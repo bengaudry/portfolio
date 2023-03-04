@@ -18,13 +18,13 @@
       See my social networks :
     </p>
     <div class="socials-container">
-      <a href="http://" target="_blank" rel="noopener noreferrer" class="social-btn">
+      <a href="https://www.instagram.com/ben.gaudry/" target="_blank" rel="noopener noreferrer" class="social-btn">
         <img src="/public/instagram.svg" alt="Instagram">
       </a>
-      <a href="http://" target="_blank" rel="noopener noreferrer" class="social-btn">
+      <a href="https://twitter.com/ben_gaudry_" target="_blank" rel="noopener noreferrer" class="social-btn">
         <img src="/public/twitter.svg" alt="Twitter">
       </a>
-      <a href="http://" target="_blank" rel="noopener noreferrer" class="social-btn">
+      <a href="https://github.com/BenGaudry" target="_blank" rel="noopener noreferrer" class="social-btn">
         <img src="/public/github.svg" alt="GitHub">
       </a>
     </div>
