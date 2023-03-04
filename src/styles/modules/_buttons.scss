@@ -5,12 +5,17 @@
   border-radius: 9999px;
   display: flex;
   flex-direction: row;
-  gap: .7rem;
+  align-items: center;
+  gap: 1.2rem;
   width: max-content;
   font-weight: 500;
   font-size: 1.2rem;
 
   &:hover {
     background-color: var(--accent-hover);
+  }
+
+  img {
+    width: 20px;
   }
 }

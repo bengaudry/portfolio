@@ -32,26 +32,29 @@
           </button>
         </div>
         <div class="graph-title">
-          <span style="{currentGraph === 0 ? "top: 0;" : "top: -1.6rem"}">/ scripts</span>
-          <span style="{currentGraph === 1 ? "top: 0;" : "top: 1.6rem"}">/ styles</span>
+          <span style={currentGraph === 0 ? "top: 0;" : "top: -1.6rem"}
+            >/ scripts</span
+          >
+          <span style={currentGraph === 1 ? "top: 0;" : "top: 1.6rem"}
+            >/ styles</span
+          >
         </div>
       </div>
-      
+
       <div class="spacer" />
       <div class="graph-container">
         <div
           class="graph"
-          style={currentGraph === 0 ? "transform: scale(1); opacity: 1;" : "transform: scale(.80); opacity: .50;"}
+          style={currentGraph === 0
+            ? "transform: scale(1); opacity: 1;"
+            : "transform: scale(.80); opacity: .50;"}
         >
           <Progress percent={85} label="Typescript" />
           <Progress percent={95} label="JavaScript" />
           <Progress percent={70} label="React" />
           <Progress percent={40} label="Svelte" />
         </div>
-        <div
-          class="graph"
-          style={currentGraph === 1 ? "top: 0;" : "top: 100%"}
-        >
+        <div class="graph" style={currentGraph === 1 ? "top: 0;" : "top: 100%"}>
           <Progress percent={60} label="Figma" />
           <Progress percent={100} label="Css & Scss" />
           <Progress percent={90} label="Tailwind" />
@@ -161,6 +164,7 @@
     flex-direction: column;
     gap: 1.25rem;
     background-color: var(--body-bg);
-    transition: transform, top, opacity, 600ms cubic-bezier(0.165, 0.84, 0.44, 1)
+    transition: transform, top, opacity,
+      600ms cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 </style>

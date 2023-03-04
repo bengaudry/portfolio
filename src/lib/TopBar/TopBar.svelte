@@ -12,13 +12,13 @@
           <a href="#top" class="top-bar-link">Home</a>
         </li>
         <li class="top-bar-item">
-          <a href="#top" class="top-bar-link">Skills</a>
+          <a href="#skills" class="top-bar-link">Skills</a>
         </li>
         <li class="top-bar-item">
           <a href="#top" class="top-bar-link">About</a>
         </li>
         <li class="top-bar-item">
-          <a href="#top" class="top-bar-link">Contact</a>
+          <a href="#contact" class="top-bar-link">Contact</a>
         </li>
       </ul>
     </nav>
