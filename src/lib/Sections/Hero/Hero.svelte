@@ -3,6 +3,10 @@
 </script>
 
 <section class="hero">
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
   <div class="responsive">
     <h1 class="hero-main-sentence">
       Hey ! I'm Ben
@@ -10,14 +14,15 @@
       a junior dev
     </h1>
     <p class="hero-characteristics secondary-text">Based in France | 17 years old | Front-end dev </p>
-    <Cta content="Discover" customStyle="margin: 0 auto; margin-top: 2rem;" direction="bottom"/>
+    <Cta content="Discover" customStyle="margin: 0 auto; margin-top: 2rem;" direction="bottom" href="#skills" />
   </div>
 </section>
 
 <style lang="scss">
   .hero {
     text-align: center;
-    padding: 150px 0;
+    padding: 100px 0;
+    position: relative;
   }
 
   .hero-main-sentence {
@@ -28,6 +33,6 @@
 
   .hero-characteristics {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 </style>

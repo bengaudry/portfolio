@@ -1,9 +1,11 @@
 .top-bar {
   height: 80px;
   position: fixed;
+  z-index: 7;
   top: 0;
   left: 0;
   width: 100%;
+  background-color: var(--body-bg);
   border-bottom: 1px solid var(--border-color);
 
   .responsive {
@@ -12,7 +14,6 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--body-bg);
   }
 }
 

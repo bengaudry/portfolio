@@ -1,11 +1,11 @@
 <script lang="ts">
   export let customStyle = undefined;
   export let content: string;
-
+  export let href: string;
   export let direction: "bottom" | "external" | "right" | undefined = undefined;
 </script>
 
-<a href="#top" class="cta" style="{customStyle}">
+<a href="{href}" class="cta" style="{customStyle}">
   <span>{content}</span>
   {#if direction === "bottom"} 
   <img src="/public/arrow.svg" alt="↓" class="arrow-bottom">
