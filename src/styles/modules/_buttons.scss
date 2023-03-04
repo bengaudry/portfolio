@@ -1,0 +1,16 @@
+.cta {
+  background-color: var(--accent);
+  transition: background-color var(--default-transition-time);
+  padding: .775rem 1.6rem;
+  border-radius: 9999px;
+  display: flex;
+  flex-direction: row;
+  gap: .7rem;
+  width: max-content;
+  font-weight: 500;
+  font-size: 1.2rem;
+
+  &:hover {
+    background-color: var(--accent-hover);
+  }
+}

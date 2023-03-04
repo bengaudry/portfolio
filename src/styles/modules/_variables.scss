@@ -2,10 +2,19 @@
   // Raw colors
   --body-bg-raw: 11, 11, 11;
   --primary-text-raw: 255, 255, 255;
+  --secondary-text-raw: 133, 133, 133;
   --border-color-raw: 35, 35, 35;
+  --accent-raw: 62, 76, 206;
+  --accent-hover-raw: 65, 84, 255;
 
   // Usable colors
   --body-bg: rgb(var(--body-bg-raw));
   --primary-text: rgb(var(--primary-text-raw));
+  --secondary-text: rgb(var(--secondary-text-raw));
   --border-color: rgb(var(--border-color-raw));
+  --accent: rgb(var(--accent-raw));
+  --accent-hover: rgb(var(--accent-hover-raw));
+
+  // Other variables
+  --default-transition-time: 300ms;
 }
