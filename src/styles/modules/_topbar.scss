@@ -1,0 +1,23 @@
+.top-bar {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+
+  .responsive {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--body-bg);
+  }
+}
+
+.top-bar-items {
+  display: flex;
+  flex-direction: row;
+  gap: .975rem;
+}

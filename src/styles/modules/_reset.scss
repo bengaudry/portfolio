@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--primary-text);
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+ul, ol {
+  list-style: none;
+}
