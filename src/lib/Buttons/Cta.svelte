@@ -8,11 +8,11 @@
 <a href="{href}" class="cta" style="{customStyle}">
   <span>{content}</span>
   {#if direction === "bottom"} 
-  <img src="/public/arrow.svg" alt="↓" class="arrow-bottom">
+  <img src="../../../public/arrow.svg" alt="↓" class="arrow-bottom">
   {:else if direction === "external"}
-  <img src="/public/arrow.svg" alt="↗" class="arrow-external">
+  <img src="../../../public/arrow.svg" alt="↗" class="arrow-external">
   {:else}
-  <img src="/public/arrow.svg" alt="→" class="arrow-right">
+  <img src="../../../public/arrow.svg" alt="→" class="arrow-right">
   {/if}
 </a>
 

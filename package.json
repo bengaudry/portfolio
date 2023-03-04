@@ -4,10 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "deploy": "gh-pages -d dist",
+    "deploy-auto": "npm run check && npm run build && npm run deploy"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.2",
