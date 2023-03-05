@@ -1,8 +1,16 @@
 <script lang="ts">
   export let percent: number = 0;
+
+  var hasScrolled: boolean = false;
+  document.addEventListener("DOMContentLoaded", function() {
+    hasScrolled = document.documentElement.scrollTop > 50 ? true : false;
+  })
+  document.addEventListener("scroll", function () {
+    hasScrolled = document.documentElement.scrollTop > 50 ? true : false;
+  })
 </script>
 
-<header class="top-bar">
+<header class="top-bar {hasScrolled ? "scrolled-top-bar" : ""}">
   <div class="scrollbar-track">
     <div class="scrollbar" style="width: {percent}%;" />
   </div>

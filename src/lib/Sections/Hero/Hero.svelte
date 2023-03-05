@@ -3,9 +3,9 @@
 </script>
 
 <section class="hero">
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
+  <div class="bubble" />
+  <div class="bubble" />
+  <div class="bubble" />
 
   <div class="responsive">
     <h1 class="hero-main-sentence">
@@ -13,32 +13,60 @@
       <br />
       a junior dev
     </h1>
-    <p class="hero-characteristics">Based in France | 17 years old | Front-end dev </p>
-    <Cta content="Discover" customStyle="margin: 0 auto; margin-top: 2rem;" direction="bottom" href="#skills" />
+    <p class="hero-characteristics">
+      Based in France | 17 years old | Front-end dev
+    </p>
+    <Cta
+      content="Discover"
+      customStyle="margin: 0 auto; margin-top: 2rem; animation: fade-in 500ms ease-out forwards; animation-delay: 600ms; opacity: 0; transform: translateY(10%);"
+      direction="bottom"
+      href="#skills"
+    />
   </div>
 </section>
 
 <style lang="scss">
   @import "../../../styles/modules/variables";
+  @import "../../../styles/modules/animations";
+
+  $animation: fade-in 500ms ease-out forwards;
 
   .hero {
     text-align: center;
     position: relative;
     overflow: hidden;
     height: 100vh;
-    padding-top: 80px;
+    padding-top: 70px;
     display: flex;
     align-items: center;
     place-content: center;
-    background: url("/gradient-1x.png");
-    background-size: cover;
-    background-position: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("/gradient-1x.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      transform-origin: center;
+      opacity: 0;
+      transform: scale(.5);
+      animation: background-appear 1000ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
   }
 
   .hero-main-sentence {
     font-size: 4.375rem;
     font-weight: 600;
     margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(0);
+    animation: $animation;
   }
 
   .hero-characteristics {
@@ -51,15 +79,19 @@
     background-clip: text;
     font-weight: 600;
     font-size: 1.25rem;
+    opacity: 0;
+    transform: translateY(0);
+    animation: $animation;
+    animation-delay: 300ms;
   }
 
   @media screen and (max-width: 480px) {
-  .hero-main-sentence {
-    font-size: 2.75rem;
-  }
+    .hero-main-sentence {
+      font-size: 2.75rem;
+    }
 
-  .hero-characteristics {
-    font-size: .9rem;
+    .hero-characteristics {
+      font-size: 0.9rem;
+    }
   }
-}
 </style>

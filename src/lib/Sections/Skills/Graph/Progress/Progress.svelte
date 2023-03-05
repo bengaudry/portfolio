@@ -31,9 +31,7 @@
   }
 
   .progress-bar-fg {
-    background: url("/Gradient.svg");
-    background-size: cover;
-    background-position: 50%;
+    background-color: blueviolet;
     position: absolute;
     top: 0;
     left: 0;

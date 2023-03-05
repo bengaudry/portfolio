@@ -22,7 +22,9 @@
   {/if}
 </a>
 
-<style>
+<style lang="scss">
+
+  @import "../../styles/modules/animations";
   .arrow-external {
     transform: rotate(-135deg);
   }

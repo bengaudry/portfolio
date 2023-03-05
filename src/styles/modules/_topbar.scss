@@ -1,13 +1,21 @@
+.scrolled-top-bar {
+  height: 70px !important;
+  background-color: rgba(var(--body-bg-raw), .4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
 .top-bar {
-  height: 80px;
+  height: 120px;
   position: fixed;
   z-index: 7;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(var(--body-bg-raw), .4);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-color);
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: menu-appear 1200ms 800ms forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: height, background-color, backdrop-filter, -webkit-backdrop-filter, 500ms ease-out;
 
   .responsive {
     height: 100%;

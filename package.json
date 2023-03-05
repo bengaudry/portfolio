@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "auto-deploy": "npm run check && npm run build && npm run deploy && cls",
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "deploy": "gh-pages -d dist",
-    "deploy-auto": "npm run check && npm run build && npm run deploy && cls"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^4.0.3",
