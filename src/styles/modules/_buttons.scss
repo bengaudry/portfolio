@@ -1,8 +1,9 @@
 .cta {
-  background-color: var(--accent);
-  transition: background-color var(--default-transition-time);
-  padding: .775rem 1.6rem;
-  border-radius: 9999px;
+  background-color: transparent;
+  transition: border-color var(--default-transition-time);
+  padding: .5rem 1.2rem;
+  border: 1px solid #ffffff50;
+  border-radius: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11,11 +12,11 @@
   font-weight: 500;
   font-size: 1.2rem;
 
-  &:hover {
-    background-color: var(--accent-hover);
+  img {
+    width: 14px;
   }
 
-  img {
-    width: 20px;
+  &:hover {
+    border-color: #ffffff80;
   }
 }

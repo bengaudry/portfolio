@@ -4,8 +4,9 @@
   z-index: 7;
   top: 0;
   left: 0;
-  width: 100vw;
-  background-color: var(--body-bg);
+  width: 100%;
+  background-color: rgba(var(--body-bg-raw), .4);
+  backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-color);
 
   .responsive {

@@ -1,7 +1,11 @@
 <script lang="ts">
+  export let percent: number = 0;
 </script>
 
 <header class="top-bar">
+  <div class="scrollbar-track">
+    <div class="scrollbar" style="width: {percent}%;" />
+  </div>
   <div class="responsive">
     <div class="title">
       <a href="#top"> @ben.gaudry </a>
@@ -22,13 +26,25 @@
   </div>
 </header>
 
-<style>
+<style lang="scss">
+  @import "../../styles/modules/variables";
   .title > a {
-    background: linear-gradient(135deg, #0029BC, #007893);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 600;
-    font-size: 1.25rem;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: rgba(var(--primary-text-raw), .6);
+  }
+
+  .scrollbar-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 4px;
+  }
+
+  .scrollbar {
+    height: 100%;
+    background-color: var(--accent);
   }
 </style>

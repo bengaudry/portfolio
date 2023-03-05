@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     svelte(),
   ],
-  base: "https://bengaudry.github.io/",
+  base: "/portfolio/",
   build: {
     outDir: "dist",
   },

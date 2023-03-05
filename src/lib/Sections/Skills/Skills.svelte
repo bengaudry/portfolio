@@ -21,14 +21,14 @@
             class="slider-btn"
             style={currentGraph === 0 ? "opacity: .4" : "opacity: 1;"}
           >
-            <img src="/arrow.svg" alt="->" style="transform: rotate(90deg);">
+            <img src="/arrow.svg" alt="->" style="transform: rotate(90deg);" />
           </button>
           <button
             on:click={() => (currentGraph = 1)}
             class="slider-btn"
             style={currentGraph === 1 ? "opacity: .4" : "opacity: 1;"}
           >
-            <img src="/arrow.svg" alt="<-" style="transform: rotate(-90deg);">
+            <img src="/arrow.svg" alt="<-" style="transform: rotate(-90deg);" />
           </button>
         </div>
         <div class="graph-title">
@@ -204,13 +204,13 @@
       position: absolute;
       left: 0;
       background-color: var(--accent);
-      transition: transform 400ms cubic-bezier(0.215, 0.610, 0.355, 1);
+      transition: transform 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
     }
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 720px) {
     .skills {
-      padding: 50px 0;
+      padding: 120px 0;
       .responsive {
         gap: 50px;
         flex-direction: column;
