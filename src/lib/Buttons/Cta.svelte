@@ -5,14 +5,20 @@
   export let direction: "bottom" | "external" | "right" | undefined = undefined;
 </script>
 
-<a href="{href}" class="cta" style="{customStyle}">
+<a
+  {href}
+  class="cta"
+  style={customStyle}
+  rel="noopener noreferrer"
+  target={direction === "external" ? "_blank" : "_self"}
+>
   <span>{content}</span>
-  {#if direction === "bottom"} 
-  <img src="../../assets/arrow.svg" alt="↓" class="arrow-bottom">
+  {#if direction === "bottom"}
+    <img src="../../../public/arrow.svg" alt="↓" class="arrow-bottom" />
   {:else if direction === "external"}
-  <img src="../../assets/public/arrow.svg" alt="↗" class="arrow-external">
+    <img src="../../../public/arrow.svg" alt="↗" class="arrow-external" />
   {:else}
-  <img src="../../assets/public/arrow.svg" alt="→" class="arrow-right">
+    <img src="../../../public/arrow.svg" alt="→" class="arrow-right" />
   {/if}
 </a>
 

@@ -19,13 +19,13 @@
     </p>
     <div class="socials-container">
       <a href="https://www.instagram.com/ben.gaudry/" target="_blank" rel="noopener noreferrer" class="social-btn">
-        <img src="@src/assets/instagram.svg" alt="Instagram">
+        <img src="/instagram.svg" alt="Instagram">
       </a>
       <a href="https://twitter.com/ben_gaudry_" target="_blank" rel="noopener noreferrer" class="social-btn">
-        <img src="@src/assets/twitter.svg" alt="Twitter">
+        <img src="/twitter.svg" alt="Twitter">
       </a>
       <a href="https://github.com/BenGaudry" target="_blank" rel="noopener noreferrer" class="social-btn">
-        <img src="@src/assets/github.svg" alt="GitHub">
+        <img src="/github.svg" alt="GitHub">
       </a>
     </div>
   </div>

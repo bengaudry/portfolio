@@ -4,7 +4,7 @@
   z-index: 7;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background-color: var(--body-bg);
   border-bottom: 1px solid var(--border-color);
 
@@ -20,5 +20,11 @@
 .top-bar-items {
   display: flex;
   flex-direction: row;
-  gap: .975rem;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+  .top-bar-items {
+    display: none;
+  }
 }
