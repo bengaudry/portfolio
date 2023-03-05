@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     place-content: center;
-    background: url("/Gradient.svg");
+    background: url("/gradient-1x.png");
     background-size: cover;
     background-position: 50%;
   }
