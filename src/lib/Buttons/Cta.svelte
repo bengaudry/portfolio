@@ -14,11 +14,11 @@
 >
   <span>{content}</span>
   {#if direction === "bottom"}
-    <img src="../../../public/arrow.svg" alt="↓" class="arrow-bottom" />
+    <div class="arrow arrow-bottom" />
   {:else if direction === "external"}
-    <img src="../../../public/arrow.svg" alt="↗" class="arrow-external" />
+    <div class="arrow arrow-external" />
   {:else}
-    <img src="../../../public/arrow.svg" alt="→" class="arrow-right" />
+    <div class="arrow arrow-right" />
   {/if}
 </a>
 
@@ -27,6 +27,15 @@
   @import "../../styles/modules/animations";
   .arrow-external {
     transform: rotate(-135deg);
+  }
+
+  .arrow {
+    background: url("../../../public/arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
   }
 
   .arrow-right {

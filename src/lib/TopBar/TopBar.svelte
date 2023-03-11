@@ -1,16 +1,18 @@
 <script lang="ts">
+  import Cta from "../Buttons/Cta.svelte";
+
   export let percent: number = 0;
 
   var hasScrolled: boolean = false;
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     hasScrolled = document.documentElement.scrollTop > 50 ? true : false;
-  })
+  });
   document.addEventListener("scroll", function () {
     hasScrolled = document.documentElement.scrollTop > 50 ? true : false;
-  })
+  });
 </script>
 
-<header class="top-bar {hasScrolled ? "scrolled-top-bar" : ""}">
+<header class="top-bar {hasScrolled ? 'scrolled-top-bar' : ''}">
   <div class="scrollbar-track">
     <div class="scrollbar" style="width: {percent}%;" />
   </div>
@@ -24,11 +26,16 @@
           <a href="#top" class="top-bar-link">Home</a>
         </li>
         <li class="top-bar-item">
-          <a href="#skills" class="top-bar-link">Skills</a>
+          <a href="#about" class="top-bar-link">About</a>
         </li>
         <li class="top-bar-item">
           <a href="#contact" class="top-bar-link">Contact</a>
         </li>
+        <Cta
+          content="GitHub"
+          href="https://github.com/bengaudry"
+          direction="external"
+        />
       </ul>
     </nav>
   </div>
@@ -39,7 +46,7 @@
   .title > a {
     font-weight: 400;
     font-size: 1.125rem;
-    color: rgba(var(--primary-text-raw), .6);
+    color: rgba(var(--primary-text-raw), 0.6);
   }
 
   .scrollbar-track {

@@ -11,9 +11,7 @@
 </div>
 
 <style lang="scss">
-
   @import "../../../../../styles/modules/variables";
-
 
   .progress-container {
     display: flex;
@@ -22,7 +20,7 @@
   }
 
   .progress-bar-bg {
-    background-color: rgb(#d6d6d6, .1);
+    background-color: rgb(#fff, .15);
     position: relative;
     height: 20px;
     border-radius: 20px;
@@ -31,7 +29,7 @@
   }
 
   .progress-bar-fg {
-    background-color: blueviolet;
+    background-color: rgb(#fff, .4);
     position: absolute;
     top: 0;
     left: 0;

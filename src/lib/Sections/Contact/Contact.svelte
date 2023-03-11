@@ -5,27 +5,53 @@
 <section id="contact">
   <div class="responsive">
     <h2>Contact</h2>
-    <p>Want to work with me ? See my gigs on fiverr !</p>
-    <Cta
-      content="See on fiverr"
-      href="https://fr.fiverr.com/share/2daNGV"
-      direction="external"
-      customStyle="margin: 0 auto;"
-    />
+    <p>
+      Want to work with me ?
+      <br />Hire me on these platforms !
+    </p>
+    <div class="btn-container">
+      <Cta
+        content="See my fiverr"
+        href="https://fr.fiverr.com/share/2daNGV"
+        direction="external"
+        customStyle="margin: 0 auto;"
+      />
+      <Cta
+        content="See my malt"
+        href="https://www.malt.fr/profile/bengaudry"
+        direction="external"
+        customStyle="margin: 0 auto;"
+      />
+    </div>
     <div class="spacer" />
     <p>
       Want to contact me for another reason ?<br />
       See my social networks :
     </p>
     <div class="socials-container">
-      <a href="https://www.instagram.com/ben.gaudry/" target="_blank" rel="noopener noreferrer" class="social-btn">
-        <img src="/instagram.svg" alt="Instagram">
+      <a
+        href="https://www.instagram.com/ben.gaudry/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-btn"
+      >
+        <img src="/instagram.svg" alt="Instagram" />
       </a>
-      <a href="https://twitter.com/ben_gaudry_" target="_blank" rel="noopener noreferrer" class="social-btn">
-        <img src="/twitter.svg" alt="Twitter">
+      <a
+        href="https://twitter.com/ben_gaudry_"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-btn"
+      >
+        <img src="/twitter.svg" alt="Twitter" />
       </a>
-      <a href="https://github.com/BenGaudry" target="_blank" rel="noopener noreferrer" class="social-btn">
-        <img src="/github.svg" alt="GitHub">
+      <a
+        href="https://github.com/BenGaudry"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-btn"
+      >
+        <img src="/github.svg" alt="GitHub" />
       </a>
     </div>
   </div>
@@ -33,6 +59,15 @@
 
 <style lang="scss">
   @import "../../../styles/modules/variables";
+
+  .btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+    gap: 12px;
+  }
 
   #contact {
     padding: 100px 0;
@@ -70,11 +105,17 @@
 
   .social-btn {
     height: 35px;
-    opacity: .4;
+    opacity: 0.4;
     transition: opacity 200ms ease-in-out;
 
     &:hover {
       opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .btn-container {
+      flex-direction: column;
     }
   }
 </style>

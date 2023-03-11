@@ -20,7 +20,7 @@
       content="Discover"
       customStyle="margin: 0 auto; margin-top: 2rem; animation: fade-in 500ms ease-out forwards; animation-delay: 600ms; opacity: 0; transform: translateY(10%);"
       direction="bottom"
-      href="#skills"
+      href="#about"
     />
   </div>
 </section>
@@ -49,7 +49,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url("/gradient-1x.png");
+      background: url("/gradient-05x.png");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
