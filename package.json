@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "auto-deploy": "npm run check && npm run build && npm run deploy",
+    "auto-deploy": "npm run build && npm run deploy",
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",

@@ -1,16 +1,16 @@
 <script lang="ts">
   import Progress from "../Skills/Graph/Progress/Progress.svelte";
-  let currentGraph = 0;
+  let currentGraph = 1;
 
   let sliderOneWidth: number = 10;
   function setSliderOneWidth(slider: HTMLElement) {
-    sliderOneWidth = slider.clientWidth - 8;
+    sliderOneWidth = slider.clientWidth - 6;
     console.log(slider);
   }
 
   let sliderTwoWidth: number = 10;
   function setSliderTwoWidth(slider: HTMLElement) {
-    sliderTwoWidth = slider.clientWidth - 8;
+    sliderTwoWidth = slider.clientWidth - 6;
     console.log(slider);
   }
 </script>
@@ -37,7 +37,7 @@
                 : sliderTwoWidth}px;
                 transform: {currentGraph === 0
                 ? 'translateX(0)'
-                : 'translateX(calc(100% + 20px))'};
+                : 'translateX(calc(100% + 16px))'};
               "
             />
             <button on:click={() => {currentGraph = 0}} use:setSliderOneWidth
@@ -210,7 +210,7 @@
     align-items: center;
     z-index: -2;
     border-radius: 9999px;
-    background-color: #292929;
+    background-color: #333333;
 
     .background {
       position: absolute;
@@ -219,7 +219,7 @@
       height: calc(100% - 8px);
       inset: 4px;
       border-radius: 9999px;
-      background-color: #525252;
+      background-color: #606060;
       transition: width, transform, 300ms;
       pointer-events: none;
     }
