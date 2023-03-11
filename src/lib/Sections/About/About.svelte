@@ -4,13 +4,13 @@
 
   let sliderOneWidth: number = 10;
   function setSliderOneWidth(slider: HTMLElement) {
-    sliderOneWidth = slider.clientWidth - 6;
+    sliderOneWidth = slider.clientWidth;
     console.log(slider);
   }
 
   let sliderTwoWidth: number = 10;
   function setSliderTwoWidth(slider: HTMLElement) {
-    sliderTwoWidth = slider.clientWidth - 6;
+    sliderTwoWidth = slider.clientWidth;
     console.log(slider);
   }
 </script>
@@ -37,7 +37,7 @@
                 : sliderTwoWidth}px;
                 transform: {currentGraph === 0
                 ? 'translateX(0)'
-                : 'translateX(calc(100% + 16px))'};
+                : 'translateX(calc(100% + 22px))'};
               "
             />
             <button on:click={() => {currentGraph = 0}} use:setSliderOneWidth
