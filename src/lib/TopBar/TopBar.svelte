@@ -12,7 +12,11 @@
   let menuOpened: boolean = false;
 </script>
 
-<header class="top-bar {hasScrolled ? 'scrolled-top-bar' : ''} {(menuOpened) ? "tb-opened scrolled-top-bar" : ""}">
+<header
+  class="top-bar {hasScrolled ? 'scrolled-top-bar' : ''} {menuOpened
+    ? 'tb-opened scrolled-top-bar'
+    : ''}"
+>
   <div class="responsive">
     <div class="title">
       <a href="#top"> @ben.gaudry </a>
@@ -35,9 +39,9 @@
         />
       </ul>
     </nav>
-    <button class="menu-toggler" on:click={() => menuOpened = !menuOpened}>
-      <div></div>
-      <div></div>
+    <button class="menu-toggler" on:click={() => (menuOpened = !menuOpened)}>
+      <div />
+      <div />
     </button>
   </div>
 </header>

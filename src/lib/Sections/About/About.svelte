@@ -1,56 +1,50 @@
 <script lang="ts">
   import Progress from "../Skills/Graph/Progress/Progress.svelte";
   let currentGraph = 0;
+
+  let sliderOneWidth: number = 10;
+  function setSliderOneWidth(slider: HTMLElement) {
+    sliderOneWidth = slider.clientWidth - 8;
+    console.log(slider);
+  }
+
+  let sliderTwoWidth: number = 10;
+  function setSliderTwoWidth(slider: HTMLElement) {
+    sliderTwoWidth = slider.clientWidth - 8;
+    console.log(slider);
+  }
 </script>
 
 <section id="about">
   <div class="responsive cards-grid-view">
     <div class="grid-child">
-      <div class="content"></div>
+      <div class="content" />
     </div>
     <div class="grid-child">
-      <div class="content"></div>
+      <div class="content" />
     </div>
     <div class="grid-child">
-      <div class="content"></div>
+      <div class="content" />
     </div>
     <div class="grid-child">
       <div class="content">
         <div class="graph-header">
-          <div class="btn-container">
-            <button
-              on:click={() => (currentGraph = 0)}
-              class="slider-btn"
-              style={currentGraph === 0 ? "opacity: .4" : "opacity: 1;"}
+          <div class="graph-switcher">
+            <div
+              class="background"
+              style="width: {currentGraph === 0
+                ? sliderOneWidth
+                : sliderTwoWidth}px;
+                transform: {currentGraph === 0
+                ? 'translateX(0)'
+                : 'translateX(calc(100% + 20px))'};
+              "
+            />
+            <button on:click={() => {currentGraph = 0}} use:setSliderOneWidth
+              >Scripting</button
             >
-              <img
-                src="/arrow.svg"
-                alt="->"
-                style="transform: rotate(90deg);"
-              />
-            </button>
-            <button
-              on:click={() => (currentGraph = 1)}
-              class="slider-btn"
-              style={currentGraph === 1 ? "opacity: .4" : "opacity: 1;"}
-            >
-              <img
-                src="/arrow.svg"
-                alt="<-"
-                style="transform: rotate(-90deg);"
-              />
-            </button>
-          </div>
-          <div class="graph-title">
-            <span
-              style={currentGraph === 0
-                ? "transform: translateX(0);"
-                : "transform: translateX(-100%)"}>/ scripts</span
-            >
-            <span
-              style={currentGraph === 1
-                ? "transform: translateX(0);"
-                : "transform: translateX(100%)"}>/ styles</span
+            <button on:click={() => {currentGraph = 1}} use:setSliderTwoWidth
+              >Styling</button
             >
           </div>
         </div>
@@ -81,8 +75,8 @@
           </div>
         </div>
         <div class="dots">
-          <div />
-          <div />
+          <button on:click={() => (currentGraph = 0)} />
+          <button on:click={() => (currentGraph = 1)} />
           <div
             class="dot-selector"
             style={currentGraph === 0
@@ -100,9 +94,27 @@
 
   #about {
     padding: 80px 0;
-    background: radial-gradient(rgba(255, 255, 255, 0.2) 4%, transparent 4%);
-    background-position: 0% 0%;
-    background-size: 5vmin 5vmin;
+    // background: radial-gradient(rgba(255, 255, 255, 0.2) 4%, transparent 4%);
+    // background-position: 0% 0%;
+    // background-size: 5vmin 5vmin;
+    position: relative;
+    background: #ff35fc60;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        from(#000),
+        color-stop(15%, rgba(0, 0, 0, 0))
+      ),
+      -webkit-gradient(linear, left top, left bottom, from(#000), color-stop(15%, rgba(0, 0, 0, 0))),
+      radial-gradient(circle farthest-side at 50% 0%, rgba(0, 0, 0, 0), #000),
+      url("../../../../public/bg-tile-dark.svg");
+    background-image: linear-gradient(0deg, #000, rgba(0, 0, 0, 0) 15%),
+      linear-gradient(180deg, #000, rgba(0, 0, 0, 0) 15%),
+      radial-gradient(circle farthest-side at 50% 0%, rgba(0, 0, 0, 0), #000),
+      url("../../../../public/bg-tile-dark.svg");
+    background-position: 0px 0px, 0px 0px, 0px 0px, -1px -1px;
+    background-size: auto, auto, auto, 64px;
   }
 
   .cards-grid-view {
@@ -132,7 +144,7 @@
       grid-column: 1 / 3;
 
       .content {
-        background-color: rgba(#000000, .7);
+        background-color: rgba(#000000, 0.7);
         backdrop-filter: blur(100px);
         width: 100%;
         height: 100%;
@@ -147,7 +159,7 @@
       grid-row: 2 / 3;
 
       .content {
-        background-color: rgba(#000000, .7);
+        background-color: rgba(#000000, 0.7);
         backdrop-filter: blur(100px);
         width: 100%;
         height: 100%;
@@ -178,7 +190,7 @@
       .content {
         width: 100%;
         height: 100%;
-        background-color: rgba(#000000, .7);
+        background-color: rgba(#000000, 0.7);
         backdrop-filter: blur(100px);
       }
     }
@@ -188,48 +200,39 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 
-  .graph-title {
+  .graph-switcher {
     position: relative;
-    overflow: hidden;
-    width: 70px;
-    height: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: -2;
+    border-radius: 9999px;
+    background-color: #292929;
 
-    span {
+    .background {
       position: absolute;
-      text-align: right;
-      width: 100%;
-      top: 0;
-      left: 0;
+      z-index: -1;
+      width: calc(50% - 25px);
+      height: calc(100% - 8px);
+      inset: 4px;
+      border-radius: 9999px;
+      background-color: #525252;
+      transition: width, transform, 300ms;
+      pointer-events: none;
+    }
+
+    button {
+      padding: 10px 20px;
       display: block;
-      height: 1.6rem;
-      line-height: 1.6rem;
-      transition: transform 400ms;
+      width: max-content;
     }
   }
 
   .spacer {
     height: 25px;
-  }
-
-  .slider-btn {
-    width: max-content;
-    padding: 5px 5px;
-    border-radius: 15px;
-    height: 50px;
-    width: 50px;
-    transition: opacity ease-out 200ms;
-    font-size: 1.25rem;
-    border: 3px solid #fff;
-  }
-
-  .btn-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
   }
 
   .graph-container {
@@ -264,8 +267,8 @@
     width: max-content;
     margin: 0 auto;
     position: relative;
-    div {
-      background-color: rgba(#fff, .2);
+    button {
+      background-color: rgba(#fff, 0.2);
       height: 10px;
       border-radius: 5px;
       width: 10px;
@@ -274,17 +277,11 @@
     .dot-selector {
       position: absolute;
       left: 0;
+      height: 10px;
+      border-radius: 5px;
+      width: 10px;
       background-color: var(--accent);
       transition: transform 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-  }
-
-  @media screen and (max-width: 720px) {
-    .slider-btn {
-      font-size: 0.975rem;
-      height: fit-content;
-      padding: 8px 16px;
-      border-radius: 10px;
     }
   }
 
