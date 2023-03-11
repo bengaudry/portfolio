@@ -22,7 +22,7 @@
       direction="bottom"
       className="glow-effect"
       href="#about"
-      children='<svg class="glow-container"><rect class="glow-blur" pathLength="100" rx="8px"></rect><rect class="glow-line" pathLength="100" rx="8px"></rect></svg>'
+      children="<svg class='glow-container'><rect class='glow-blur' pathLength='100' rx='8px'></rect><rect class='glow-line' pathLength='100' rx='8px'></rect></svg>"
     />
   </div>
 </section>

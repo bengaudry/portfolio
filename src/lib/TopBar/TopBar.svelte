@@ -1,8 +1,6 @@
 <script lang="ts">
   import Cta from "../Buttons/Cta.svelte";
 
-  export let percent: number = 0;
-
   var hasScrolled: boolean = false;
   document.addEventListener("DOMContentLoaded", function () {
     hasScrolled = document.documentElement.scrollTop > 50 ? true : false;
@@ -10,12 +8,11 @@
   document.addEventListener("scroll", function () {
     hasScrolled = document.documentElement.scrollTop > 50 ? true : false;
   });
+
+  let menuOpened: boolean = false;
 </script>
 
-<header class="top-bar {hasScrolled ? 'scrolled-top-bar' : ''}">
-  <div class="scrollbar-track">
-    <div class="scrollbar" style="width: {percent}%;" />
-  </div>
+<header class="top-bar {hasScrolled ? 'scrolled-top-bar' : ''} {(menuOpened) ? "tb-opened scrolled-top-bar" : ""}">
   <div class="responsive">
     <div class="title">
       <a href="#top"> @ben.gaudry </a>
@@ -38,6 +35,10 @@
         />
       </ul>
     </nav>
+    <button class="menu-toggler" on:click={() => menuOpened = !menuOpened}>
+      <div></div>
+      <div></div>
+    </button>
   </div>
 </header>
 

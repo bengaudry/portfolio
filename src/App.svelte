@@ -10,30 +10,45 @@
     console.log("scroll", scrollPercent);
   });
 
-  var mousex = 0;
-  var mousey = 0;
-  document.body.addEventListener("mousemove", function (e: MouseEvent) {
-    mousex = e.pageX;
-    mousey = e.pageY;
-    cursorShadow.animate(
-      [{ left: `${mousex}px` }, { top: `${mousey}px` }],
-      {
-        // temporisation
-        duration: 3000,
-        iterations: 1
-      }
-    )
-  });
+  // var mousex = 0;
+  // var mousey = 0;
+  // document.body.addEventListener("mousemove", function (e: MouseEvent) {
+  //   mousex = e.pageX;
+  //   mousey = e.pageY;
+  //   cursorShadow.animate(
+  //     [{ left: `${mousex}px` }, { top: `${mousey}px` }],
+  //     {
+  //       // temporisation
+  //       duration: 3000,
+  //       iterations: 1
+  //     }
+  //   )
+  // });
 
-  let cursorShadow;
+  // let cursorShadow;
+
+  let loader: HTMLElement;
+  let windowLoaded = false;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    window.setTimeout(() => {
+      loader.style.transform = "translateY(-100%)";
+      windowLoaded = true;
+    }, 1000)
+  })
+
+  function waitForLoad(node) {
+    if (windowLoaded) { node.classList.add("start-anims") };
+  }
 </script>
 
-<main class="page-main">
-  <div
+<main class="page-main" use:waitForLoad>
+  <!-- <div
     class="cursor-shadow"
     bind:this={cursorShadow}
-  />
-  <TopBar percent={scrollPercent} />
+  /> -->
+  <div class="loader" bind:this={loader}></div>
+  <TopBar />
   <Hero />
   <About />
   <Contact />
@@ -52,8 +67,19 @@
     transition: opacity 300ms;
   } */
 
-  .cursor-shadow {
+  /* .cursor-shadow {
     display: none;
     pointer-events: none;
+  } */
+
+  .loader {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    transition: transform, 600ms cubic-bezier(.17,.67,.12,.83);
   }
 </style>
