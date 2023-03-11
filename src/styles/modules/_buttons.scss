@@ -42,6 +42,7 @@
 
 .glow-container {
   position: absolute;
+  pointer-events: none;
   inset: calc(var(--container-offset) / -2);
   width: calc(100% + var(--container-offset));
   height: calc(100% + var(--container-offset));
@@ -54,35 +55,39 @@
   height: calc(100% - var(--container-offset));
   x: calc(var(--container-offset) / 2);
   y: calc(var(--container-offset) / 2);
-  rx: var(--cta-border-radius);
   fill: transparent;
-  stroke: #ffffff80;
+  stroke: #ffffff70;
   stroke-width: 1px;
   transition: stroke 500ms;
-  animation: blur-rotate 12s forwards infinite;
+  animation: blur-rotate 18s forwards infinite;
 }
 
 .glow-blur {
-  filter: blur(20px);
+  stroke-width: 2px;
+  filter: blur(8px);
 }
 
 @keyframes blur-rotate {
   from {
     stroke-dasharray: 100px 0;
     stroke-dashoffset: 0px;
+    opacity: 1;
   }
 
-  15% {
+  30% {
     stroke-dasharray: 20px 30px;
+    opacity: 1;
   }
 
-  40% {
+  60% {
     stroke-dasharray: 20px 30px;
     stroke-dashoffset: 200px;
+    opacity: 1;
   }
 
-  to {
+  80% {
     stroke-dasharray: 100px 0;
     stroke-dashoffset: 200px;
+    opacity: 0;
   }
 }

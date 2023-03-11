@@ -38,7 +38,7 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 20px;
-    height: 20px;
+    height: 16px;
   }
 
   .arrow-right {
