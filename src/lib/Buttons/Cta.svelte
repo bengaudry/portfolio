@@ -1,13 +1,15 @@
 <script lang="ts">
   export let customStyle = undefined;
   export let content: string;
+  export let children: HTMLElement | string = "";
+  export let className: string = "";
   export let href: string;
   export let direction: "bottom" | "external" | "right" | undefined = undefined;
 </script>
 
 <a
   {href}
-  class="cta"
+  class="cta {className}"
   style={customStyle}
   rel="noopener noreferrer"
   target={direction === "external" ? "_blank" : "_self"}
@@ -20,6 +22,7 @@
   {:else}
     <div class="arrow arrow-right" />
   {/if}
+  {@html children}
 </a>
 
 <style lang="scss">

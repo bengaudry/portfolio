@@ -1,9 +1,13 @@
+:root {
+  --cta-border-radius: 8px;
+}
+
 .cta {
   background-color: transparent;
   transition: border-color var(--default-transition-time);
   padding: .5rem 1.2rem;
   border: 1px solid #ffffff50;
-  border-radius: 8px;
+  border-radius: var(--cta-border-radius);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,5 +22,67 @@
 
   &:hover {
     border-color: #ffffff80;
+  }
+}
+
+
+// Stolen from Kevin Powell ;)
+
+.glow-effect {
+  --container-offset: 50px;
+  position: relative;
+  
+  &:hover {
+    .glow-blur,
+    .glow-line {
+      stroke: #fff;
+    }
+  }
+}
+
+.glow-container {
+  position: absolute;
+  inset: calc(var(--container-offset) / -2);
+  width: calc(100% + var(--container-offset));
+  height: calc(100% + var(--container-offset));
+  // outline: 3px solid black;
+}
+
+.glow-blur,
+.glow-line {
+  width: calc(100% - var(--container-offset));
+  height: calc(100% - var(--container-offset));
+  x: calc(var(--container-offset) / 2);
+  y: calc(var(--container-offset) / 2);
+  rx: var(--cta-border-radius);
+  fill: transparent;
+  stroke: #ffffff80;
+  stroke-width: 1px;
+  transition: stroke 500ms;
+  animation: blur-rotate 12s forwards infinite;
+}
+
+.glow-blur {
+  filter: blur(20px);
+}
+
+@keyframes blur-rotate {
+  from {
+    stroke-dasharray: 100px 0;
+    stroke-dashoffset: 0px;
+  }
+
+  15% {
+    stroke-dasharray: 20px 30px;
+  }
+
+  40% {
+    stroke-dasharray: 20px 30px;
+    stroke-dashoffset: 200px;
+  }
+
+  to {
+    stroke-dasharray: 100px 0;
+    stroke-dashoffset: 200px;
   }
 }

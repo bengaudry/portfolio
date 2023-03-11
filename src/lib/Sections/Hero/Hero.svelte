@@ -20,7 +20,9 @@
       content="Discover"
       customStyle="margin: 0 auto; margin-top: 2rem; animation: fade-in 500ms ease-out forwards; animation-delay: 600ms; opacity: 0; transform: translateY(10%);"
       direction="bottom"
+      className="glow-effect"
       href="#about"
+      children='<svg class="glow-container"><rect class="glow-blur" pathLength="100"></rect><rect class="glow-line" pathLength="100"></rect></svg>'
     />
   </div>
 </section>
@@ -55,8 +57,9 @@
       background-attachment: fixed;
       transform-origin: center;
       opacity: 0;
-      transform: scale(.5);
-      animation: background-appear 1000ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      transform: scale(0.5);
+      animation: background-appear 1000ms cubic-bezier(0.165, 0.84, 0.44, 1)
+        forwards;
     }
   }
 
