@@ -1,5 +1,27 @@
 <script lang="ts">
   import Cta from "../../Buttons/Cta.svelte";
+
+  let freelanceBtnContent: "fiverr" | "malt" = "fiverr";
+
+  document.addEventListener("DOMContentLoaded", changeFreelanceBtnContent);
+
+  let freelanceBtn;
+  let fiverrBtnWidth;
+  let maltBtnWidth;
+  function changeFreelanceBtnContent() {
+    console.log("function - 1");
+    freelanceBtnContent = freelanceBtnContent === "fiverr" ? "malt" : "fiverr";
+    freelanceBtn.style.width = `${
+      freelanceBtnContent === "fiverr" ? fiverrBtnWidth : maltBtnWidth
+    }px`;
+    setTimeout(() => {
+      changeFreelanceBtnContent();
+      freelanceBtn.style.width = `${
+        freelanceBtnContent === "fiverr" ? fiverrBtnWidth : maltBtnWidth
+      }px`;
+      console.log("function - 2");
+    }, 1000);
+  }
 </script>
 
 <section id="contact">
@@ -10,18 +32,8 @@
       <br />Hire me on these platforms !
     </p>
     <div class="btn-container">
-      <Cta
-        content="See my fiverr"
-        href="https://fr.fiverr.com/share/2daNGV"
-        direction="external"
-        customStyle="margin: 0 auto;"
-      />
-      <Cta
-        content="See my malt"
-        href="https://www.malt.fr/profile/bengaudry"
-        direction="external"
-        customStyle="margin: 0 auto;"
-      />
+      <Cta href="https://www.fiverr.com/ben_gdry" content="See on fiverr" direction="external"/>
+      <Cta href="https://www.malt.fr/profile/bengaudry" content="See on malt" direction="external"/>
     </div>
     <div class="spacer" />
     <p>
@@ -111,6 +123,39 @@
     &:hover {
       opacity: 1;
     }
+  }
+
+  .freelance-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 8px;
+    font-size: 1.4rem;
+    border-radius: 9999px;
+    background-color: #fff;
+
+    span {
+      color: #000 !important;
+    }
+  }
+
+  .fiverr-icon {
+    width: 40px;
+    height: 40px;
+    background: url("../../../../public/fiverr-logo.png");
+    background-size: cover;
+    background-position: center;
+    transition: width 800ms ease-out;
+  }
+
+  .malt-icon {
+    width: 40px;
+    height: 40px;
+    background: url("../../../../public/malt-icon.png");
+    background-size: cover;
+    background-position: center;
+    transition: width 800ms ease-out;
   }
 
   @media screen and (max-width: 480px) {
