@@ -5,6 +5,11 @@
   margin: 0 auto;
 }
 
-.WithPadding {
-  padding: 2rem;
+.WithMargin {
+  margin: 2rem;
+}
+
+.WithBorder {
+  border-left: 1px solid var(--primary-text-color);
+  padding-left: 2rem;
 }

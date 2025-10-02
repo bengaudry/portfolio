@@ -5,7 +5,7 @@ import styles from "./Header.module.scss";
 export function Header() {
   return (
     <section className={styles.Header}>
-      <ResponsiveWrapper withPadding className={styles.InnerWrapper}>
+      <ResponsiveWrapper withMargin className={styles.InnerWrapper}>
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmoKyKfvQdoELlHQd4QZoIIIRiAJ3S2gj4yg&s"
           className={styles.Picture}
