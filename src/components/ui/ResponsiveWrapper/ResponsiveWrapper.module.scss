@@ -6,12 +6,14 @@
 }
 
 .WithMargin {
+  width: calc(100% - 4rem);
   margin: 2rem;
 }
 
 .WithBorder {
   border-left: 1px solid var(--primary-text-color);
   margin: 0;
+  width: calc(100% - 2rem);
   margin-left: 2rem;
   padding: 2rem;
 }
