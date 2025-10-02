@@ -1,0 +1,19 @@
+.SocialMediaLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--primary-text-color);
+  height: fit-content;
+  aspect-ratio: 1/1;
+
+  i {
+    font-size: 1.6rem;
+    transform: translateY(-2px);
+    transition: color 150ms;
+  }
+
+  &:hover {
+    color: rgba(var(--primary-text-color-raw), 0.5);
+  }
+}
