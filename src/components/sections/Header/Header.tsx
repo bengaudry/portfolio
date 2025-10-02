@@ -1,3 +1,4 @@
+import { HeroTitle } from "../../misc";
 import { ResponsiveWrapper } from "../../ui";
 import { SocialMediaLink } from "../../ui/SocialMediaLink/SocialMediaLink";
 import styles from "./Header.module.scss";
@@ -10,7 +11,7 @@ export function Header() {
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmoKyKfvQdoELlHQd4QZoIIIRiAJ3S2gj4yg&s"
           className={styles.Picture}
         />
-        <h1 className={styles.Title}>Ben Gaudry</h1>
+        <HeroTitle />
         <p className={styles.Subtitle}>
           Étudiant en informatique dans l'école d'ingénieurs Polytech Lyon, je
           suis spécialisé dans le développement web, et notamment le front-end

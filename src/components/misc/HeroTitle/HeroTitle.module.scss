@@ -1,0 +1,9 @@
+.HeroTitle {
+  font-size: clamp(2rem, 10vw, 5.5rem);
+  font-weight: 700;
+
+  span {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}
