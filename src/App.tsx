@@ -1,4 +1,4 @@
-import { About, Header } from "./components/sections";
+import { About, Header, Skills } from "./components/sections";
 import "./styles/App.scss";
 
 export default function App() {
@@ -6,6 +6,7 @@ export default function App() {
     <>
       <Header />
       <About />
+      <Skills />
     </>
   );
 }

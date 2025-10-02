@@ -1,11 +1,11 @@
 import { ResponsiveWrapper, SectionTitle } from "../../ui";
-import styles from "./About.module.scss";
+import styles from "./Skills.module.scss";
 
-export function About() {
+export function Skills() {
   return (
-    <div className={styles.About}>
+    <div className={styles.Skills}>
       <ResponsiveWrapper withMargin withBorder>
-        <SectionTitle title="À propos" />
+        <SectionTitle title="Compétences" />
       </ResponsiveWrapper>
     </div>
   );
