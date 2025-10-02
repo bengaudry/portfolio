@@ -1,0 +1,20 @@
+.List {
+  position: relative;
+}
+
+.RoundedSquare {
+  position: absolute;
+  top: -1rem;
+  left: calc(-2rem - 1px);
+  width: 2rem;
+  height: 2rem;
+  border-bottom-left-radius: 100%;
+  border-bottom: 1px solid var(--primary-text-color);
+  border-left: 1px solid var(--primary-text-color);
+}
+
+.Title {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
