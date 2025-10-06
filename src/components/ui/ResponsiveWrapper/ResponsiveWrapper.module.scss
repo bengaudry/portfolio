@@ -11,9 +11,42 @@
 }
 
 .WithBorder {
+  position: relative;
   border-left: 1px solid var(--primary-text-color);
   margin: 0;
   width: calc(100% - 2rem);
   margin-left: 2rem;
   padding: 2rem;
+}
+
+.First::before {
+  position: absolute;
+  z-index: 30;
+  left: -1px;
+  top: 0;
+  content: "";
+  display: block;
+  height: 2rem;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    var(--main-background-color),
+    var(--primary-text-color)
+  );
+}
+
+.Last::before {
+  position: absolute;
+  z-index: 30;
+  left: -1px;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2rem;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    var(--primary-text-color),
+    var(--main-background-color)
+  );
 }

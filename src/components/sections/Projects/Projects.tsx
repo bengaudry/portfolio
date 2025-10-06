@@ -1,12 +1,14 @@
-import { ResponsiveWrapper, SectionTitle } from "../../ui";
+import { List, ResponsiveWrapper, SectionTitle } from "../../ui";
 import styles from "./Projects.module.scss";
 
 export function Projects() {
   return (
-    <div className={styles.Projects}>
+    <section className={styles.Projects}>
       <ResponsiveWrapper withMargin withBorder>
         <SectionTitle title="Projets" />
+        <List title="Studyswipe" />
+        <List title="Sortify" />
       </ResponsiveWrapper>
-    </div>
+    </section>
   );
 }

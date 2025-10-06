@@ -4,7 +4,7 @@ import styles from "./About.module.scss";
 export function About() {
   return (
     <div className={styles.About}>
-      <ResponsiveWrapper withMargin withBorder>
+      <ResponsiveWrapper withMargin withBorder isFirst>
         <SectionTitle title="À propos" />
       </ResponsiveWrapper>
     </div>
