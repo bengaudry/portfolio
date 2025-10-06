@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "presentation": "I am a computer science student at the engineering school Polytech Lyon, and I am specialized in web development, especially front-end"
+  },
+  "about": {
+    "title": "About"
+  },
+  "skills": {
+    "title": "Skills",
+    "front-end": "Front-end",
+    "back-end": "Back-end",
+    "tools": "Tools",
+    "others": "Others"
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "contact": {
+    "title": "Contact"
+  }
+}

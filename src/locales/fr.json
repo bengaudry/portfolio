@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "presentation": "Étudiant en informatique dans l'école d'ingénieurs Polytech Lyon, je suis spécialisé dans le développement web, et notamment le front-end"
+  },
+  "about": {
+    "title": "À props"
+  },
+  "skills": {
+    "title": "Compétences",
+    "front-end": "Front-end",
+    "back-end": "Back-end",
+    "tools": "Outils",
+    "others": "Autres"
+  },
+  "projects": {
+    "title": "Projets"
+  },
+  "contact": {
+    "title": "Contact"
+  }
+}
