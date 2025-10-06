@@ -1,19 +1,18 @@
 .SocialMediaLink {
+  padding: 0.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: var(--primary-text-color);
   height: fit-content;
   aspect-ratio: 1/1;
-
-  i {
-    font-size: 1.6rem;
-    transform: translateY(-2px);
-    transition: color 150ms;
-  }
+  transition: opacity 100ms;
 
   &:hover {
-    color: rgba(var(--primary-text-color-raw), 0.5);
+    opacity: 0.5;
+  }
+
+  &:first-child {
+    padding-left: 0;
   }
 }

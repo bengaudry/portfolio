@@ -1,11 +1,11 @@
 import { HeroTitle } from "../../misc";
 import { ResponsiveWrapper } from "../../ui";
 import { SocialMediaLink } from "../../ui/SocialMediaLink/SocialMediaLink";
-import styles from "./Header.module.scss";
+import styles from "./Hero.module.scss";
 
-export function Header() {
+export function Hero() {
   return (
-    <section className={styles.Header}>
+    <section className={styles.Hero}>
       <ResponsiveWrapper withMargin className={styles.InnerWrapper}>
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmoKyKfvQdoELlHQd4QZoIIIRiAJ3S2gj4yg&s"

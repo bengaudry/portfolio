@@ -1,17 +1,11 @@
 import styles from "./App.module.scss";
-import {
-  About,
-  Contact,
-  Header,
-  Projects,
-  Skills,
-} from "./components/sections";
+import { About, Contact, Hero, Projects, Skills } from "./components/sections";
 import "./styles/App.scss";
 
 export default function App() {
   return (
     <div className={styles.App}>
-      <Header />
+      <Hero />
       <About />
       <Skills />
       <Projects />

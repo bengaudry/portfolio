@@ -6,6 +6,7 @@ export function Projects() {
     <section className={styles.Projects}>
       <ResponsiveWrapper withMargin withBorder>
         <SectionTitle title="Projets" />
+        <List title="Split Tabs" />
         <List title="Studyswipe" />
         <List title="Sortify" />
       </ResponsiveWrapper>

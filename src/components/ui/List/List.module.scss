@@ -13,8 +13,36 @@
   border-left: 1px solid var(--primary-text-color);
 }
 
-.Title {
+.TitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   margin-left: 1rem;
+}
+
+.Title {
   font-size: 1.2rem;
   font-weight: 700;
+}
+
+.ListItem {
+  background: var(--primary-text-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+
+  p {
+    color: var(--main-background-color);
+    white-space: nowrap;
+  }
+}
+
+.ListItemsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-bottom: 12px;
 }
