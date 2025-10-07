@@ -15,6 +15,13 @@ export function Hero() {
           className={styles.Picture}
         />
         <HeroTitle />
+        <p className={styles.Location}>
+          <img
+            src="https://img.icons8.com/?size=100&id=3nOZtpH7KQrP&format=png&color=000000"
+            height={24}
+          />
+          <u>Lyon, France</u>
+        </p>
         <p className={styles.Subtitle}>{t("hero.presentation")}</p>
         <div className={styles.SocialMediaLinksWrapper}>
           <SocialMediaLink name="linkedin" />

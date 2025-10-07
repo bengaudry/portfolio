@@ -10,6 +10,7 @@ export type ListProps = PropsWithChildren<{
   title: string;
   iconUrl?: string;
   items?: Array<ListItemT>;
+  className?: string;
 }>;
 
 function ListItem({ title, iconUrl }: ListItemT) {
@@ -25,14 +26,23 @@ function ListItemsContainer({ children }: PropsWithChildren) {
   return <div className={styles.ListItemsContainer}>{children}</div>;
 }
 
-export function List({ title, iconUrl, children, items }: ListProps) {
+export function List({
+  title,
+  iconUrl,
+  children,
+  items,
+  className,
+}: ListProps) {
+  const classNames = [styles.List];
+  if (className) classNames.push(className);
+
   const Children = () => {
     if (!items) return children;
     return <ListItemsContainer>{items.map(ListItem)}</ListItemsContainer>;
   };
 
   return (
-    <div className={styles.List}>
+    <div className={classNames.join(" ")}>
       <div className={styles.RoundedSquare} />
       <div className={styles.TitleContainer}>
         {iconUrl && <img height={32} src={iconUrl} />}

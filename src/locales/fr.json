@@ -13,9 +13,23 @@
     "others": "Autres"
   },
   "projects": {
-    "title": "Projets"
+    "title": "Projets",
+    "split-tabs": {
+      "description": "Un module Firefox qui permet à ses utilisateurs d'ouvrir deux sites webs en un seul onglet avec un système de vue séparée."
+    },
+    "studyswipe": {
+      "description": "Une application web à destination des étudiants pour réviser ses cours sous forme de flashcards."
+    },
+    "onboarder": {
+      "description": "Un outil IA intégré au terminal permettant de se repérer plus facilement dans un code encore inconnu."
+    }
   },
   "contact": {
     "title": "Contact"
+  },
+  "common": {
+    "active": "actif",
+    "inactive": "inactif",
+    "development": "développement"
   }
 }

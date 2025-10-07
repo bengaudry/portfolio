@@ -1,2 +1,65 @@
 .Projects {
 }
+
+.ProjectItem {
+  &:hover {
+    .ProjectPicture {
+      filter: none;
+    }
+  }
+}
+
+.ProjectItem {
+  & > article {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  p {
+    display: block;
+    max-width: 350px;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .ProjectItem > article {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.ProjectPicture {
+  width: 100%;
+  max-width: 350px;
+  filter: grayscale(1);
+}
+
+.ProjectStatePill {
+  --background-raw: 140, 140, 140;
+  margin-top: 1rem;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 6px 12px;
+  width: fit-content;
+  border-radius: 4px;
+  background: rgba(var(--background-raw), 0.2);
+  color: rgba(var(--background-raw), 0.6);
+  font-size: 0.8rem;
+
+  span:first-child {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: rgb(var(--background-raw), 0.7);
+  }
+
+  &[aria-label="active"] {
+    --background-raw: 0, 255, 153;
+  }
+  &[aria-label="development"] {
+    --background-raw: 255, 166, 1;
+  }
+}

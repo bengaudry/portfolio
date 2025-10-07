@@ -13,9 +13,23 @@
     "others": "Others"
   },
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "split-tabs": {
+      "description": "A firefox addon that allows its users to open two websites in a single tab with a system of split view."
+    },
+    "studyswipe": {
+      "description": "A web app for students to study their courses with flashcards."
+    },
+    "onboarder": {
+      "description": "An CLI AI tool to discover and explore easily new code projects."
+    }
   },
   "contact": {
     "title": "Contact"
+  },
+  "common": {
+    "active": "active",
+    "inactive": "inactive",
+    "development": "development"
   }
 }

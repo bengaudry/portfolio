@@ -9,7 +9,7 @@ import en from "./locales/en.json";
 import fr from "./locales/fr.json";
 
 i18n.use(initReactI18next).init({
-  fallbackLng: "en",
+  fallbackLng: "fr",
   interpolation: {
     escapeValue: false,
   },

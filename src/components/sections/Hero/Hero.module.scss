@@ -56,3 +56,15 @@
   flex-direction: row;
   align-items: center;
 }
+
+.Location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2rem;
+
+  u {
+    font-size: 1.2rem;
+    color: var(--primary-text-color);
+  }
+}
