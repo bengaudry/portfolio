@@ -42,6 +42,7 @@ export function Skills() {
             { title: "VS Code" },
             { title: "Github" },
             { title: "Notion" },
+            { title: "Vercel" },
           ]}
         />
         <List
