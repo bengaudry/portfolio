@@ -13,27 +13,27 @@ const SKILLS: Record<
       {
         title: "HTML",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=23028&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=23028&format=png&color=000000",
       },
       {
         title: "CSS",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=38272&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=38272&format=png&color=000000",
       },
       {
         title: "React",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=35989&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=35989&format=png&color=000000",
       },
       {
         title: "TypeScript",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=cHBUT9SmrD2V&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=cHBUT9SmrD2V&format=png&color=000000",
       },
       {
         title: "TailwindCSS",
         iconUrl:
-          "https://img.icons8.com/?size=100&id=UpSCHTwpywad&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=UpSCHTwpywad&format=png&color=000000",
       },
       {
         title: "Alpine.js",
@@ -47,32 +47,32 @@ const SKILLS: Record<
       {
         title: "Next.JS",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=yUdJlcKanVbh&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=yUdJlcKanVbh&format=png&color=000000",
       },
       {
         title: "Prisma",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=aqb9SdV9P8oC&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=aqb9SdV9P8oC&format=png&color=000000",
       },
       {
         title: "Firebase",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=5pr1cz6sq9qI&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=5pr1cz6sq9qI&format=png&color=000000",
       },
       {
         title: "Supabase",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=WOIMvKUjwCRp&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=WOIMvKUjwCRp&format=png&color=000000",
       },
       {
         title: "NodeJS",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=FQlr_bFSqEdG&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=FQlr_bFSqEdG&format=png&color=000000",
       },
       {
         title: "Oracle SQL",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=8305&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=8305&format=png&color=000000",
       },
     ],
   },
@@ -83,32 +83,32 @@ const SKILLS: Record<
       {
         title: "Git",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=38389&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=38389&format=png&color=000000",
       },
       {
         title: "Figma",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=amXjtNWVYSKP&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=amXjtNWVYSKP&format=png&color=000000",
       },
       {
         title: "Canva",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=jGpsTXAr6PAK&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=jGpsTXAr6PAK&format=png&color=000000",
       },
       {
         title: "VS Code",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=SNeRmWiOLnK7&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=SNeRmWiOLnK7&format=png&color=000000",
       },
       {
         title: "Github",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=62856&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=62856&format=png&color=000000",
       },
       {
         title: "Notion",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=F6H2fsqXKBwH&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=F6H2fsqXKBwH&format=png&color=000000",
       },
       { title: "Vercel" },
     ],
@@ -120,23 +120,23 @@ const SKILLS: Record<
       {
         title: "Java",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=2572&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=2572&format=png&color=000000",
       },
       {
         title: "Python",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=12592&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=12592&format=png&color=000000",
       },
       { title: "C" },
       {
         title: "ARM",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=9134&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=9134&format=png&color=000000",
       },
       {
         title: "React Native",
         iconUrl:
-          "https://img.icons8.com/?size=16&id=35989&format=png&color=000000",
+          "https://img.icons8.com/?size=32&id=35989&format=png&color=000000",
       },
     ],
   },

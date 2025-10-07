@@ -21,16 +21,24 @@ function Project({
   description,
   imgSrc,
   state,
+  link,
 }: {
   title: string;
   description: string;
   imgSrc: string;
   state: ProjectState;
+  link?: string;
 }) {
   return (
     <List className={styles.ProjectItem} title={title}>
       <article>
-        <img src={imgSrc} className={styles.ProjectPicture} />
+        <img
+          src={imgSrc}
+          className={styles.ProjectPicture}
+          onClick={() => {
+            if (link) open(link, "_blank");
+          }}
+        />
         <div>
           <p>{description}</p>
           <ProjectStatePill state={state} />
@@ -52,12 +60,14 @@ export function Projects() {
           state="active"
           description={t("projects.split-tabs.description")}
           imgSrc="https://addons.mozilla.org/user-media/previews/full/322/322418.png?modified=1748884796"
+          link="https://addons.mozilla.org/firefox/addon/split-tabs"
         />
         <Project
           title="Studyswipe"
           state="active"
           description={t("projects.studyswipe.description")}
           imgSrc="/portfolio/studyswipe-screenshot.png"
+          link="https://studyswipe.vercel.app"
         />
         <Project
           title="Onboarder"

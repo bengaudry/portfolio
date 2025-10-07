@@ -1,0 +1,11 @@
+.MenuTrigger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+  aspect-ratio: 1/1;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  color: white;
+}
