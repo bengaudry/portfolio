@@ -28,6 +28,9 @@
 }
 
 .ListItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   background: var(--primary-text-color);
   border-radius: 6px;
   padding: 6px 12px;

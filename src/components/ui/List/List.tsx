@@ -3,11 +3,19 @@ import styles from "./List.module.scss";
 
 export type ListItemT = {
   title: string;
+  iconUrl?: string;
 };
 
-function ListItem({ title }: ListItemT) {
+export type ListProps = PropsWithChildren<{
+  title: string;
+  iconUrl?: string;
+  items?: Array<ListItemT>;
+}>;
+
+function ListItem({ title, iconUrl }: ListItemT) {
   return (
     <div className={styles.ListItem}>
+      {iconUrl && <img src={iconUrl} height={16} />}
       <p>{title}</p>
     </div>
   );
@@ -17,13 +25,7 @@ function ListItemsContainer({ children }: PropsWithChildren) {
   return <div className={styles.ListItemsContainer}>{children}</div>;
 }
 
-export type ListProps = PropsWithChildren<{
-  title: string;
-  icon?: string;
-  items?: Array<ListItemT>;
-}>;
-
-export function List({ title, icon, children, items }: ListProps) {
+export function List({ title, iconUrl, children, items }: ListProps) {
   const Children = () => {
     if (!items) return children;
     return <ListItemsContainer>{items.map(ListItem)}</ListItemsContainer>;
@@ -33,7 +35,7 @@ export function List({ title, icon, children, items }: ListProps) {
     <div className={styles.List}>
       <div className={styles.RoundedSquare} />
       <div className={styles.TitleContainer}>
-        {icon && <img height={32} src={icon} />}
+        {iconUrl && <img height={32} src={iconUrl} />}
         <span className={styles.Title}>{title}</span>
       </div>
       <Children />
