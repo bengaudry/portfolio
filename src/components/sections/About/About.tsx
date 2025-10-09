@@ -16,11 +16,11 @@ export function About() {
         <SectionTitle title={t("about.title")} />
         {t("about.content")
           .split("\n")
-          .map((content) => (
+          .map((content, idx) => (
             <motion.p
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.3*idx }}
               style={{ display: "flex", gap: "1rem", marginTop: 12 }}
             >
               <span>{"$"}</span>
