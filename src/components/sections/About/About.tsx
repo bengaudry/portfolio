@@ -11,14 +11,13 @@ export function About() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className={styles.About}>
+    <section ref={ref} className={styles.About}>
       <ResponsiveWrapper withBorder isFirst style={{ paddingBottom: 0 }}>
         <SectionTitle title={t("about.title")} />
         {t("about.content")
           .split("\n")
           .map((content) => (
             <motion.p
-              ref={ref}
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
