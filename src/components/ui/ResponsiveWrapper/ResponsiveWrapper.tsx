@@ -1,4 +1,4 @@
-import type { PropsWithChildren } from "react";
+import type { CSSProperties, PropsWithChildren } from "react";
 import styles from "./ResponsiveWrapper.module.scss";
 
 export type ResponsiveWrapperProps = PropsWithChildren<{
@@ -7,6 +7,7 @@ export type ResponsiveWrapperProps = PropsWithChildren<{
   className?: string;
   isFirst?: boolean;
   isLast?: boolean;
+  style?: CSSProperties;
 }>;
 
 export function ResponsiveWrapper({
@@ -16,6 +17,7 @@ export function ResponsiveWrapper({
   className,
   withBorder,
   withMargin,
+  style,
 }: ResponsiveWrapperProps) {
   const classNames = [styles.ResponsiveWrapper];
   if (withMargin) classNames.push(styles.WithMargin);
@@ -24,5 +26,9 @@ export function ResponsiveWrapper({
   if (isLast) classNames.push(styles.Last);
   if (className) classNames.push(className);
 
-  return <div className={classNames.join(" ")}>{children}</div>;
+  return (
+    <div className={classNames.join(" ")} style={style}>
+      {children}
+    </div>
+  );
 }

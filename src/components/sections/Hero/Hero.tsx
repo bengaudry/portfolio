@@ -15,7 +15,7 @@ export function Hero() {
       transition={{ duration: 0.6 }}
       className={styles.Hero}
     >
-      <ResponsiveWrapper withMargin className={styles.InnerWrapper}>
+      <ResponsiveWrapper className={styles.InnerWrapper}>
         <img src="/portfolio/me.png" className={styles.Picture} />
         <HeroTitle />
         <p className={styles.Location}>
@@ -25,7 +25,7 @@ export function Hero() {
           />
           <u>Lyon, France</u>
         </p>
-        <p className={styles.Subtitle}>{t("hero.presentation")}</p>
+        <p>{t("hero.presentation")}</p>
         <div className={styles.SocialMediaLinksWrapper}>
           <SocialMediaLink name="linkedin" />
           <SocialMediaLink name="github" />

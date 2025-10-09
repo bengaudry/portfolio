@@ -12,9 +12,9 @@ export function Rhombus(props: RhombusProps) {
     <motion.div
       className={classNames.join(" ")}
       {...otherProps}
-      initial={{ transform: "rotate(90deg)" }}
-      animate={props.isInView ? { transform: "rotate(0)" } : {}}
-      transition={{ duration: 0.3, ease: "easeOut" }}
+      initial={{ opacity: 0, transform: "scale(0.8) rotate(-45deg)" }}
+      animate={props.isInView ? { opacity: 1, transform: "scale(1) rotate(0)" } : {}}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
     />
   );
 }

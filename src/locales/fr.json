@@ -3,7 +3,11 @@
     "presentation": "Étudiant en informatique dans l'école d'ingénieurs Polytech Lyon, je suis spécialisé dans le développement web, et notamment le front-end"
   },
   "about": {
-    "title": "À propos"
+    "title": "À propos",
+    "content": "J'ai commencé à coder au début du collège avec les cours de développement web de Mathieu Nebra sur OpenClassrooms.\nPendant le confinement j'ai étendu mes connaissances en code avec le développement de jeu vidéo sur UE4.\nJ'ai depuis développé plusieurs projets par moi-même, et formalisé mes connaissances avec mes études.\nJ'aimerais travailler dans le développement logiciel et éventuellement dans le domaine automobile"
+  },
+  "education": {
+    "title": "Formation"
   },
   "skills": {
     "title": "Compétences",

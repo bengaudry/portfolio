@@ -3,7 +3,11 @@
     "presentation": "I am a computer science student at the engineering school Polytech Lyon, and I am specialized in web development, especially front-end"
   },
   "about": {
-    "title": "About"
+    "title": "About",
+    "content": "I started coding in the beggining of middle school with Mathieu Nebra's web development course on OpenClassrooms.\nDuring lockdown, I extended my coding skills with game development on UE4.\nSince that, I developed many projects by myself, and I deepened my knowledge with my studies.\nI would like to work in software development and possibly in the automotive industry."
+  },
+  "education": {
+    "title": "Education"
   },
   "skills": {
     "title": "Skills",

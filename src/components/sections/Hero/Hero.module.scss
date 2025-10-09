@@ -3,11 +3,11 @@
   position: relative;
   flex-direction: column;
   min-height: 70vh;
-  margin-bottom: 4rem;
   background-image: linear-gradient(to right, #26ae7725 1px, transparent 1px),
     linear-gradient(to bottom, #029eff25 1px, transparent 1px);
   background-size: 24px 24px;
   background-position: -1px -1px;
+  margin-bottom: 4rem;
 
   & > div {
     z-index: 20;
@@ -30,10 +30,6 @@
       var(--main-background-color)
     );
   }
-}
-
-.Subtitle {
-  max-width: 580px;
 }
 
 .InnerWrapper {
