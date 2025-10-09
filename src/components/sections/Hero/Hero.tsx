@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { HeroTitle } from "../../misc";
 import { ResponsiveWrapper } from "../../ui";
@@ -8,12 +9,14 @@ export function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className={styles.Hero}>
+    <motion.section
+      initial={{ opacity: 0, y: 20, scale: .9 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.6 }}
+      className={styles.Hero}
+    >
       <ResponsiveWrapper withMargin className={styles.InnerWrapper}>
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmoKyKfvQdoELlHQd4QZoIIIRiAJ3S2gj4yg&s"
-          className={styles.Picture}
-        />
+        <img src="/portfolio/me.png" className={styles.Picture} />
         <HeroTitle />
         <p className={styles.Location}>
           <img
@@ -29,6 +32,6 @@ export function Hero() {
           <SocialMediaLink name="mail" />
         </div>
       </ResponsiveWrapper>
-    </section>
+    </motion.section>
   );
 }

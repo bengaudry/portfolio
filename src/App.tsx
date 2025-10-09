@@ -1,5 +1,5 @@
 import styles from "./App.module.scss";
-import { About, Contact, Hero, Projects, Skills } from "./components/sections";
+import { About, Contact, Footer, Hero, Projects, Skills } from "./components/sections";
 import "./styles/App.scss";
 
 export default function App() {
@@ -10,6 +10,7 @@ export default function App() {
       <Skills />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 }

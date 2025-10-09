@@ -1,4 +1,5 @@
-import type { PropsWithChildren } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef, type PropsWithChildren } from "react";
 import styles from "./List.module.scss";
 
 export type ListItemT = {
@@ -33,6 +34,9 @@ export function List({
   items,
   className,
 }: ListProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
   const classNames = [styles.List];
   if (className) classNames.push(className);
 
@@ -42,13 +46,19 @@ export function List({
   };
 
   return (
-    <div className={classNames.join(" ")}>
+    <motion.div
+      ref={ref}
+      className={classNames.join(" ")}
+      initial={{ opacity: 0, scaleX: 0.9 }}
+      animate={isInView ? { opacity: 1, scaleX: 1, originX: 0 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className={styles.RoundedSquare} />
       <div className={styles.TitleContainer}>
         {iconUrl && <img height={32} src={iconUrl} />}
         <span className={styles.Title}>{title}</span>
       </div>
       <Children />
-    </div>
+    </motion.div>
   );
 }

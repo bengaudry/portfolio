@@ -1,8 +1,7 @@
-.Projects {
-}
-
 .ProjectItem {
   &:hover {
+    cursor: pointer;
+
     .ProjectPicture {
       filter: none;
     }
