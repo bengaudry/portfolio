@@ -15,7 +15,7 @@ export function Hero() {
       transition={{ duration: 0.6 }}
       className={styles.Hero}
     >
-      <ResponsiveWrapper className={styles.InnerWrapper}>
+      <ResponsiveWrapper withMargin className={styles.InnerWrapper}>
         <img src="/portfolio/me.png" className={styles.Picture} />
         <HeroTitle />
         <p className={styles.Location}>
