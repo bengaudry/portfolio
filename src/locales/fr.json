@@ -25,7 +25,8 @@
     }
   },
   "contact": {
-    "title": "Contact"
+    "title": "Contact",
+    "contactMe": "Contactez moi par email :"
   },
   "common": {
     "active": "actif",

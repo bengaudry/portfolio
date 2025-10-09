@@ -146,7 +146,7 @@ export function Skills() {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.Skills}>
+    <section className={styles.Skills}>
       <ResponsiveWrapper withMargin withBorder>
         <SectionTitle title={t("skills.title")} />
         {Object.keys(SKILLS).map((skillName) => (
@@ -157,6 +157,6 @@ export function Skills() {
           />
         ))}
       </ResponsiveWrapper>
-    </div>
+    </section>
   );
 }

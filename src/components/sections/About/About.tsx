@@ -6,10 +6,10 @@ export function About() {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.About}>
+    <section className={styles.About}>
       <ResponsiveWrapper withMargin withBorder isFirst>
         <SectionTitle title={t("about.title")} />
       </ResponsiveWrapper>
-    </div>
+    </section>
   );
 }

@@ -6,12 +6,12 @@ export function Contact() {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.Contact}>
+    <section className={styles.Contact}>
       <ResponsiveWrapper withMargin withBorder isLast>
         <SectionTitle title={t("contact.title")} />
-        <p>Contactez moi par email :</p>
+        <p>{t("contact.contactMe")}</p>
         <a href="mailto:bengaudry@outlook.fr">bengaudry@outlook.fr</a>
       </ResponsiveWrapper>
-    </div>
+    </section>
   );
 }
