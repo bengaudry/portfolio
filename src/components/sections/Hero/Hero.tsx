@@ -16,7 +16,7 @@ export function Hero() {
       className={styles.Hero}
     >
       <ResponsiveWrapper withMargin className={styles.InnerWrapper}>
-        <img src="/portfolio/me.png" className={styles.Picture} />
+        <img src="/portfolio/me.jpg" className={styles.Picture} />
         <HeroTitle />
         <p className={styles.Location}>
           <img

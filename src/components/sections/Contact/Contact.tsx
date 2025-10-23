@@ -10,7 +10,7 @@ export function Contact() {
       <ResponsiveWrapper withMargin withBorder isLast>
         <SectionTitle title={t("contact.title")} />
         <p>{t("contact.contactMe")}</p>
-        <a href="mailto:bengaudry@outlook.fr">bengaudry@outlook.fr</a>
+        <a href="mailto:bengaudry@outlook.com">bengaudry@outlook.com</a>
       </ResponsiveWrapper>
     </section>
   );
