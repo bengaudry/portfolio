@@ -21,6 +21,32 @@
   }
 }
 
+.ProjectIcon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.5rem;
+}
+
+.ProjectLinks {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    height: 24px;
+    width: 24px;
+    display: block;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
 @media screen and (min-width: 780px) {
   .ProjectItem > article {
     flex-direction: row;
@@ -36,7 +62,6 @@
 
 .ProjectStatePill {
   --background-raw: 140, 140, 140;
-  margin-top: 1rem;
   display: flex;
   gap: 6px;
   align-items: center;
