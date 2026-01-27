@@ -23,7 +23,7 @@ function Project({
   iconSrc,
   state,
   link,
-  repoUrl
+  repoUrl,
 }: {
   title: string;
   description: string;
@@ -34,21 +34,21 @@ function Project({
   repoUrl?: string;
 }) {
   return (
-    <List className={styles.ProjectItem} title={title}>
+    <List className={styles.ProjectItem} title={title} iconUrl={iconSrc}>
       <article>
         <a href={link} target="_blank" rel="noopener noreferrer">
           <img
             src={imgSrc}
-            className={styles.ProjectPicture} alt={`${title} screenshot`}
+            className={styles.ProjectPicture}
+            alt={`${title} screenshot`}
           />
         </a>
 
         <div>
-          {iconSrc && <img src={iconSrc} alt="Icon" width={32} height={32} className={styles.ProjectIcon} />}
           <p>{description}</p>
           <div className={styles.ProjectLinks}>
             <ProjectStatePill state={state} />
-            {repoUrl &&
+            {repoUrl && (
               <a href={repoUrl} target="_blank" rel="noopener noreferrer">
                 <img
                   height={24}
@@ -57,7 +57,7 @@ function Project({
                   src="https://img.icons8.com/?size=100&id=62856&format=png&color=ffffff"
                 />
               </a>
-            }
+            )}
           </div>
         </div>
       </article>
