@@ -1,4 +1,8 @@
 .ProjectItem {
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+
   &:hover {
     cursor: pointer;
 
