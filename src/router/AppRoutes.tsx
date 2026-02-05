@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-import App from "../App";
+import App from "../views/App";
 
 export function AppRoutes() {
     return <Routes>
