@@ -11,24 +11,24 @@ export function SocialMediaLink({ name }: SocialMediaLinkProps) {
   if ("linkedin" === name) {
     link = "https://www.linkedin.com/in/ben-gaudry-4702932a5/";
     iconSrc =
-      "https://img.icons8.com/?size=100&id=8808&format=png&color=ffffff";
+      "https://img.icons8.com/?size=36&id=8808&format=png&color=ffffff";
   }
 
   if ("github" === name) {
     link = "https://github.com/bengaudry";
     iconSrc =
-      "https://img.icons8.com/?size=100&id=62856&format=png&color=ffffff";
+      "https://img.icons8.com/?size=36&id=62856&format=png&color=ffffff";
   }
 
   if ("mail" === name) {
     link = "mailto:bengaudry@outlook.com";
     iconSrc =
-      "https://img.icons8.com/?size=100&id=YRRhCXfA0Vd0&format=png&color=ffffff";
+      "https://img.icons8.com/?size=36&id=YRRhCXfA0Vd0&format=png&color=ffffff";
   }
 
   return (
     <a className={styles.SocialMediaLink} href={link} target="_blank">
-      <img height={36} src={iconSrc} />
+      <img height={36} width={36} src={iconSrc} />
     </a>
   );
 }
