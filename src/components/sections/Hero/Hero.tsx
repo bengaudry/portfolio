@@ -3,9 +3,8 @@ import { useTranslation } from "react-i18next";
 import { HeroTitle } from "../../misc";
 import { ResponsiveWrapper } from "../../ui";
 import { SocialMediaLink } from "../../ui/SocialMediaLink/SocialMediaLink";
-
+import { LangSelector } from "../../misc/LangSelector/LangSelector";
 import meImgSrc from "../../../assets/me.jpg";
-
 import styles from "./Hero.module.scss";
 
 export function Hero() {
@@ -19,6 +18,7 @@ export function Hero() {
       className={styles.Hero}
     >
       <ResponsiveWrapper withMargin className={styles.InnerWrapper}>
+        <LangSelector />
         <img src={meImgSrc} className={styles.Picture} />
         <HeroTitle />
         <p className={styles.Location}>

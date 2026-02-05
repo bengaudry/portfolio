@@ -1,0 +1,27 @@
+.LangSelector {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-secondary);
+  position: absolute;
+  z-index: 20;
+  top: 5vh;
+}
+
+.separator {
+  margin-right: .5rem;
+  height: 100%;
+  width: 1px;
+}
+
+.button {
+  display: block;
+  padding: 4px 8px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
