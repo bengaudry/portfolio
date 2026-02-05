@@ -12,6 +12,7 @@ export type ListProps = PropsWithChildren<{
   iconUrl?: string;
   items?: Array<ListItemT>;
   className?: string;
+  linksTo?: string;
 }>;
 
 function ListItem({ title, iconUrl }: ListItemT) {
@@ -32,6 +33,7 @@ export function List({
   iconUrl,
   children,
   items,
+  linksTo,
   className,
 }: ListProps) {
   const ref = useRef(null);
@@ -56,7 +58,18 @@ export function List({
       <div className={styles.RoundedSquare} />
       <div className={styles.TitleContainer}>
         {iconUrl && <img height={32} src={iconUrl} />}
-        <span className={styles.Title}>{title}</span>
+        {linksTo ? (
+          <a
+            href={linksTo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.Title}
+          >
+            {title}
+          </a>
+        ) : (
+          <span className={styles.Title}>{title}</span>
+        )}
       </div>
       <Children />
     </motion.div>

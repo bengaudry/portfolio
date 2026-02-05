@@ -44,6 +44,7 @@ export function Education() {
         </List>
         <List
           title="Université Grenoble Alpes"
+          linksTo="https://www.univ-grenoble-alpes.fr/"
           iconUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReXxUySnD6gMiW5fa-7QML3b_2loN0ajH09A&s"
         >
           <EducationItem
@@ -55,6 +56,7 @@ export function Education() {
         </List>
         <List
           title="Polytech Lyon"
+          linksTo="https://polytech.univ-lyon1.fr/"
           iconUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrRODzZ0NqirXYQ9V-cR5P59JFGT5FoMUi0g&s"
         >
           <EducationItem
