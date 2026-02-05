@@ -20,8 +20,13 @@
   padding: 4px 8px;
   background: none;
   border: none;
-  color: var(--text-secondary);
+  color: var(--secondary-text-color);
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.button.active {
+  color: var(--primary-text-color);
 }
