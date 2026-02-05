@@ -4,9 +4,10 @@ import { HeroTitle } from "../../misc";
 import { ResponsiveWrapper } from "../../ui";
 import { SocialMediaLink } from "../../ui/SocialMediaLink/SocialMediaLink";
 import { LangSelector } from "../../misc/LangSelector/LangSelector";
-import meImgSrc from "../../../assets/me.jpg";
-import styles from "./Hero.module.scss";
 import { DownloadResumeButton } from "../../misc/DownloadResumeButton/DownloadResumeButton";
+import meImgSrc from "../../../assets/me.jpg";
+import locationIconSrc from "../../../assets/icons/icons8-location-94.png"
+import styles from "./Hero.module.scss";
 
 export function Hero() {
 	const { t } = useTranslation();
@@ -20,12 +21,13 @@ export function Hero() {
 		>
 			<ResponsiveWrapper withMargin className={styles.InnerWrapper}>
 				<LangSelector />
-				<img src={meImgSrc} className={styles.Picture} />
+				<img src={meImgSrc} className={styles.Picture} width={480} height={480} />
 				<HeroTitle />
 				<p className={styles.Location}>
 					<img
-						src="https://img.icons8.com/?size=100&id=3nOZtpH7KQrP&format=png&color=000000"
+						src={locationIconSrc}
 						height={24}
+						width={24}
 					/>
 					<u>Lyon, France</u>
 				</p>

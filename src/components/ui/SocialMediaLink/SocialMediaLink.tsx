@@ -1,5 +1,8 @@
 import { PERSONNAL_EMAIL } from "../../../lib/constants";
 import styles from "./SocialMediaLink.module.scss";
+import linkedinIconSrc from "../../../assets/icons/icons8-linkedin-50.png"
+import githubIconSrc from "../../../assets/icons/icons8-github-64.png"
+import mailIconSrc from "../../../assets/icons/icons8-mail-50.png"
 
 export type SocialMediaLinkProps = {
 	name: "linkedin" | "github" | "mail";
@@ -11,20 +14,17 @@ export function SocialMediaLink({ name }: SocialMediaLinkProps) {
 
 	if ("linkedin" === name) {
 		link = "https://www.linkedin.com/in/ben-gaudry-4702932a5/";
-		iconSrc =
-			"https://img.icons8.com/?size=36&id=8808&format=png&color=ffffff";
+		iconSrc = linkedinIconSrc
 	}
 
 	if ("github" === name) {
 		link = "https://github.com/bengaudry";
-		iconSrc =
-			"https://img.icons8.com/?size=36&id=62856&format=png&color=ffffff";
+		iconSrc = githubIconSrc
 	}
 
 	if ("mail" === name) {
 		link = `mailto:${PERSONNAL_EMAIL}`;
-		iconSrc =
-			"https://img.icons8.com/?size=36&id=YRRhCXfA0Vd0&format=png&color=ffffff";
+		iconSrc = mailIconSrc
 	}
 
 	return (

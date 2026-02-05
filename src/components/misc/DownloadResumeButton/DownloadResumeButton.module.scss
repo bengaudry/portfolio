@@ -11,6 +11,11 @@
 	margin-left: 1rem;
 	transition: background-color 0.3s ease;
 
+	span {
+		font-weight: 500;
+		font-size: 1.1rem;
+	}
+
 	&:hover {
 		background-color: rgba(var(--primary-text-color-raw), 0.8);
 	}

@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router";
+import downloadIconSrc from "../../../assets/icons/icons8-download-64.png"
 import styles from "./DownloadResumeButton.module.scss";
 
 const RESUMES: Record<string, { name: string; url: string }> = {
@@ -26,7 +27,7 @@ export function DownloadResumeButton() {
 		>
 			<span>{t("common.download-resume")}</span>
 			<img
-				src="https://img.icons8.com/?size=28&id=CcyOKBYi20tH&format=png&color=000000"
+				src={downloadIconSrc}
 				alt="Download icon"
 				height={28}
 				width={28}
