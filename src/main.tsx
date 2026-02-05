@@ -19,6 +19,14 @@ i18n.use(initReactI18next).init({
   },
 });
 
+if (window.location.pathname.endsWith("/en")) {
+  i18n.changeLanguage("en");
+}
+
+if (window.location.pathname.endsWith("/fr")) {
+  i18n.changeLanguage("fr");
+}
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
