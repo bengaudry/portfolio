@@ -4,9 +4,10 @@ import i18n from "i18next";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { initReactI18next } from "react-i18next";
-import App from "./App.tsx";
+import { BrowserRouter } from "react-router";
 import en from "./locales/en.json";
 import fr from "./locales/fr.json";
+import { AppRoutes } from "./router/AppRoutes.tsx";
 
 i18n.use(initReactI18next).init({
   fallbackLng: "fr",
@@ -29,6 +30,8 @@ if (window.location.pathname.endsWith("/fr")) {
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   </StrictMode>
 );
