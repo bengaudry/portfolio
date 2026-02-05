@@ -1,5 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { List, ResponsiveWrapper, SectionTitle } from "../../ui";
+import splitTabsIconSrc from "../../../assets/split-tabs-icon.png";
+import studyswipeIllustrationSrc from "../../../assets/studyswipe-screenshot.png";
+import studyswipeIconSrc from "../../../assets/studyswipe-icon.png";
 import styles from "./Projects.module.scss";
 
 type ProjectState = "active" | "development" | "inactive";
@@ -77,7 +80,7 @@ export function Projects() {
           state="active"
           description={t("projects.split-tabs.description")}
           imgSrc="https://addons.mozilla.org/user-media/previews/full/322/322418.png?modified=1748884796"
-          iconSrc="/split-tabs-icon.png"
+          iconSrc={splitTabsIconSrc}
           link="https://addons.mozilla.org/firefox/addon/split-tabs"
           repoUrl="https://github.com/bengaudry/split-tabs"
         />
@@ -85,8 +88,8 @@ export function Projects() {
           title="Studyswipe"
           state="active"
           description={t("projects.studyswipe.description")}
-          imgSrc="/studyswipe-screenshot.png"
-          iconSrc="/studyswipe-icon.png"
+          imgSrc={studyswipeIllustrationSrc}
+          iconSrc={studyswipeIconSrc}
           link="https://studyswipe.vercel.app"
         />
       </ResponsiveWrapper>

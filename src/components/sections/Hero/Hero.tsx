@@ -3,6 +3,9 @@ import { useTranslation } from "react-i18next";
 import { HeroTitle } from "../../misc";
 import { ResponsiveWrapper } from "../../ui";
 import { SocialMediaLink } from "../../ui/SocialMediaLink/SocialMediaLink";
+
+import meImgSrc from "../../../assets/me.jpg";
+
 import styles from "./Hero.module.scss";
 
 export function Hero() {
@@ -16,7 +19,7 @@ export function Hero() {
       className={styles.Hero}
     >
       <ResponsiveWrapper withMargin className={styles.InnerWrapper}>
-        <img src="/me.jpg" className={styles.Picture} />
+        <img src={meImgSrc} className={styles.Picture} />
         <HeroTitle />
         <p className={styles.Location}>
           <img
