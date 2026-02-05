@@ -77,7 +77,7 @@ export function Projects() {
           state="active"
           description={t("projects.split-tabs.description")}
           imgSrc="https://addons.mozilla.org/user-media/previews/full/322/322418.png?modified=1748884796"
-          iconSrc="/portfolio/split-tabs-icon.png"
+          iconSrc="/split-tabs-icon.png"
           link="https://addons.mozilla.org/firefox/addon/split-tabs"
           repoUrl="https://github.com/bengaudry/split-tabs"
         />
@@ -85,8 +85,8 @@ export function Projects() {
           title="Studyswipe"
           state="active"
           description={t("projects.studyswipe.description")}
-          imgSrc="/portfolio/studyswipe-screenshot.png"
-          iconSrc="/portfolio/studyswipe-icon.png"
+          imgSrc="/studyswipe-screenshot.png"
+          iconSrc="/studyswipe-icon.png"
           link="https://studyswipe.vercel.app"
         />
       </ResponsiveWrapper>
