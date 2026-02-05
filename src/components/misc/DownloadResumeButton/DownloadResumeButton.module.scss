@@ -1,17 +1,17 @@
 .button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background-color: var(--primary-text-color);
-    color: var(--main-background-color);
-    border-radius: 12px;
-    text-decoration: none;
-    margin-left: 1rem;
-    transition: background-color 0.3s ease;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 16px;
+	background-color: var(--primary-text-color);
+	color: var(--main-background-color);
+	border-radius: 12px;
+	text-decoration: none;
+	margin-left: 1rem;
+	transition: background-color 0.3s ease;
 
-    &:hover {
-        background-color: rgba(var(--primary-text-color-raw), 0.8);
-    }
+	&:hover {
+		background-color: rgba(var(--primary-text-color-raw), 0.8);
+	}
 }

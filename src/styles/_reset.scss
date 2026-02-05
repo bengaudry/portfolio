@@ -1,28 +1,28 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  user-select: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Space Mono", monospace;
+	font-weight: 400;
+	user-select: none;
 }
 
 body {
-  color: var(--primary-text-color);
-  background-color: var(--main-background-color);
+	color: var(--primary-text-color);
+	background-color: var(--main-background-color);
 }
 
 p {
-  line-height: 1.1rem;
-  color: var(--secondary-text-color);
-  max-width: 580px;
+	line-height: 1.1rem;
+	color: var(--secondary-text-color);
+	max-width: 580px;
 }
 
 button {
-  border: 0;
-  outline: 0;
+	border: 0;
+	outline: 0;
 }
 
 a {
-  color: inherit;
+	color: inherit;
 }

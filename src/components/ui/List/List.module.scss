@@ -1,57 +1,57 @@
 .List {
-  position: relative;
-  margin-top: 2rem;
+	position: relative;
+	margin-top: 2rem;
 }
 
 .RoundedSquare {
-  position: absolute;
-  top: -1rem;
-  left: calc(-2rem - 1px);
-  width: 2rem;
-  height: 2rem;
-  border-bottom-left-radius: 100%;
-  border-bottom: 1px solid var(--primary-text-color);
-  border-left: 1px solid var(--primary-text-color);
+	position: absolute;
+	top: -1rem;
+	left: calc(-2rem - 1px);
+	width: 2rem;
+	height: 2rem;
+	border-bottom-left-radius: 100%;
+	border-bottom: 1px solid var(--primary-text-color);
+	border-left: 1px solid var(--primary-text-color);
 }
 
 .TitleContainer {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.8rem;
-  margin-left: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 0.8rem;
+	margin-left: 1rem;
 
-  img {
-    overflow: hidden;
-    border-radius: 4px;
-  }
+	img {
+		overflow: hidden;
+		border-radius: 4px;
+	}
 }
 
 .Title {
-  font-size: 1.2rem;
-  font-weight: 700;
+	font-size: 1.2rem;
+	font-weight: 700;
 }
 
 .ListItem {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--primary-text-color);
-  border-radius: 6px;
-  padding: 6px 12px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	background: var(--primary-text-color);
+	border-radius: 6px;
+	padding: 6px 12px;
 
-  p {
-    color: var(--main-background-color);
-    white-space: nowrap;
-  }
+	p {
+		color: var(--main-background-color);
+		white-space: nowrap;
+	}
 }
 
 .ListItemsContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  padding-bottom: 12px;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	padding-bottom: 12px;
 }

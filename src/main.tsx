@@ -10,28 +10,28 @@ import fr from "./locales/fr.json";
 import { AppRoutes } from "./router/AppRoutes.tsx";
 
 i18n.use(initReactI18next).init({
-  fallbackLng: "fr",
-  interpolation: {
-    escapeValue: false,
-  },
-  resources: {
-    fr: { translation: fr },
-    en: { translation: en },
-  },
+	fallbackLng: "fr",
+	interpolation: {
+		escapeValue: false,
+	},
+	resources: {
+		fr: { translation: fr },
+		en: { translation: en },
+	},
 });
 
 if (window.location.pathname.endsWith("/en")) {
-  i18n.changeLanguage("en");
+	i18n.changeLanguage("en");
 }
 
 if (window.location.pathname.endsWith("/fr")) {
-  i18n.changeLanguage("fr");
+	i18n.changeLanguage("fr");
 }
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
-  </StrictMode>
+	<StrictMode>
+		<BrowserRouter>
+			<AppRoutes />
+		</BrowserRouter>
+	</StrictMode>,
 );

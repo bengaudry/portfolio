@@ -1,41 +1,41 @@
 {
-  "hero": {
-    "presentation": "I am a computer science student at the engineering school Polytech Lyon, and I am specialized in web development, especially front-end."
-  },
-  "about": {
-    "title": "About",
-    "content": "I started coding in the beggining of middle school with Mathieu Nebra's web development course on OpenClassrooms.\nDuring lockdown, I extended my coding skills with game development on UE4.\nSince that, I developed many projects by myself, and I deepened my knowledge with my studies.\nI would like to work in software development and possibly in the automotive industry."
-  },
-  "education": {
-    "title": "Education"
-  },
-  "skills": {
-    "title": "Skills",
-    "front-end": "Front-end",
-    "back-end": "Back-end",
-    "tools": "Tools",
-    "others": "Others"
-  },
-  "projects": {
-    "title": "Projects",
-    "split-tabs": {
-      "description": "A firefox addon that allows its users to open two websites in a single tab with a system of split view."
-    },
-    "studyswipe": {
-      "description": "A web app for students to study their courses with flashcards."
-    },
-    "onboarder": {
-      "description": "An CLI AI tool to discover and explore easily new code projects."
-    }
-  },
-  "contact": {
-    "title": "Contact",
-    "contactMe": "You can contact me via email :"
-  },
-  "common": {
-    "active": "active",
-    "inactive": "inactive",
-    "development": "development",
-    "download-resume": "Resume"
-  }
+	"hero": {
+		"presentation": "I am a computer science student at the engineering school Polytech Lyon, and I am specialized in web development, especially front-end."
+	},
+	"about": {
+		"title": "About",
+		"content": "I started coding in the beggining of middle school with Mathieu Nebra's web development course on OpenClassrooms.\nDuring lockdown, I extended my coding skills with game development on UE4.\nSince that, I developed many projects by myself, and I deepened my knowledge with my studies.\nI would like to work in software development and possibly in the automotive industry."
+	},
+	"education": {
+		"title": "Education"
+	},
+	"skills": {
+		"title": "Skills",
+		"front-end": "Front-end",
+		"back-end": "Back-end",
+		"tools": "Tools",
+		"others": "Others"
+	},
+	"projects": {
+		"title": "Projects",
+		"split-tabs": {
+			"description": "A firefox addon that allows its users to open two websites in a single tab with a system of split view."
+		},
+		"studyswipe": {
+			"description": "A web app for students to study their courses with flashcards."
+		},
+		"onboarder": {
+			"description": "An CLI AI tool to discover and explore easily new code projects."
+		}
+	},
+	"contact": {
+		"title": "Contact",
+		"contactMe": "You can contact me via email :"
+	},
+	"common": {
+		"active": "active",
+		"inactive": "inactive",
+		"development": "development",
+		"download-resume": "Resume"
+	}
 }

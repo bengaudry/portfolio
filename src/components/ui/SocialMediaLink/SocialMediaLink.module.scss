@@ -1,18 +1,18 @@
 .SocialMediaLink {
-  padding: 0.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  height: fit-content;
-  aspect-ratio: 1/1;
-  transition: opacity 100ms;
+	padding: 0.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	height: fit-content;
+	aspect-ratio: 1/1;
+	transition: opacity 100ms;
 
-  &:hover {
-    opacity: 0.5;
-  }
+	&:hover {
+		opacity: 0.5;
+	}
 
-  &:first-child {
-    padding-left: 0;
-  }
+	&:first-child {
+		padding-left: 0;
+	}
 }

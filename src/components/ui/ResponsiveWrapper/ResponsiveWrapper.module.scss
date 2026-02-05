@@ -1,50 +1,50 @@
 .ResponsiveWrapper {
-  width: 100%;
-  height: 100%;
-  max-width: 780px;
-  margin: auto !important;
+	width: 100%;
+	height: 100%;
+	max-width: 780px;
+	margin: auto !important;
 }
 
 .WithMargin {
-  padding: 0 1rem;
+	padding: 0 1rem;
 }
 
 .WithBorder {
-  position: relative;
-  border-left: 1px solid var(--primary-text-color);
-  width: calc(100% - 2rem);
-  padding: 2rem;
-  padding-top: 6rem;
+	position: relative;
+	border-left: 1px solid var(--primary-text-color);
+	width: calc(100% - 2rem);
+	padding: 2rem;
+	padding-top: 6rem;
 }
 
 .First::before {
-  position: absolute;
-  z-index: 30;
-  left: -1px;
-  top: 0;
-  content: "";
-  display: block;
-  height: 2rem;
-  width: 1px;
-  background: linear-gradient(
-    180deg,
-    var(--main-background-color),
-    var(--primary-text-color)
-  );
+	position: absolute;
+	z-index: 30;
+	left: -1px;
+	top: 0;
+	content: "";
+	display: block;
+	height: 2rem;
+	width: 1px;
+	background: linear-gradient(
+		180deg,
+		var(--main-background-color),
+		var(--primary-text-color)
+	);
 }
 
 .Last::after {
-  position: absolute;
-  z-index: 30;
-  left: -1px;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2rem;
-  width: 1px;
-  background: linear-gradient(
-    180deg,
-    var(--primary-text-color),
-    var(--main-background-color)
-  );
+	position: absolute;
+	z-index: 30;
+	left: -1px;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2rem;
+	width: 1px;
+	background: linear-gradient(
+		180deg,
+		var(--primary-text-color),
+		var(--main-background-color)
+	);
 }

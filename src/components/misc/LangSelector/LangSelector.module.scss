@@ -1,32 +1,32 @@
 .LangSelector {
-  display: flex;
-  align-items: center;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--text-secondary);
-  position: absolute;
-  z-index: 20;
-  top: 5vh;
+	display: flex;
+	align-items: center;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: var(--text-secondary);
+	position: absolute;
+	z-index: 20;
+	top: 5vh;
 }
 
 .separator {
-  margin-right: .5rem;
-  height: 100%;
-  width: 1px;
+	margin-right: 0.5rem;
+	height: 100%;
+	width: 1px;
 }
 
 .button {
-  display: block;
-  padding: 4px 8px;
-  background: none;
-  border: none;
-  color: var(--secondary-text-color);
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s ease;
+	display: block;
+	padding: 4px 8px;
+	background: none;
+	border: none;
+	color: var(--secondary-text-color);
+	font-size: 1.1rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: color 0.3s ease;
 }
 
 .button.active {
-  color: var(--primary-text-color);
+	color: var(--primary-text-color);
 }

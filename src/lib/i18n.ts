@@ -5,19 +5,18 @@ import { initReactI18next } from "react-i18next";
 import en from "../locales/en.json";
 import fr from "../locales/fr.json";
 
-i18n
-  .use(Backend)
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    fallbackLng: "fr",
-    interpolation: {
-      escapeValue: false,
-    },
-    resources: {
-      fr,
-      en,
-    },
-  });
+i18n.use(Backend)
+	.use(LanguageDetector)
+	.use(initReactI18next)
+	.init({
+		fallbackLng: "fr",
+		interpolation: {
+			escapeValue: false,
+		},
+		resources: {
+			fr,
+			en,
+		},
+	});
 
 export default i18n;

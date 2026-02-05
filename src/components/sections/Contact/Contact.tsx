@@ -4,15 +4,15 @@ import styles from "./Contact.module.scss";
 import { PERSONNAL_EMAIL } from "../../../lib/constants";
 
 export function Contact() {
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 
-  return (
-    <section className={styles.Contact}>
-      <ResponsiveWrapper withMargin withBorder isLast>
-        <SectionTitle title={t("contact.title")} />
-        <p>{t("contact.contactMe")}</p>
-        <a href={`mailto:${PERSONNAL_EMAIL}`}>{PERSONNAL_EMAIL}</a>
-      </ResponsiveWrapper>
-    </section>
-  );
+	return (
+		<section className={styles.Contact}>
+			<ResponsiveWrapper withMargin withBorder isLast>
+				<SectionTitle title={t("contact.title")} />
+				<p>{t("contact.contactMe")}</p>
+				<a href={`mailto:${PERSONNAL_EMAIL}`}>{PERSONNAL_EMAIL}</a>
+			</ResponsiveWrapper>
+		</section>
+	);
 }
