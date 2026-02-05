@@ -1,0 +1,1 @@
+export const PERSONNAL_EMAIL = "bengaudry@etu.univ-lyon1.fr"
