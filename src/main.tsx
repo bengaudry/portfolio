@@ -4,7 +4,7 @@ import i18n from "i18next";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { initReactI18next } from "react-i18next";
-import { BrowserRouter } from "react-router";
+import { HashRouter } from "react-router";
 import en from "./locales/en.json";
 import fr from "./locales/fr.json";
 import { AppRoutes } from "./router/AppRoutes.tsx";
@@ -30,8 +30,8 @@ if (window.location.pathname.endsWith("/fr")) {
 
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
-		<BrowserRouter>
+		<HashRouter>
 			<AppRoutes />
-		</BrowserRouter>
+		</HashRouter>
 	</StrictMode>,
 );
