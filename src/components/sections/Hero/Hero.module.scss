@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  min-height: 70vh;
+  min-height: 85lvh;
   background-image: linear-gradient(to right, #26ae7725 1px, transparent 1px),
     linear-gradient(to bottom, #029eff25 1px, transparent 1px);
   background-size: 24px 24px;
@@ -18,7 +18,7 @@
     display: block;
     z-index: -10;
     width: 100%;
-    height: 20vh;
+    height: 20lvh;
     position: absolute;
     left: 0;
     right: 0;
@@ -29,6 +29,12 @@
       transparent,
       var(--main-background-color)
     );
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Hero {
+    min-height: 75lvh;
   }
 }
 
