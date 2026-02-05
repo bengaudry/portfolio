@@ -35,6 +35,7 @@
   "common": {
     "active": "actif",
     "inactive": "inactif",
-    "development": "développement"
+    "development": "développement",
+    "download-resume": "Télécharger mon CV"
   }
 }

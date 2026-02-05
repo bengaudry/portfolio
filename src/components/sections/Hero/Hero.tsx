@@ -6,6 +6,7 @@ import { SocialMediaLink } from "../../ui/SocialMediaLink/SocialMediaLink";
 import { LangSelector } from "../../misc/LangSelector/LangSelector";
 import meImgSrc from "../../../assets/me.jpg";
 import styles from "./Hero.module.scss";
+import { DownloadResumeButton } from "../../misc/DownloadResumeButton/DownloadResumeButton";
 
 export function Hero() {
   const { t } = useTranslation();
@@ -33,6 +34,7 @@ export function Hero() {
           <SocialMediaLink name="linkedin" />
           <SocialMediaLink name="github" />
           <SocialMediaLink name="mail" />
+          <DownloadResumeButton />
         </div>
       </ResponsiveWrapper>
     </motion.section>

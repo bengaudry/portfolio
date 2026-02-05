@@ -35,6 +35,7 @@
   "common": {
     "active": "active",
     "inactive": "inactive",
-    "development": "development"
+    "development": "development",
+    "download-resume": "Download my resume"
   }
 }
