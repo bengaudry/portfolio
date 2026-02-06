@@ -18,7 +18,9 @@ export type ListProps = PropsWithChildren<{
 function ListItem({ title, iconUrl }: ListItemT) {
 	return (
 		<div className={styles.ListItem}>
-			{iconUrl && <img src={iconUrl} loading="lazy" width={16} height={16} />}
+			{iconUrl && (
+				<img src={iconUrl} loading="lazy" width={16} height={16} />
+			)}
 			<p>{title}</p>
 		</div>
 	)

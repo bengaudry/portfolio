@@ -45,7 +45,7 @@ export function Project({
 						className={styles.ProjectPicture}
 						loading="lazy"
 						width={350}
-						height={350*9/16}
+						height={(350 * 9) / 16}
 						alt={`${title} screenshot`}
 					/>
 				</a>
