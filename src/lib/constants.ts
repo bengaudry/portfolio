@@ -1,1 +1,1 @@
-export const PERSONNAL_EMAIL = "bengaudry@etu.univ-lyon1.fr"
+export const PERSONNAL_EMAIL = "ben.gaudry@etu.univ-lyon1.fr"
