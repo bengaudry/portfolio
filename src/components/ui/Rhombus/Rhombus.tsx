@@ -1,12 +1,12 @@
-import { motion } from "framer-motion";
-import styles from "./Rhombus.module.scss";
+import { motion } from "framer-motion"
+import styles from "./Rhombus.module.scss"
 
-export type RhombusProps = { isInView?: boolean; className?: string };
+export type RhombusProps = { isInView?: boolean; className?: string }
 
 export function Rhombus(props: RhombusProps) {
-	const classNames: string[] = [styles.Rhombus];
-	const { className, isInView, ...otherProps } = props;
-	if (className) classNames.push(className);
+	const classNames: string[] = [styles.Rhombus]
+	const { className, isInView, ...otherProps } = props
+	if (className) classNames.push(className)
 
 	return (
 		<motion.div
@@ -18,5 +18,5 @@ export function Rhombus(props: RhombusProps) {
 			}
 			transition={{ duration: 0.6, ease: "easeInOut" }}
 		/>
-	);
+	)
 }

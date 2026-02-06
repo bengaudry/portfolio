@@ -1,14 +1,14 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { useTranslation } from "react-i18next";
-import { ResponsiveWrapper, SectionTitle } from "../../ui";
-import styles from "./About.module.scss";
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
+import { useTranslation } from "react-i18next"
+import { ResponsiveWrapper, SectionTitle } from "../../ui"
+import styles from "./About.module.scss"
 
 export function About() {
-	const { t } = useTranslation();
+	const { t } = useTranslation()
 
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true, margin: "-50px" });
+	const ref = useRef(null)
+	const isInView = useInView(ref, { once: true, margin: "-50px" })
 
 	return (
 		<section ref={ref} className={styles.About}>
@@ -25,7 +25,7 @@ export function About() {
 							style={{
 								display: "flex",
 								gap: "1rem",
-								marginTop: 12,
+								marginTop: 12
 							}}
 						>
 							<span>{"$"}</span>
@@ -34,5 +34,5 @@ export function About() {
 					))}
 			</ResponsiveWrapper>
 		</section>
-	);
+	)
 }

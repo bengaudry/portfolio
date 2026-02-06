@@ -1,17 +1,17 @@
-import { useTranslation } from "react-i18next";
-import { List, ResponsiveWrapper, SectionTitle } from "../../ui";
-import styles from "./Education.module.scss";
+import { useTranslation } from "react-i18next"
+import { List, ResponsiveWrapper, SectionTitle } from "../../ui"
+import styles from "./Education.module.scss"
 
 function EducationItem({
 	location,
 	startYear,
 	endYear,
-	description,
+	description
 }: {
-	location: string;
-	startYear: number;
-	endYear?: number;
-	description?: string;
+	location: string
+	startYear: number
+	endYear?: number
+	description?: string
 }) {
 	return (
 		<div>
@@ -21,11 +21,11 @@ function EducationItem({
 			</span>
 			<p>{description}</p>
 		</div>
-	);
+	)
 }
 
 export function Education() {
-	const { t } = useTranslation();
+	const { t } = useTranslation()
 
 	return (
 		<section className={styles.Education}>
@@ -67,5 +67,5 @@ export function Education() {
 				</List>
 			</ResponsiveWrapper>
 		</section>
-	);
+	)
 }

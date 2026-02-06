@@ -1,14 +1,14 @@
-import styles from "./App.module.scss";
+import styles from "./App.module.scss"
 import {
 	About,
 	Contact,
 	Footer,
 	Hero,
 	Projects,
-	Skills,
-} from "../components/sections";
-import { Education } from "../components/sections/Education/Education";
-import "../styles/App.scss";
+	Skills
+} from "../components/sections"
+import { Education } from "../components/sections/Education/Education"
+import "../styles/App.scss"
 
 export default function App() {
 	return (
@@ -21,5 +21,5 @@ export default function App() {
 			<Contact />
 			<Footer />
 		</div>
-	);
+	)
 }

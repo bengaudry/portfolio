@@ -1,22 +1,22 @@
-import { useTranslation } from "react-i18next";
-import { List, ResponsiveWrapper, SectionTitle } from "../../ui";
-import splitTabsIconSrc from "../../../assets/split-tabs-icon.png";
-import studyswipeIllustrationSrc from "../../../assets/studyswipe-screenshot.png";
-import studyswipeIconSrc from "../../../assets/studyswipe-icon.png";
-import styles from "./Projects.module.scss";
+import { useTranslation } from "react-i18next"
+import { List, ResponsiveWrapper, SectionTitle } from "../../ui"
+import splitTabsIconSrc from "../../../assets/split-tabs-icon.png"
+import studyswipeIllustrationSrc from "../../../assets/studyswipe-screenshot.png"
+import studyswipeIconSrc from "../../../assets/studyswipe-icon.png"
+import styles from "./Projects.module.scss"
 
-type ProjectState = "active" | "development" | "inactive";
+type ProjectState = "active" | "development" | "inactive"
 
 function ProjectStatePill({ state }: { state: ProjectState }) {
-	const { t } = useTranslation();
-	const classNames = [styles.ProjectStatePill];
+	const { t } = useTranslation()
+	const classNames = [styles.ProjectStatePill]
 
 	return (
 		<div aria-label={state} className={classNames.join(" ")}>
 			<span />
 			<span>{t("common." + state)}</span>
 		</div>
-	);
+	)
 }
 
 function Project({
@@ -26,15 +26,15 @@ function Project({
 	iconSrc,
 	state,
 	link,
-	repoUrl,
+	repoUrl
 }: {
-	title: string;
-	description: string;
-	imgSrc: string;
-	iconSrc?: string;
-	state: ProjectState;
-	link?: string;
-	repoUrl?: string;
+	title: string
+	description: string
+	imgSrc: string
+	iconSrc?: string
+	state: ProjectState
+	link?: string
+	repoUrl?: string
 }) {
 	return (
 		<List className={styles.ProjectItem} title={title} iconUrl={iconSrc}>
@@ -69,11 +69,11 @@ function Project({
 				</div>
 			</article>
 		</List>
-	);
+	)
 }
 
 export function Projects() {
-	const { t } = useTranslation();
+	const { t } = useTranslation()
 
 	return (
 		<section className={styles.Projects}>
@@ -98,5 +98,5 @@ export function Projects() {
 				/>
 			</ResponsiveWrapper>
 		</section>
-	);
+	)
 }

@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router";
-import App from "../views/App";
+import { Route, Routes } from "react-router"
+import App from "../views/App"
 
 export function AppRoutes() {
 	return (
@@ -8,5 +8,5 @@ export function AppRoutes() {
 			<Route path="en" element={<App />} />
 			<Route path="fr" element={<App />} />
 		</Routes>
-	);
+	)
 }

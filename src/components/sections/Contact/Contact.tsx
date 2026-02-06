@@ -1,10 +1,10 @@
-import { useTranslation } from "react-i18next";
-import { ResponsiveWrapper, SectionTitle } from "../../ui";
-import styles from "./Contact.module.scss";
-import { PERSONNAL_EMAIL } from "../../../lib/constants";
+import { useTranslation } from "react-i18next"
+import { ResponsiveWrapper, SectionTitle } from "../../ui"
+import styles from "./Contact.module.scss"
+import { PERSONNAL_EMAIL } from "../../../lib/constants"
 
 export function Contact() {
-	const { t } = useTranslation();
+	const { t } = useTranslation()
 
 	return (
 		<section className={styles.Contact}>
@@ -14,5 +14,5 @@ export function Contact() {
 				<a href={`mailto:${PERSONNAL_EMAIL}`}>{PERSONNAL_EMAIL}</a>
 			</ResponsiveWrapper>
 		</section>
-	);
+	)
 }

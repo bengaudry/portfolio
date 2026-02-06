@@ -1,35 +1,35 @@
-import "@flaticon/flaticon-uicons/css/brands/all.css";
-import "@flaticon/flaticon-uicons/css/solid/rounded.css";
-import i18n from "i18next";
-import { StrictMode } from "react";
-import { hydrateRoot } from "react-dom/client";
-import { initReactI18next } from "react-i18next";
-import en from "./locales/en.json";
-import fr from "./locales/fr.json";
-import { HydratedRouter } from "react-router/dom";
+import "@flaticon/flaticon-uicons/css/brands/all.css"
+import "@flaticon/flaticon-uicons/css/solid/rounded.css"
+import i18n from "i18next"
+import { StrictMode } from "react"
+import { hydrateRoot } from "react-dom/client"
+import { initReactI18next } from "react-i18next"
+import en from "./locales/en.json"
+import fr from "./locales/fr.json"
+import { HydratedRouter } from "react-router/dom"
 
 i18n.use(initReactI18next).init({
 	fallbackLng: "fr",
 	interpolation: {
-		escapeValue: false,
+		escapeValue: false
 	},
 	resources: {
 		fr: { translation: fr },
-		en: { translation: en },
-	},
-});
+		en: { translation: en }
+	}
+})
 
 if (window.location.pathname.endsWith("/en")) {
-	i18n.changeLanguage("en");
+	i18n.changeLanguage("en")
 }
 
 if (window.location.pathname.endsWith("/fr")) {
-	i18n.changeLanguage("fr");
+	i18n.changeLanguage("fr")
 }
 
 hydrateRoot(
 	document,
 	<StrictMode>
 		<HydratedRouter />
-	</StrictMode>,
-);
+	</StrictMode>
+)

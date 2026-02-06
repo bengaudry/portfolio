@@ -1,19 +1,19 @@
-import { motion, useInView } from "framer-motion";
-import { useRef, type PropsWithChildren } from "react";
-import styles from "./List.module.scss";
+import { motion, useInView } from "framer-motion"
+import { useRef, type PropsWithChildren } from "react"
+import styles from "./List.module.scss"
 
 export type ListItemT = {
-	title: string;
-	iconUrl?: string;
-};
+	title: string
+	iconUrl?: string
+}
 
 export type ListProps = PropsWithChildren<{
-	title: string;
-	iconUrl?: string;
-	items?: Array<ListItemT>;
-	className?: string;
-	linksTo?: string;
-}>;
+	title: string
+	iconUrl?: string
+	items?: Array<ListItemT>
+	className?: string
+	linksTo?: string
+}>
 
 function ListItem({ title, iconUrl }: ListItemT) {
 	return (
@@ -21,11 +21,11 @@ function ListItem({ title, iconUrl }: ListItemT) {
 			{iconUrl && <img src={iconUrl} height={16} />}
 			<p>{title}</p>
 		</div>
-	);
+	)
 }
 
 function ListItemsContainer({ children }: PropsWithChildren) {
-	return <div className={styles.ListItemsContainer}>{children}</div>;
+	return <div className={styles.ListItemsContainer}>{children}</div>
 }
 
 export function List({
@@ -34,24 +34,24 @@ export function List({
 	children,
 	items,
 	linksTo,
-	className,
+	className
 }: ListProps) {
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true, margin: "-50px" });
+	const ref = useRef(null)
+	const isInView = useInView(ref, { once: true, margin: "-50px" })
 
-	const classNames = [styles.List];
-	if (className) classNames.push(className);
+	const classNames = [styles.List]
+	if (className) classNames.push(className)
 
 	const Children = () => {
-		if (!items) return children;
+		if (!items) return children
 		return (
 			<ListItemsContainer>
 				{items.map((item, index) => (
 					<ListItem key={index} {...item} />
 				))}
 			</ListItemsContainer>
-		);
-	};
+		)
+	}
 
 	return (
 		<motion.div
@@ -79,5 +79,5 @@ export function List({
 			</div>
 			<Children />
 		</motion.div>
-	);
+	)
 }

@@ -1,5 +1,5 @@
-import { ResponsiveWrapper } from "../../ui";
-import styles from "./Footer.module.scss";
+import { ResponsiveWrapper } from "../../ui"
+import styles from "./Footer.module.scss"
 
 export function Footer() {
 	return (
@@ -16,5 +16,5 @@ export function Footer() {
 				</div>
 			</ResponsiveWrapper>
 		</footer>
-	);
+	)
 }
