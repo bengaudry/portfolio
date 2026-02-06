@@ -5,7 +5,7 @@ import { ResponsiveWrapper } from "../../ui"
 import { SocialMediaLink } from "../../ui/SocialMediaLink/SocialMediaLink"
 import { LangSelector } from "../../misc/LangSelector/LangSelector"
 import { DownloadResumeButton } from "../../misc/DownloadResumeButton/DownloadResumeButton"
-import meImgSrc from "../../../assets/me.jpg"
+import meImgSrc from "../../../assets/me.webp"
 import locationIconSrc from "../../../assets/icons/icons8-location-94.png"
 import styles from "./Hero.module.scss"
 
