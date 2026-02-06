@@ -44,7 +44,13 @@ export function List({
 
 	const Children = () => {
 		if (!items) return children;
-		return <ListItemsContainer>{items.map(ListItem)}</ListItemsContainer>;
+		return (
+			<ListItemsContainer>
+				{items.map((item, index) => (
+					<ListItem key={index} {...item} />
+				))}
+			</ListItemsContainer>
+		);
 	};
 
 	return (

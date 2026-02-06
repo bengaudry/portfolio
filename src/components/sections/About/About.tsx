@@ -18,6 +18,7 @@ export function About() {
 					.split("\n")
 					.map((content, idx) => (
 						<motion.p
+							key={content}
 							initial={{ opacity: 0, x: -20 }}
 							animate={isInView ? { opacity: 1, x: 0 } : {}}
 							transition={{ duration: 0.6, delay: 0.3 * idx }}

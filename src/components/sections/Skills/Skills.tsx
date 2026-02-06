@@ -151,6 +151,7 @@ export function Skills() {
 				<SectionTitle title={t("skills.title")} />
 				{Object.keys(SKILLS).map((skillName) => (
 					<List
+						key={skillName}
 						title={t("skills." + skillName)}
 						iconUrl={SKILLS[skillName].iconUrl}
 						items={SKILLS[skillName].items}

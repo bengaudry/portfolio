@@ -2,12 +2,11 @@ import "@flaticon/flaticon-uicons/css/brands/all.css";
 import "@flaticon/flaticon-uicons/css/solid/rounded.css";
 import i18n from "i18next";
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { hydrateRoot } from "react-dom/client";
 import { initReactI18next } from "react-i18next";
-import { HashRouter } from "react-router";
 import en from "./locales/en.json";
 import fr from "./locales/fr.json";
-import { AppRoutes } from "./router/AppRoutes.tsx";
+import { HydratedRouter } from "react-router/dom";
 
 i18n.use(initReactI18next).init({
 	fallbackLng: "fr",
@@ -28,10 +27,9 @@ if (window.location.pathname.endsWith("/fr")) {
 	i18n.changeLanguage("fr");
 }
 
-createRoot(document.getElementById("root")!).render(
+hydrateRoot(
+	document,
 	<StrictMode>
-		<HashRouter>
-			<AppRoutes />
-		</HashRouter>
+		<HydratedRouter />
 	</StrictMode>,
 );

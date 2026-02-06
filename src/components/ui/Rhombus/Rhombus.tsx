@@ -5,7 +5,7 @@ export type RhombusProps = { isInView?: boolean; className?: string };
 
 export function Rhombus(props: RhombusProps) {
 	const classNames: string[] = [styles.Rhombus];
-	const { className, ...otherProps } = props;
+	const { className, isInView, ...otherProps } = props;
 	if (className) classNames.push(className);
 
 	return (
@@ -14,7 +14,7 @@ export function Rhombus(props: RhombusProps) {
 			{...otherProps}
 			initial={{ opacity: 0, transform: "scale(0.8) rotate(-45deg)" }}
 			animate={
-				props.isInView
+				isInView
 					? { opacity: 1, transform: "scale(1) rotate(0)" }
 					: {}
 			}
