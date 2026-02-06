@@ -430,6 +430,35 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@netlify/edge-functions@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@netlify/edge-functions/-/edge-functions-3.0.3.tgz#dae8c469f8b2a3f36e4e70f157b77c40c66b2476"
+  integrity sha512-grElRK+rTBdYrPsULPKrhcHhrW+fwpDRLPbGByqa6Xrz0fhzcFJ2D9ijxEQ/onFcSVPYHT1u1mI48GhS5bZ/Ag==
+  dependencies:
+    "@netlify/types" "2.3.0"
+
+"@netlify/functions@^5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@netlify/functions/-/functions-5.1.2.tgz#a18a141c989f3c5e6963d5d4c0613f106854ae0c"
+  integrity sha512-tpPiLSkQatuexH8AdAZ8RlALvT7ixOE9VhvpkzQGNvihcms8hzmvUDuSxQa7UneTj/sHsdirnXmnJ+nmf+Nx/w==
+  dependencies:
+    "@netlify/types" "2.3.0"
+
+"@netlify/types@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@netlify/types/-/types-2.3.0.tgz#db4dc8e0a5f288cfb6d9f23f02202f2d68a06959"
+  integrity sha512-5gxMWh/S7wr0uHKSTbMv4bjWmWSpwpeLYvErWeVNAPll5/QNFo9aWimMAUuh8ReLY3/fg92XAroVVu7+z27Snw==
+
+"@netlify/vite-plugin-react-router@^2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@netlify/vite-plugin-react-router/-/vite-plugin-react-router-2.1.3.tgz#91bcba553788161df69ecb783f3d6432d9c20baa"
+  integrity sha512-INa4T51E0SPwbNzr0RVhGJvpBwn296tuY3x1M6FglqnsukdDnReRzeY395h26CbZP0CtEaY7ziRb1ZGBwev34w==
+  dependencies:
+    "@netlify/edge-functions" "^3.0.3"
+    "@netlify/functions" "^5.1.2"
+    isbot "^5.1.25"
+    tinyglobby "^0.2.10"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -1355,6 +1384,11 @@ is-number@^7.0.0:
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
 
+isbot@^5.1.25:
+  version "5.1.34"
+  resolved "https://registry.yarnpkg.com/isbot/-/isbot-5.1.34.tgz#219ee5b4c8c6bbc092e722c0f8d775a3bad17f8b"
+  integrity sha512-aCMIBSKd/XPRYdiCQTLC8QHH4YT8B3JUADu+7COgYIZPvkeoMcUHMRjZLM9/7V8fCj+l7FSREc1lOPNjzogo/A==
+
 isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
@@ -1888,7 +1922,7 @@ sync-message-port@^1.0.0:
   resolved "https://registry.yarnpkg.com/sync-message-port/-/sync-message-port-1.1.3.tgz#6055c565ee8c81d2f9ee5aae7db757e6d9088c0c"
   integrity sha512-GTt8rSKje5FilG+wEdfCkOcLL7LWqpMlr2c3LRuKt/YXxcJ52aGSbGBAdI4L3aaqfrBt6y711El53ItyH1NWzg==
 
-tinyglobby@^0.2.15:
+tinyglobby@^0.2.10, tinyglobby@^0.2.15:
   version "0.2.15"
   resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.15.tgz#e228dd1e638cea993d2fdb4fcd2d4602a79951c2"
   integrity sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==
