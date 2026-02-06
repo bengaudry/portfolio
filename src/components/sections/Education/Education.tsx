@@ -24,7 +24,7 @@ function EducationItem({
 	)
 }
 
-export function Education() {
+export default function Education() {
 	const { t } = useTranslation()
 
 	return (

@@ -4,8 +4,6 @@ import i18n from "i18next"
 import { StrictMode } from "react"
 import { hydrateRoot } from "react-dom/client"
 import { initReactI18next } from "react-i18next"
-import en from "./locales/en.json"
-import fr from "./locales/fr.json"
 import { HydratedRouter } from "react-router/dom"
 
 i18n.use(initReactI18next).init({
@@ -13,9 +11,8 @@ i18n.use(initReactI18next).init({
 	interpolation: {
 		escapeValue: false
 	},
-	resources: {
-		fr: { translation: fr },
-		en: { translation: en }
+	backend: {
+		loadPath: "/locales/{{lng}}.json"
 	}
 })
 

@@ -3,7 +3,7 @@ import { ResponsiveWrapper, SectionTitle } from "../../ui"
 import styles from "./Contact.module.scss"
 import { PERSONNAL_EMAIL } from "../../../lib/constants"
 
-export function Contact() {
+export default function Contact() {
 	const { t } = useTranslation()
 
 	return (

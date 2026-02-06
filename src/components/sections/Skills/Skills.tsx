@@ -142,7 +142,7 @@ const SKILLS: Record<
 	}
 }
 
-export function Skills() {
+export default function Skills() {
 	const { t } = useTranslation()
 
 	return (

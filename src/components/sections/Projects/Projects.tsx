@@ -19,7 +19,7 @@ function ProjectStatePill({ state }: { state: ProjectState }) {
 	)
 }
 
-function Project({
+export function Project({
 	title,
 	description,
 	imgSrc,
@@ -43,6 +43,9 @@ function Project({
 					<img
 						src={imgSrc}
 						className={styles.ProjectPicture}
+						loading="lazy"
+						width={350}
+						height={350*9/16}
 						alt={`${title} screenshot`}
 					/>
 				</a>
@@ -72,7 +75,7 @@ function Project({
 	)
 }
 
-export function Projects() {
+export default function Projects() {
 	const { t } = useTranslation()
 
 	return (
