@@ -15,7 +15,6 @@ const RESUMES: Record<string, { name: string; url: string }> = {
 }
 
 export function DownloadResumeButton() {
-	return null
 	const { t, i18n } = useTranslation()
 	const lang = i18n?.language?.split("-")?.[0]
 
