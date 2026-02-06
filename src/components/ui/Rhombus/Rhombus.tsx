@@ -14,9 +14,7 @@ export function Rhombus(props: RhombusProps) {
 			{...otherProps}
 			initial={{ opacity: 0, transform: "scale(0.8) rotate(-45deg)" }}
 			animate={
-				isInView
-					? { opacity: 1, transform: "scale(1) rotate(0)" }
-					: {}
+				isInView ? { opacity: 1, transform: "scale(1) rotate(0)" } : {}
 			}
 			transition={{ duration: 0.6, ease: "easeInOut" }}
 		/>
