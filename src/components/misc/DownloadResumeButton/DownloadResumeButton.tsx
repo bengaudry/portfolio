@@ -6,11 +6,11 @@ import styles from "./DownloadResumeButton.module.scss"
 const RESUMES: Record<string, { name: string; url: string }> = {
 	en: {
 		name: "resume-ben-gaudry.pdf",
-		url: "/en-resume-bengaudry.pdf"
+		url: "/resume-ben-gaudry.pdf"
 	},
 	fr: {
 		name: "cv-ben-gaudry.pdf",
-		url: "/fr-cv-bengaudry.pdf"
+		url: "/cv-ben-gaudry.pdf"
 	}
 }
 
