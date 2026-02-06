@@ -6,7 +6,7 @@ import { SocialMediaLink } from "../../ui/SocialMediaLink/SocialMediaLink";
 import { LangSelector } from "../../misc/LangSelector/LangSelector";
 import { DownloadResumeButton } from "../../misc/DownloadResumeButton/DownloadResumeButton";
 import meImgSrc from "../../../assets/me.jpg";
-import locationIconSrc from "../../../assets/icons/icons8-location-94.png"
+import locationIconSrc from "../../../assets/icons/icons8-location-94.png";
 import styles from "./Hero.module.scss";
 
 export function Hero() {
@@ -21,14 +21,15 @@ export function Hero() {
 		>
 			<ResponsiveWrapper withMargin className={styles.InnerWrapper}>
 				<LangSelector />
-				<img src={meImgSrc} className={styles.Picture} width={480} height={480} />
+				<img
+					src={meImgSrc}
+					className={styles.Picture}
+					width={480}
+					height={480}
+				/>
 				<HeroTitle />
 				<p className={styles.Location}>
-					<img
-						src={locationIconSrc}
-						height={24}
-						width={24}
-					/>
+					<img src={locationIconSrc} height={24} width={24} />
 					<u>Lyon, France</u>
 				</p>
 				<p>{t("hero.presentation")}</p>

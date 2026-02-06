@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router";
-import downloadIconSrc from "../../../assets/icons/icons8-download-64.png"
+import downloadIconSrc from "../../../assets/icons/icons8-download-64.png";
 import styles from "./DownloadResumeButton.module.scss";
 
 const RESUMES: Record<string, { name: string; url: string }> = {
