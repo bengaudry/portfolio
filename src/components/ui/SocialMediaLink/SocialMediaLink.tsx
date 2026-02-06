@@ -33,8 +33,9 @@ export function SocialMediaLink({ name }: SocialMediaLinkProps) {
 			href={link}
 			target="_blank"
 			rel="noopener noreferrer"
+			aria-label={"Open " + name + " in a new tab"}
 		>
-			<img height={36} width={36} src={iconSrc} />
+			<img height={36} width={36} src={iconSrc} alt={name + " icon"} />
 		</a>
 	)
 }

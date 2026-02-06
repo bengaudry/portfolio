@@ -9,6 +9,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 					name="viewport"
 					content="width=device-width, initial-scale=1.0"
 				/>
+				<meta
+					name="description"
+					content="Portfolio of Ben Gaudry, a french computer science student, interested in softwarez development, web development, and low-level programming."
+				/>
 				<title>Ben Gaudry - Portfolio</title>
 				<link rel="icon" href="/favicon.ico" />
 				<Meta />

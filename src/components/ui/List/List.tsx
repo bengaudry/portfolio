@@ -65,7 +65,7 @@ export function List({
 		>
 			<div className={styles.RoundedSquare} />
 			<div className={styles.TitleContainer}>
-				{iconUrl && <img height={32} src={iconUrl} />}
+				{iconUrl && <img height={32} width={32} src={iconUrl} alt={title + " icon"} />}
 				{linksTo ? (
 					<a
 						href={linksTo}

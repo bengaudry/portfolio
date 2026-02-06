@@ -24,12 +24,13 @@ export function Hero() {
 				<img
 					src={meImgSrc}
 					className={styles.Picture}
+					alt="Picture of Ben Gaudry"
 					width={480}
 					height={480}
 				/>
 				<HeroTitle />
 				<p className={styles.Location}>
-					<img src={locationIconSrc} height={24} width={24} />
+					<img src={locationIconSrc} height={24} width={24} alt="Location icon" />
 					<u>Lyon, France</u>
 				</p>
 				<p>{t("hero.presentation")}</p>

@@ -13,7 +13,7 @@ const Footer = lazy(() => import("../components/sections/Footer/Footer"))
 
 export default function App() {
 	return (
-		<div className={styles.App}>
+		<div className={styles.App} role="main" aria-label="Main content">
 			<Hero />
 			<About />
 
