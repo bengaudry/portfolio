@@ -2,12 +2,12 @@ import styles from "./App.module.scss"
 import {
 	About,
 	Contact,
+	Education,
 	Footer,
 	Hero,
 	Projects,
 	Skills
 } from "../components/sections"
-import { Education } from "../components/sections/Education/Education"
 import "../styles/App.scss"
 
 export default function App() {

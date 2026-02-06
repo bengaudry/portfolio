@@ -1,5 +1,6 @@
 export * from "./About/About"
 export * from "./Contact/Contact"
+export * from "./Education/Education"
 export * from "./Footer/Footer"
 export * from "./Hero/Hero"
 export * from "./Projects/Projects"
