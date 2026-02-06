@@ -19,7 +19,7 @@ function ListItem({ title, iconUrl }: ListItemT) {
 	return (
 		<div className={styles.ListItem}>
 			{iconUrl && (
-				<img src={iconUrl} loading="lazy" width={16} height={16} />
+				<img src={iconUrl} loading="lazy" width={16} height={16} alt={title + " icon"} />
 			)}
 			<p>{title}</p>
 		</div>
