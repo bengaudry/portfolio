@@ -19,7 +19,13 @@ function ListItem({ title, iconUrl }: ListItemT) {
 	return (
 		<div className={styles.ListItem}>
 			{iconUrl && (
-				<img src={iconUrl} loading="lazy" width={16} height={16} alt={title + " icon"} />
+				<img
+					src={iconUrl}
+					loading="lazy"
+					width={16}
+					height={16}
+					alt={title + " icon"}
+				/>
 			)}
 			<p>{title}</p>
 		</div>
@@ -65,7 +71,15 @@ export function List({
 		>
 			<div className={styles.RoundedSquare} />
 			<div className={styles.TitleContainer}>
-				{iconUrl && <img height={32} width={32} src={iconUrl} alt={title + " icon"} className={styles.Icon} />}
+				{iconUrl && (
+					<img
+						height={32}
+						width={32}
+						src={iconUrl}
+						alt={title + " icon"}
+						className={styles.Icon}
+					/>
+				)}
 				{linksTo ? (
 					<a
 						href={linksTo}

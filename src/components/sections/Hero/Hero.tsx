@@ -35,7 +35,12 @@ export function Hero() {
 				/>
 				<HeroTitle />
 				<p className={styles.Location}>
-					<img src={locationIconSrc} height={24} width={24} alt="Location icon" />
+					<img
+						src={locationIconSrc}
+						height={24}
+						width={24}
+						alt="Location icon"
+					/>
 					<u>Lyon, France</u>
 				</p>
 				<p>{t("hero.presentation")}</p>

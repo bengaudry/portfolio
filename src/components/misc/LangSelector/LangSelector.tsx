@@ -24,7 +24,11 @@ export function LangSelector() {
 	}
 
 	return (
-		<div className={styles.LangSelector} role="navigation" aria-label="Language selector">
+		<div
+			className={styles.LangSelector}
+			role="navigation"
+			aria-label="Language selector"
+		>
 			<button
 				onClick={() => handleChangeLanguage("en")}
 				className={[
