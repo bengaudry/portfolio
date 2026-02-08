@@ -49,8 +49,8 @@
 }
 
 .Picture {
-	width: clamp(150px, 10vw, 480px);
-	height: clamp(150px, 10vw, 480px);
+	width: clamp(150px, 10vw, 280px);
+	height: clamp(150px, 10vw, 280px);
 	aspect-ratio: 1/1;
 	object-fit: cover;
 	border-radius: 9999px;

@@ -5,6 +5,7 @@ import { ResponsiveWrapper } from "../../ui"
 import { SocialMediaLink } from "../../ui/SocialMediaLink/SocialMediaLink"
 import { LangSelector } from "../../misc/LangSelector/LangSelector"
 import { DownloadResumeButton } from "../../misc/DownloadResumeButton/DownloadResumeButton"
+import meLowResImgSrc from "../../../assets/me-low-res.webp"
 import meImgSrc from "../../../assets/me.webp"
 import locationIconSrc from "../../../assets/icons/icons8-location-94.png"
 import styles from "./Hero.module.scss"
@@ -24,6 +25,10 @@ export function Hero() {
 				<img
 					src={meImgSrc}
 					className={styles.Picture}
+					style={{
+						// Loading the low res image as a background image while the high res one is loading to avoid layout shift
+						backgroundImage: `url(${meLowResImgSrc})`
+					}}
 					alt="Picture of Ben Gaudry"
 					width={480}
 					height={480}
