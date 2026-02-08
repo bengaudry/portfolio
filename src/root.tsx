@@ -1,8 +1,10 @@
+import i18next from "i18next"
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router"
 
 export function Layout({ children }: { children: React.ReactNode }) {
+	const lang = i18next.language || "fr"
 	return (
-		<html lang="en">
+		<html lang={lang}>
 			<head>
 				<meta charSet="UTF-8" />
 				<meta
