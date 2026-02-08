@@ -11,7 +11,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				/>
 				<meta
 					name="description"
-					content="Portfolio of Ben Gaudry, a french computer science student, interested in softwarez development, web development, and low-level programming."
+					content="Portfolio of Ben Gaudry, a french computer science student, interested in software development, web development, and low-level programming."
 				/>
 				<title>Ben Gaudry - Portfolio</title>
 				<link rel="icon" href="/favicon.ico" />
