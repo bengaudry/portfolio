@@ -54,6 +54,7 @@
 	aspect-ratio: 1/1;
 	object-fit: cover;
 	border-radius: 9999px;
+	margin-bottom: 1rem;
 }
 
 .SocialMediaLinksWrapper {
@@ -67,7 +68,8 @@
 	display: flex;
 	align-items: center;
 	gap: 6px;
-	margin-bottom: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
 
 	u {
 		font-size: 1.2rem;
