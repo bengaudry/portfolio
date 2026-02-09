@@ -1,10 +1,12 @@
 import { useTranslation } from "react-i18next"
 import { List, ResponsiveWrapper, SectionTitle } from "../../ui"
-import splitTabsIconSrc from "../../../assets/split-tabs-icon.png"
+import splitTabsIconSrc from "../../../assets/split-tabs-icon.svg"
 import studyswipeIllustrationSrc from "../../../assets/studyswipe-screenshot.png"
 import studyswipeIconSrc from "../../../assets/studyswipe-icon.png"
 import compilerIllustrationSrc from "../../../assets/compiler-illustration.png"
-import irrigationProjectSrc from "../../../assets/irrigation-proj-illustration.png"
+import compilerIconSrc from "../../../assets/binary-icon.png"
+import irrigationProjectIllustrationSrc from "../../../assets/irrigation-proj-illustration.png"
+import irrigationProjectIconSrc from "../../../assets/flowerpot-icon.png"
 import styles from "./Projects.module.scss"
 
 type ProjectState = "active" | "development" | "inactive"
@@ -108,12 +110,14 @@ export default function Projects() {
 					state="inactive"
 					description={t("projects.compiler.description")}
 					imgSrc={compilerIllustrationSrc}
+					iconSrc={compilerIconSrc}
 				/>
 				<Project
 					title={t("projects.irrigation-system.title")}
 					state="inactive"
 					description={t("projects.irrigation-system.description")}
-					imgSrc={irrigationProjectSrc}
+					imgSrc={irrigationProjectIllustrationSrc}
+					iconSrc={irrigationProjectIconSrc}
 				/>
 			</ResponsiveWrapper>
 		</section>
