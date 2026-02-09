@@ -19,10 +19,12 @@
 	"projects": {
 		"title": "Projects",
 		"split-tabs": {
-			"description": "A firefox addon that allows its users to open two websites in a single tab with a system of split view."
+			"description": "A firefox addon that allows its users to open two websites in a single tab with a system of split view.",
+			"link-label": "Mozilla Addons"
 		},
 		"studyswipe": {
-			"description": "A web app for students to study their courses with flashcards."
+			"description": "A web app for students to study their courses with flashcards.",
+			"link-label": "Go to web app"
 		},
 		"compiler": {
 			"title": "Compiler",

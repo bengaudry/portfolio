@@ -19,10 +19,12 @@
 	"projects": {
 		"title": "Projets",
 		"split-tabs": {
-			"description": "Un module Firefox qui permet à ses utilisateurs d'ouvrir deux sites webs en un seul onglet avec un système de vue séparée."
+			"description": "Un module Firefox qui permet à ses utilisateurs d'ouvrir deux sites webs en un seul onglet avec un système de vue séparée.",
+			"link-label": "Mozilla Addons"
 		},
 		"studyswipe": {
-			"description": "Une application web à destination des étudiants pour réviser ses cours sous forme de flashcards."
+			"description": "Une application web à destination des étudiants pour réviser ses cours sous forme de flashcards.",
+			"link-label": "Accéder à l'application"
 		},
 		"compiler": {
 			"title": "Compilateur",

@@ -1,0 +1,22 @@
+.Button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 16px;
+	width: fit-content;
+	background-color: var(--primary-text-color);
+	color: var(--main-background-color);
+	border-radius: 12px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+
+	span {
+		font-weight: 500;
+		font-size: .9rem;
+	}
+
+	&:hover {
+		background-color: rgba(var(--primary-text-color-raw), 0.8);
+	}
+}

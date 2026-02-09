@@ -7,7 +7,9 @@ import compilerIllustrationSrc from "../../../assets/compiler-illustration.png"
 import compilerIconSrc from "../../../assets/binary-icon.png"
 import irrigationProjectIllustrationSrc from "../../../assets/irrigation-proj-illustration.png"
 import irrigationProjectIconSrc from "../../../assets/flowerpot-icon.png"
+import externalLinkIconSrc from "../../../assets/icons/icons8-link-48.png"
 import styles from "./Projects.module.scss"
+import { ButtonLink } from "../../misc/Button/Button"
 
 type ProjectState = "active" | "development" | "inactive"
 
@@ -30,8 +32,9 @@ export type ProjectProps = {
 	iconSrc?: string
 	state: ProjectState
 	link?: string
+	linkLabel?: string
 	repoUrl?: string
-};
+}
 
 export function Project({
 	title,
@@ -40,21 +43,20 @@ export function Project({
 	iconSrc,
 	state,
 	link,
+	linkLabel,
 	repoUrl
 }: ProjectProps) {
 	return (
 		<List className={styles.ProjectItem} title={title} iconUrl={iconSrc}>
 			<article>
-				<a href={link} target="_blank" rel="noopener noreferrer">
-					<img
-						src={imgSrc}
-						className={styles.ProjectPicture}
-						loading="lazy"
-						width={350}
-						height={(350 * 9) / 16}
-						alt={`${title} screenshot`}
-					/>
-				</a>
+				<img
+					src={imgSrc}
+					className={styles.ProjectPicture}
+					loading="lazy"
+					width={350}
+					height={(350 * 9) / 16}
+					alt={`${title} screenshot`}
+				/>
 
 				<div>
 					<p>{description}</p>
@@ -75,6 +77,19 @@ export function Project({
 							</a>
 						)}
 					</div>
+					{link && (
+						<ButtonLink
+							to={link}
+							rel="noopener noreferrer"
+							target="_blank"
+							label={linkLabel ?? "View project"}
+							className={styles.ButtonLink}
+							rightIcon={{
+								src: externalLinkIconSrc,
+								alt: "External link icon"
+							}}
+						/>
+					)}
 				</div>
 			</article>
 		</List>
@@ -95,6 +110,7 @@ export default function Projects() {
 					imgSrc="https://addons.mozilla.org/user-media/previews/full/322/322418.png?modified=1748884796"
 					iconSrc={splitTabsIconSrc}
 					link="https://addons.mozilla.org/firefox/addon/split-tabs"
+					linkLabel={t("projects.split-tabs.link-label")}
 					repoUrl="https://github.com/bengaudry/split-tabs"
 				/>
 				<Project
@@ -104,6 +120,7 @@ export default function Projects() {
 					imgSrc={studyswipeIllustrationSrc}
 					iconSrc={studyswipeIconSrc}
 					link="https://studyswipe.vercel.app"
+					linkLabel={t("projects.studyswipe.link-label")}
 				/>
 				<Project
 					title={t("projects.compiler.title")}

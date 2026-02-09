@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
-import { NavLink } from "react-router"
 import downloadIconSrc from "../../../assets/icons/icons8-download-64.png"
 import styles from "./DownloadResumeButton.module.scss"
+import { ButtonLink } from "../Button/Button"
 
 const RESUMES: Record<string, { name: string; url: string }> = {
 	en: {
@@ -19,19 +19,18 @@ export function DownloadResumeButton() {
 	const lang = i18n?.language?.split("-")?.[0]
 
 	return (
-		<NavLink
+		<ButtonLink
 			target="_blank"
 			to={RESUMES[lang].url}
 			className={styles.button}
 			download={RESUMES[lang].name}
-		>
-			<span>{t("common.download-resume")}</span>
-			<img
-				src={downloadIconSrc}
-				alt="Download icon"
-				height={28}
-				width={28}
-			/>
-		</NavLink>
+			label={t("common.download-resume")}
+			rightIcon={{
+				src: downloadIconSrc,
+				alt: "Download icon",
+				height: 28,
+				width: 28
+			}}
+		/>
 	)
 }

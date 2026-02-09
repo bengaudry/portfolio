@@ -4,8 +4,6 @@
 	}
 
 	&:hover {
-		cursor: pointer;
-
 		.ProjectPicture {
 			filter: none;
 		}
@@ -90,4 +88,8 @@
 	&[aria-label="development"] {
 		--background-raw: 255, 166, 1;
 	}
+}
+
+.ButtonLink {
+	margin-top: 1rem;
 }
