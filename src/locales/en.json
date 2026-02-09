@@ -24,8 +24,13 @@
 		"studyswipe": {
 			"description": "A web app for students to study their courses with flashcards."
 		},
-		"onboarder": {
-			"description": "An CLI AI tool to discover and explore easily new code projects."
+		"compiler": {
+			"title": "Compiler",
+			"description": "A compiler for a simplified version of C, written in Java. It compiles to a custom assembly language resembling arm64."
+		},
+		"irrigation-system": {
+			"title": "Irrigation System",
+			"description": "An automated irrigation system based on an arduino nano, sensors such as soil moisture sensor, temperature sensor, brightness sensor... and a water pump."
 		}
 	},
 	"contact": {

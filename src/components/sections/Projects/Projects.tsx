@@ -3,6 +3,8 @@ import { List, ResponsiveWrapper, SectionTitle } from "../../ui"
 import splitTabsIconSrc from "../../../assets/split-tabs-icon.png"
 import studyswipeIllustrationSrc from "../../../assets/studyswipe-screenshot.png"
 import studyswipeIconSrc from "../../../assets/studyswipe-icon.png"
+import compilerIllustrationSrc from "../../../assets/compiler-illustration.png"
+import irrigationProjectSrc from "../../../assets/irrigation-proj-illustration.png"
 import styles from "./Projects.module.scss"
 
 type ProjectState = "active" | "development" | "inactive"
@@ -19,6 +21,16 @@ function ProjectStatePill({ state }: { state: ProjectState }) {
 	)
 }
 
+export type ProjectProps = {
+	title: string
+	description: string
+	imgSrc: string
+	iconSrc?: string
+	state: ProjectState
+	link?: string
+	repoUrl?: string
+};
+
 export function Project({
 	title,
 	description,
@@ -27,15 +39,7 @@ export function Project({
 	state,
 	link,
 	repoUrl
-}: {
-	title: string
-	description: string
-	imgSrc: string
-	iconSrc?: string
-	state: ProjectState
-	link?: string
-	repoUrl?: string
-}) {
+}: ProjectProps) {
 	return (
 		<List className={styles.ProjectItem} title={title} iconUrl={iconSrc}>
 			<article>
@@ -98,6 +102,18 @@ export default function Projects() {
 					imgSrc={studyswipeIllustrationSrc}
 					iconSrc={studyswipeIconSrc}
 					link="https://studyswipe.vercel.app"
+				/>
+				<Project
+					title={t("projects.compiler.title")}
+					state="inactive"
+					description={t("projects.compiler.description")}
+					imgSrc={compilerIllustrationSrc}
+				/>
+				<Project
+					title={t("projects.irrigation-system.title")}
+					state="inactive"
+					description={t("projects.irrigation-system.description")}
+					imgSrc={irrigationProjectSrc}
 				/>
 			</ResponsiveWrapper>
 		</section>

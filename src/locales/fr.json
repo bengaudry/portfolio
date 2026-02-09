@@ -24,8 +24,13 @@
 		"studyswipe": {
 			"description": "Une application web à destination des étudiants pour réviser ses cours sous forme de flashcards."
 		},
-		"onboarder": {
-			"description": "Un outil IA intégré au terminal permettant de se repérer plus facilement dans un code encore inconnu."
+		"compiler": {
+			"title": "Compilateur",
+			"description": "Un compilateur pour une version simplifiée de C, écrit en Java. Il compile vers un langage d'assemblage personnalisé ressemblant à arm64."
+		},
+		"irrigation-system": {
+			"title": "Système d'irrigation",
+			"description": "Un système d'irrigation automatisé basé sur un arduino nano, des capteurs tels que capteur d'humidité du sol, capteur de température, capteur de luminosité... et une pompe à eau."
 		}
 	},
 	"contact": {
