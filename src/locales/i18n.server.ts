@@ -16,6 +16,7 @@ export async function initI18n(language: string) {
       lng: language,
       fallbackLng: "fr",
       supportedLngs: ["en", "fr"],
+      preload: ["en", "fr"],
       defaultNS: "common",
       ns: ["common"],
       interpolation: { escapeValue: false },

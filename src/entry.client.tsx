@@ -5,37 +5,34 @@ import "./assets/fonts/SpaceMono-Regular.ttf"
 import i18n from "i18next"
 import { StrictMode } from "react"
 import { hydrateRoot } from "react-dom/client"
-import { initReactI18next } from "react-i18next"
 import { HydratedRouter } from "react-router/dom"
-import en from "./locales/en.json"
-import fr from "./locales/fr.json"
+import { initReactI18next } from "react-i18next"
 
-i18n.use(initReactI18next).init({
-	fallbackLng: "fr",
-	interpolation: {
-		escapeValue: false
-	},
-	resources: {
-		en: {
-			translation: en
-		},
-		fr: {
-			translation: fr
+const initialStore = window.__INITIAL_I18N_STORE__ ?? {
+	en: { common: {} },
+	fr: { common: {} }
+}
+
+const initialLanguage = window.__INITIAL_LANGUAGE__ ?? "fr"
+
+i18n
+	.use(initReactI18next)
+	.init({
+		resources: initialStore,
+		lng: initialLanguage,
+		fallbackLng: "fr",
+		supportedLngs: ["en", "fr"],
+		defaultNS: "common",
+		ns: ["common"],
+		interpolation: {
+			escapeValue: false
 		}
-	}
-})
-
-if (window.location.pathname.endsWith("/en")) {
-	i18n.changeLanguage("en")
-}
-
-if (window.location.pathname.endsWith("/fr")) {
-	i18n.changeLanguage("fr")
-}
-
-hydrateRoot(
-	document,
-	<StrictMode>
-		<HydratedRouter />
-	</StrictMode>
-)
+	})
+	.finally(() => {
+		hydrateRoot(
+			document,
+			<StrictMode>
+				<HydratedRouter />
+			</StrictMode>
+		)
+	})
