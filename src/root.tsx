@@ -1,10 +1,14 @@
-import i18next from "i18next"
+import i18next, { type Resource } from "i18next"
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router"
+import { useLoaderData } from "react-router"
 
 export function Layout({ children }: { children: React.ReactNode }) {
-	const lang = i18next.language || "fr"
+	const data = useLoaderData() as {
+		i18n: { initialI18nStore: Resource; initialLanguage: string }
+	}
+
 	return (
-		<html lang={lang}>
+		<html lang={data?.i18n?.initialLanguage || i18next.language || "fr"}>
 			<head>
 				<meta charSet="UTF-8" />
 				<meta
