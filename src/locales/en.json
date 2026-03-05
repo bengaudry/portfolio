@@ -18,7 +18,7 @@
 	},
 	"projects": {
 		"title": "Projects",
-		"split-tabs": {
+		"side-by-side": {
 			"description": "A firefox addon that allows its users to open two websites in a single tab with a system of split view.",
 			"link-label": "Mozilla Addons"
 		},
