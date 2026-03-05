@@ -104,14 +104,14 @@ export default function Projects() {
 			<ResponsiveWrapper withMargin withBorder>
 				<SectionTitle title={t("projects.title")} />
 				<Project
-					title="Split Tabs"
+					title="Side by Side"
 					state="active"
-					description={t("projects.split-tabs.description")}
+					description={t("projects.side-by-side.description")}
 					imgSrc="https://addons.mozilla.org/user-media/previews/full/322/322418.png?modified=1748884796"
 					iconSrc={splitTabsIconSrc}
-					link="https://addons.mozilla.org/firefox/addon/split-tabs"
-					linkLabel={t("projects.split-tabs.link-label")}
-					repoUrl="https://github.com/bengaudry/split-tabs"
+					link="https://addons.mozilla.org/firefox/addon/side-by-side"
+					linkLabel={t("projects.side-by-side.link-label")}
+					repoUrl="https://github.com/bengaudry/side-by-side"
 				/>
 				<Project
 					title="Studyswipe"
