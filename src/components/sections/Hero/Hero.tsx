@@ -41,7 +41,7 @@ export function Hero() {
 						width={24}
 						alt="Location icon"
 					/>
-					<u>Lyon, France</u>
+					<u>Villeurbanne, France</u>
 				</p>
 				<p>{t("hero.presentation")}</p>
 				<div className={styles.SocialMediaLinksWrapper}>
