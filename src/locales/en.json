@@ -26,6 +26,11 @@
 			"description": "A web app for students to study their courses with flashcards.",
 			"link-label": "Go to web app"
 		},
+		"trade-fair": {
+			"title": "Trade Fair Website",
+			"description": "Website for the trade fair of the engineering school Polytech Lyon, where students can see the different companies that will be present at the trade fair, and apply for internships and job offers.",
+			"link-label": "Go to website"
+		},
 		"compiler": {
 			"title": "Compiler",
 			"description": "A compiler for a simplified version of C, written in Java. It compiles to a custom assembly language resembling arm64."

@@ -26,6 +26,11 @@
 			"description": "Une application web à destination des étudiants pour réviser ses cours sous forme de flashcards.",
 			"link-label": "Accéder à l'application"
 		},
+		"trade-fair": {
+			"title": "Site web du forum des entreprises",
+			"description": "Site web du forum des entreprises de l'école d'ingénieurs Polytech Lyon, où les étudiants peuvent voir les différentes entreprises qui seront présentes au forum, et postuler à des offres de stage et d'emploi.",
+			"link-label": "Accéder au site web"
+		},
 		"compiler": {
 			"title": "Compilateur",
 			"description": "Un compilateur pour une version simplifiée de C, écrit en Java. Il compile vers un langage d'assemblage personnalisé ressemblant à arm64."
