@@ -8,6 +8,8 @@ import compilerIconSrc from "../../../assets/binary-icon.png"
 import irrigationProjectIllustrationSrc from "../../../assets/irrigation-proj-illustration.png"
 import irrigationProjectIconSrc from "../../../assets/flowerpot-icon.png"
 import externalLinkIconSrc from "../../../assets/icons/icons8-link-48.png"
+import tradeFairScreenshotSrc from "../../../assets/trade-fair-screenshot.png"
+import tradeFairIconSrc from "../../../assets/polytech.webp"
 import styles from "./Projects.module.scss"
 import { ButtonLink } from "../../misc/Button/Button"
 
@@ -121,6 +123,16 @@ export default function Projects() {
 					iconSrc={studyswipeIconSrc}
 					link="https://studyswipe.vercel.app"
 					linkLabel={t("projects.studyswipe.link-label")}
+				/>
+				<Project
+					title={t("projects.trade-fair.title")}
+					state="active"
+					description={t("projects.trade-fair.description")}
+					imgSrc={tradeFairScreenshotSrc}
+					iconSrc={tradeFairIconSrc}
+					link="https://forum-polytech-lyon.org"
+					linkLabel={t("projects.trade-fair.link-label")}
+					repoUrl="https://github.com/bengaudry/forum-entreprises-polytech"
 				/>
 				<Project
 					title={t("projects.compiler.title")}
