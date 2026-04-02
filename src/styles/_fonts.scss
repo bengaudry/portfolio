@@ -3,6 +3,7 @@
     src: local("Avenue X.ttf"), url("../assets/fonts/Avenue X.otf");
     font-weight: 400;
     font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,5 +11,6 @@
   src: local("Heming-Variable.ttf"), url("../assets/fonts/Heming-Variable.ttf");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
