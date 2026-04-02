@@ -1,9 +1,11 @@
 .HeroTitle {
 	font-size: clamp(2rem, 10vw, 5.5rem);
-	font-weight: 700;
+	font-weight: 500;
 
 	span {
+		font-family: inherit;
 		font-size: inherit;
-		font-weight: inherit;
+		font-weight: 700;
+		letter-spacing: 0.25rem;
 	}
 }
