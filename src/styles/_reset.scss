@@ -6,17 +6,26 @@
 }
 
 body {
-	color: var(--primary-text-color);
 	background-color: var(--main-background-color);
 	font-family: "AvenueX", monospace;
 	font-weight: 400;
+	color: var(--secondary-text-color);
 }
 
 p {
-	font-size: 1.1rem;
-	line-height: 1.3rem;
-	color: var(--secondary-text-color);
 	max-width: 580px;
+}
+
+p, span {
+	font-size: 0.9rem;
+	line-height: 1.1rem;
+}
+
+@media screen and (min-width: 780px) {
+	p, span {
+		font-size: 1.1rem;
+		line-height: 1.3rem;
+	}
 }
 
 button {
@@ -29,6 +38,13 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6, button, a {
+	color: var(--primary-text-color);
 	font-family: "Heming", monospace;
 	letter-spacing: 0.1rem;
+
+	& > * {
+		font-family: inherit;
+		letter-spacing: inherit;
+		color: inherit;
+	}
 }
