@@ -14,7 +14,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  min-height: 85lvh;
+  min-height: 90lvh;
   background-image: linear-gradient(to right, #26ae7725 1px, transparent 1px),
   linear-gradient(to bottom, #029eff25 1px, transparent 1px);
   background-size: 24px 24px;
@@ -61,21 +61,25 @@
                     var(--main-background-color)
     );
   }
+
+  & > * {
+    z-index: 20;
+  }
 }
 
 @keyframes hero-bg-pulse {
   0% {
     --left-light-opacity: 0.1;
-    --right-light-opacity: 0.45;
+    --right-light-opacity: 0.35;
   }
 
   25% {
-    --left-light-opacity: 0.45;
-    --right-light-opacity: 0.45;
+    --left-light-opacity: 0.35;
+    --right-light-opacity: 0.35;
   }
 
   50% {
-    --left-light-opacity: 0.45;
+    --left-light-opacity: 0.35;
     --right-light-opacity: 0.1;
   }
 
@@ -86,7 +90,7 @@
 
   100% {
     --left-light-opacity: 0.1;
-    --right-light-opacity: 0.45;
+    --right-light-opacity: 0.35;
   }
 }
 
