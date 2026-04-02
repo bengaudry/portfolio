@@ -132,7 +132,7 @@ export default function Projects() {
 					iconSrc={tradeFairIconSrc}
 					link="https://forum-polytech-lyon.org"
 					linkLabel={t("projects.trade-fair.link-label")}
-					repoUrl="https://github.com/bengaudry/forum-entreprises-polytech"
+					repoUrl="https://github.com/bengaudry/forum-polytech-lyon"
 				/>
 				<Project
 					title={t("projects.compiler.title")}
