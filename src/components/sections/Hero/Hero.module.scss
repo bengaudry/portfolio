@@ -38,9 +38,9 @@
     z-index: -10;
     background: linear-gradient(
                     -35deg,
-                    rgba(14, 107, 68, var(--left-light-opacity)),
-                    rgba(7, 82, 51, 0),
-                    rgba(11, 112, 57, var(--right-light-opacity))
+                    rgba(14, 107, 68, var(--left-light-opacity)) 0%,
+                    rgba(7, 82, 51, 0) 35% 65%,
+                    rgba(11, 112, 57, var(--right-light-opacity)) 100%
     );
     animation: hero-bg-pulse 10s ease-in-out forwards infinite;
   }
