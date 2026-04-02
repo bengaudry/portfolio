@@ -13,7 +13,6 @@ export default function Footer() {
 							Icons8
 						</a>
 					</p>
-					<p>Made without AI</p>
 				</div>
 			</ResponsiveWrapper>
 		</footer>

@@ -2,19 +2,19 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: "Space Mono", monospace;
-	font-weight: 400;
 	user-select: none;
 }
 
 body {
 	color: var(--primary-text-color);
 	background-color: var(--main-background-color);
+	font-family: "AvenueX", monospace;
+	font-weight: 400;
 }
 
 p {
-	font-size: 0.9rem;
-	line-height: 1.1rem;
+	font-size: 1.1rem;
+	line-height: 1.3rem;
 	color: var(--secondary-text-color);
 	max-width: 580px;
 }
@@ -26,4 +26,9 @@ button {
 
 a {
 	color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, button, a {
+	font-family: "Heming", monospace;
+	letter-spacing: 0.1rem;
 }
