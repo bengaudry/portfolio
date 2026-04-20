@@ -1,3 +1,5 @@
 export * from "./List/List"
 export * from "./ResponsiveWrapper/ResponsiveWrapper"
 export * from "./SectionTitle/SectionTitle"
+export * from "./Modal/Modal"
+export * from "./Lightbox/Lightbox"

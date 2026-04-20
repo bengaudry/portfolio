@@ -18,6 +18,9 @@
 	},
 	"projects": {
 		"title": "Projects",
+		"view-details": "View Details",
+		"github": "GitHub",
+		"visit-project": "Visit project",
 		"side-by-side": {
 			"description": "A firefox addon that allows its users to open two websites in a single tab with a system of split view.",
 			"link-label": "Mozilla Addons"
@@ -48,6 +51,7 @@
 		"active": "active",
 		"inactive": "inactive",
 		"development": "development",
-		"download-resume": "Resume"
+		"download-resume": "Resume",
+		"close": "Close"
 	}
 }

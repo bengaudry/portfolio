@@ -1,0 +1,87 @@
+.LightboxBackdrop {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.95);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1001;
+	animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.LightboxContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90vw;
+	height: 90vh;
+}
+
+.LightboxImage {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+	animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+	from {
+		transform: scale(0.95);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.CloseButton {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	background: rgba(255, 255, 255, 0.2);
+	border: none;
+	font-size: 2rem;
+	cursor: pointer;
+	color: white;
+	padding: 8px 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	transition: background-color 0.2s ease;
+	z-index: 1002;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.3);
+	}
+
+	&:active {
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.LightboxContainer {
+		width: 95vw;
+		height: 95vh;
+	}
+
+	.CloseButton {
+		top: 1rem;
+		right: 1rem;
+		font-size: 1.5rem;
+		padding: 6px 12px;
+	}
+}
+
