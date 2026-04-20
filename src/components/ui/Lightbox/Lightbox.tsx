@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useOverlayControls } from "../../../hooks/useOverlayControls"
 import styles from "./Lightbox.module.scss"
 
 export type LightboxProps = {
@@ -14,33 +14,10 @@ export function Lightbox({
 	imageSrc,
 	imageAlt
 }: LightboxProps) {
-	useEffect(() => {
-		const handleEscape = (e: KeyboardEvent) => {
-			if (e.key === "Escape" && isOpen) {
-				onClose()
-			}
-		}
-
-		if (isOpen) {
-			document.addEventListener("keydown", handleEscape)
-			document.body.style.overflow = "hidden"
-		}
-
-		return () => {
-			document.removeEventListener("keydown", handleEscape)
-			document.body.style.overflow = "unset"
-		}
-	}, [isOpen, onClose])
+	const { handleBackdropClick } = useOverlayControls(isOpen, onClose)
 
 	if (!isOpen) return null
 
-	const handleBackdropClick = (
-		e: React.MouseEvent<HTMLDivElement>
-	) => {
-		if (e.target === e.currentTarget) {
-			onClose()
-		}
-	}
 
 	return (
 		<div className={styles.LightboxBackdrop} onClick={handleBackdropClick}>

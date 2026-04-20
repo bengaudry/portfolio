@@ -1,5 +1,6 @@
-import { type ReactNode, useEffect } from "react"
+import type { ReactNode } from "react"
 import { useTranslation } from "react-i18next"
+import { useOverlayControls } from "../../../hooks/useOverlayControls"
 import styles from "./Modal.module.scss"
 
 export type ModalProps = {
@@ -11,34 +12,10 @@ export type ModalProps = {
 
 export function Modal({ isOpen, onClose, title, children }: ModalProps) {
 	const { t } = useTranslation()
-
-	useEffect(() => {
-		const handleEscape = (e: KeyboardEvent) => {
-			if (e.key === "Escape" && isOpen) {
-				onClose()
-			}
-		}
-
-		if (isOpen) {
-			document.addEventListener("keydown", handleEscape)
-			document.body.style.overflow = "hidden"
-		}
-
-		return () => {
-			document.removeEventListener("keydown", handleEscape)
-			document.body.style.overflow = "unset"
-		}
-	}, [isOpen, onClose])
+	const { handleBackdropClick } = useOverlayControls(isOpen, onClose)
 
 	if (!isOpen) return null
 
-	const handleBackdropClick = (
-		e: React.MouseEvent<HTMLDivElement>
-	) => {
-		if (e.target === e.currentTarget) {
-			onClose()
-		}
-	}
 
 	return (
 		<div className={styles.ModalBackdrop} onClick={handleBackdropClick}>
