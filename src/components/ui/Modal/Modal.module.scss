@@ -1,0 +1,104 @@
+.ModalBackdrop {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	backdrop-filter: blur(2px);
+	animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.Modal {
+	background-color: var(--main-background-color);
+	color: var(--primary-text-color);
+	border-radius: 12px;
+	max-width: 90vw;
+	max-height: 90vh;
+	overflow-y: auto;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+	animation: slideUp 0.3s ease-out;
+	border: 1px solid rgba(var(--primary-text-color-raw), 0.1);
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.ModalHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.5rem;
+	border-bottom: 1px solid rgba(var(--primary-text-color-raw), 0.1);
+
+	h2 {
+		flex: 1;
+		margin: 0;
+		font-size: 1.5rem;
+	}
+}
+
+.CloseButton {
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: var(--primary-text-color);
+	padding: 0;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	transition: background-color 0.2s ease;
+
+	&:hover {
+		background-color: rgba(var(--primary-text-color-raw), 0.1);
+	}
+
+	&:active {
+		background-color: rgba(var(--primary-text-color-raw), 0.2);
+	}
+}
+
+.ModalContent {
+	padding: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+	.Modal {
+		max-width: 95vw;
+		max-height: 95vh;
+	}
+
+	.ModalHeader {
+		h2 {
+			font-size: 1.2rem;
+		}
+	}
+
+	.ModalContent {
+		padding: 1rem;
+	}
+}
+
