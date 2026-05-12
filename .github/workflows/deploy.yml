@@ -10,18 +10,9 @@ jobs:
   deploy-ftp:
     runs-on: ubuntu-latest
     environment: ftp-deploy-env
-    env:
-      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install lftp
-        run: sudo apt-get update && sudo apt-get install -y lftp
-
-      - name: Install yarn
-        run: npm install -g yarn
 
       - name: 'Setup Node.js'
         uses: actions/setup-node@v4
@@ -42,8 +33,12 @@ jobs:
             exit 1
           fi
 
-      - name: Deploy to FTP server
-        run: |
-          set -euo pipefail
-          lftp "ftp://$FTP_USERNAME:$FTP_PASSWORD@vps.bengaudry.dev" < ftp-deploy-instructions.sh
-          echo "Done!"
+      - name: Deploy to VPS via Rsync
+        uses: Burnett01/rsync-deployments@v7.0.1
+        with:
+          switches: -avzr --delete
+          path: build/client
+          remote_path: /var/www/portfolio/public_html
+          remote_host: ${{ secrets.FTP_HOST }}
+          remote_user: ${{ secrets.FTP_USERNAME }}
+          remote_pass: ${{ secrets.FTP_PASSWORD }}
