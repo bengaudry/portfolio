@@ -10,8 +10,6 @@ import { BrowserRouter } from "react-router"
 
 import "@flaticon/flaticon-uicons/css/brands/all.css"
 import "@flaticon/flaticon-uicons/css/solid/rounded.css"
-import "./assets/fonts/SpaceMono-Bold.ttf"
-import "./assets/fonts/SpaceMono-Regular.ttf"
 
 async function hydrate() {
 	await i18next
