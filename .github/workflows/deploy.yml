@@ -43,7 +43,7 @@ jobs:
           fi
 
       - name: Deploy to FTP server
-        run:
+        run: |
           set -euo pipefail
           lftp "ftp://$FTP_USERNAME:$FTP_PASSWORD@vps.bengaudry.dev" < ftp-deploy-instructions.sh
           echo "Done!"
