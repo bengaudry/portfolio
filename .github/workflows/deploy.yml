@@ -26,13 +26,6 @@ jobs:
       - name: Build the project
         run: yarn build
 
-      - name: Validate FTP secrets
-        run: |
-          if [ -z "${FTP_USERNAME}" ] || [ -z "${FTP_PASSWORD}" ]; then
-            echo "::error::Missing FTP secrets. Define FTP_USERNAME and FTP_PASSWORD in repository secrets (or FTP_USER / FTP_PASS as fallback)."
-            exit 1
-          fi
-
       - name: Deploy to VPS via Rsync
         uses: Burnett01/rsync-deployments@8.0.5
         with:
