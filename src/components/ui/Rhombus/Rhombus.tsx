@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion } from "../../motion"
 import styles from "./Rhombus.module.scss"
 
 export type RhombusProps = { isInView?: boolean; className?: string }

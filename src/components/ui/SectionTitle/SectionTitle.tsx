@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion"
+import { motion, useInView } from "../../motion"
 import { useRef } from "react"
 import { Rhombus } from "../Rhombus/Rhombus"
 import styles from "./SectionTitle.module.scss"

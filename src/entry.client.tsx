@@ -1,37 +1,46 @@
+import Backend from "i18next-http-backend"
+import LanguageDetector from "i18next-browser-languagedetector"
+import { startTransition, StrictMode } from "react"
+import { hydrateRoot } from "react-dom/client"
+import i18next from "i18next"
+import i18n from "./locales/i18n"
+import { I18nextProvider, initReactI18next } from "react-i18next"
+import { getInitialNamespaces } from "remix-i18next/client"
+import { BrowserRouter } from "react-router"
+
 import "@flaticon/flaticon-uicons/css/brands/all.css"
 import "@flaticon/flaticon-uicons/css/solid/rounded.css"
+import "./assets/fonts/SpaceMono-Bold.ttf"
+import "./assets/fonts/SpaceMono-Regular.ttf"
 
-import i18n from "i18next"
-import { StrictMode } from "react"
-import { hydrateRoot } from "react-dom/client"
-import { HydratedRouter } from "react-router/dom"
-import { initReactI18next } from "react-i18next"
+async function hydrate() {
+	await i18next
+		.use(initReactI18next)
+		.use(LanguageDetector)
+		.use(Backend)
+		.init({
+			...i18n,
+			ns: getInitialNamespaces(),
+			detection: {
+				order: ["htmlTag"],
+				caches: []
+			}
+		})
 
-const initialStore = window.__INITIAL_I18N_STORE__ ?? {
-	en: { common: {} },
-	fr: { common: {} }
-}
-
-const initialLanguage = window.__INITIAL_LANGUAGE__ ?? "fr"
-
-i18n
-	.use(initReactI18next)
-	.init({
-		resources: initialStore,
-		lng: initialLanguage,
-		fallbackLng: "fr",
-		supportedLngs: ["en", "fr"],
-		defaultNS: "common",
-		ns: ["common"],
-		interpolation: {
-			escapeValue: false
-		}
-	})
-	.finally(() => {
+	startTransition(() => {
 		hydrateRoot(
 			document,
-			<StrictMode>
-				<HydratedRouter />
-			</StrictMode>
+			<I18nextProvider i18n={i18next}>
+				<StrictMode>
+					<BrowserRouter />
+				</StrictMode>
+			</I18nextProvider>
 		)
 	})
+}
+
+if (window.requestIdleCallback) {
+	window.requestIdleCallback(hydrate)
+} else {
+	window.setTimeout(hydrate, 1)
+}

@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion"
+import { motion, useInView } from "../../motion"
 import { useRef, type PropsWithChildren } from "react"
 import styles from "./List.module.scss"
 

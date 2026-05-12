@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion"
+import { motion, useInView } from "../../motion"
 import { useRef } from "react"
 import { useTranslation } from "react-i18next"
 import { ResponsiveWrapper, SectionTitle } from "../../ui"
