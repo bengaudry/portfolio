@@ -1,34 +1,38 @@
-import {
-	Links,
-	Meta,
-	Outlet,
-	Scripts,
-	ScrollRestoration,
-	useLoaderData
-} from "react-router"
-import type { Route } from "./+types/root"
-import { useTranslation } from "react-i18next"
-import { i18next } from "./locales/i18n.server"
-import { useChangeLanguage } from "remix-i18next/react"
-import { AnimatePresence } from "framer-motion"
+import i18next, { type Resource } from "i18next"
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router"
+import { useLoaderData } from "react-router"
 
-export async function loader({ request }: Route.LoaderArgs) {
-	const locale = await i18next.getLocale(request)
-	return Response.json({ locale })
+export async function loader({ request }: { request: Request }) {
+	const url = new URL(request.url)
+	const initialLanguage = url.pathname.startsWith("/en") ? "en" : "fr"
+
+	const [en, fr] = await Promise.all([
+		import("./locales/en/common.json"),
+		import("./locales/fr/common.json")
+	])
+
+	return {
+		i18n: {
+			initialI18nStore: {
+				en: { common: en.default },
+				fr: { common: fr.default }
+			} as Resource,
+			initialLanguage
+		}
+	}
 }
 
-export const links: Route.LinksFunction = () => []
-
 export function Layout({ children }: { children: React.ReactNode }) {
-	const { locale } = useLoaderData<typeof loader>()
-
-	const { i18n } = useTranslation()
-
-	// This hook will change the i18n instance language to the current locale
-	useChangeLanguage(locale)
+	const data = useLoaderData() as {
+		i18n: { initialI18nStore: Resource; initialLanguage: string }
+	}
+	const initialI18nStore = JSON.stringify(
+		data?.i18n?.initialI18nStore ?? {}
+	).replace(/</g, "\\u003c")
+	const initialLanguage = JSON.stringify(data?.i18n?.initialLanguage ?? "fr")
 
 	return (
-		<html lang={locale} dir={i18n.dir()}>
+		<html lang={data?.i18n?.initialLanguage || i18next.language || "fr"}>
 			<head>
 				<meta charSet="UTF-8" />
 				<meta
@@ -43,9 +47,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<link rel="icon" href="/favicon.ico" />
 				<Meta />
 				<Links />
+
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `window.__INITIAL_I18N_STORE__ = ${initialI18nStore};window.__INITIAL_LANGUAGE__ = ${initialLanguage};`
+					}}
+				/>
 			</head>
 			<body>
-				<AnimatePresence mode="wait">{children}</AnimatePresence>
+				{children}
 				<ScrollRestoration />
 				<Scripts />
 			</body>
