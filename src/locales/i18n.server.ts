@@ -1,26 +1,22 @@
-import { resolve } from "node:path"
-import { URL } from "node:url"
-import { RemixI18Next } from "remix-i18next/server"
-import Backend from "i18next-fs-backend/cjs"
-import i18n from "./i18n"
+import i18next from "i18next"
+import { initReactI18next } from "react-i18next"
+import resourcesToBackend from "i18next-resources-to-backend"
 
-export const i18next = new RemixI18Next({
-	detection: {
-		supportedLanguages: i18n.supportedLngs,
-		fallbackLanguage: i18n.fallbackLng,
-		async findLocale(request) {
-			const url = new URL(request.url)
-			const locale = url.pathname.split("/").at(1)
-			return locale && i18n.supportedLngs.includes(locale)
-				? locale
-				: i18n.fallbackLng
-		}
-	},
-	i18next: {
-		...i18n,
-		backend: {
-			loadPath: resolve("./{{lng}}.json")
-		}
-	},
-	plugins: [Backend]
-})
+export async function initI18n(language: string) {
+	const instance = i18next.createInstance()
+
+	await instance
+		.use(initReactI18next)
+		.use(resourcesToBackend((lang: string) => import(`./${lang}.json`)))
+		.init({
+			lng: language,
+			fallbackLng: "fr",
+			supportedLngs: ["en", "fr"],
+			preload: ["en", "fr"],
+			defaultNS: "common",
+			ns: ["common"],
+			interpolation: { escapeValue: false }
+		})
+
+	return instance
+}
