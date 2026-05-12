@@ -19,7 +19,7 @@ export const i18next = new RemixI18Next({
 	i18next: {
 		...i18n,
 		backend: {
-			loadPath: resolve("./{{lng}}.json")
+			loadPath: resolve("./src/locales/{{lng}}.json")
 		}
 	},
 	plugins: [Backend]
