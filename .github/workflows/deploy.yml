@@ -9,7 +9,7 @@ permissions:
 jobs:
   deploy-ftp:
     runs-on: ubuntu-latest
-    environment: ftp-deployment
+    environment: ftp-deploy-env
     env:
       FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
       FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
