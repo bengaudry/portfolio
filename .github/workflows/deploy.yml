@@ -1,0 +1,49 @@
+name: Deploy to FTP Server
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-ftp:
+    runs-on: ubuntu-latest
+    environment: ftp-deployment
+    env:
+      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Install yarn
+        run: npm install -g yarn
+
+      - name: 'Setup Node.js'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build the project
+        run: yarn build
+
+      - name: Validate FTP secrets
+        run: |
+          if [ -z "${FTP_USERNAME}" ] || [ -z "${FTP_PASSWORD}" ]; then
+            echo "::error::Missing FTP secrets. Define FTP_USERNAME and FTP_PASSWORD in repository secrets (or FTP_USER / FTP_PASS as fallback)."
+            exit 1
+          fi
+
+      - name: Deploy to FTP server
+        run:
+          set -euo pipefail
+          lftp "ftp://$FTP_USERNAME:$FTP_PASSWORD@vps.bengaudry.dev" < ftp-deploy-instructions.sh
+          echo "Done!"
