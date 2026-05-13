@@ -13,7 +13,7 @@ export function SocialMediaLink({ name }: SocialMediaLinkProps) {
 	let link: string = ""
 
 	if ("linkedin" === name) {
-		link = "https://www.linkedin.com/in/ben-gaudry-4702932a5/"
+		link = "https://www.linkedin.com/in/ben-gaudry"
 		iconSrc = linkedinIconSrc
 	}
 
