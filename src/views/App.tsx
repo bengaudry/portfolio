@@ -17,7 +17,7 @@ export default function App() {
 			<Hero />
 			<About />
 
-			<Suspense>
+			<Suspense fallback={null}>
 				<Education />
 				<Skills />
 				<Projects />

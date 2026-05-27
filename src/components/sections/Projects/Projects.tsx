@@ -11,6 +11,7 @@ import irrigationProjectIconSrc from "../../../assets/flowerpot-icon.png"
 import externalLinkIconSrc from "../../../assets/icons/icons8-link-48.png"
 import tradeFairScreenshotSrc from "../../../assets/trade-fair-screenshot.png"
 import tradeFairIconSrc from "../../../assets/polytech.webp"
+import githubIconSrc from "../../../assets/icons/icons8-github-64.png"
 import styles from "./Projects.module.scss"
 import { ButtonLink } from "../../misc/Button/Button"
 
@@ -96,7 +97,7 @@ export function Project({
 									height={24}
 									width={24}
 									alt="Github repository"
-									src="https://img.icons8.com/?size=100&id=62856&format=png&color=ffffff"
+									src={githubIconSrc}
 								/>
 							</a>
 						)}

@@ -32,6 +32,7 @@ export function Hero() {
 					alt="Picture of Ben Gaudry"
 					width={480}
 					height={480}
+					fetchPriority="high"
 				/>
 				<HeroTitle />
 				<p className={styles.Location}>
