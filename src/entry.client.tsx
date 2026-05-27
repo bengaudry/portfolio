@@ -1,6 +1,3 @@
-import "@flaticon/flaticon-uicons/css/brands/all.css"
-import "@flaticon/flaticon-uicons/css/solid/rounded.css"
-
 import i18n from "i18next"
 import { StrictMode } from "react"
 import { hydrateRoot } from "react-dom/client"
