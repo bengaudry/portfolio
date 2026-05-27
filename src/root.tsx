@@ -45,6 +45,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				/>
 				<title>Ben Gaudry - Portfolio</title>
 				<link rel="icon" href="/favicon.ico" />
+				<link rel="preload" as="image" href="/assets/hero.webp" />
 				<Meta />
 				<Links />
 

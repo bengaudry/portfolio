@@ -1,8 +1,8 @@
 import { PERSONNAL_EMAIL } from "../../../lib/constants"
 import styles from "./SocialMediaLink.module.scss"
-import linkedinIconSrc from "../../../assets/icons/icons8-linkedin-50.png"
-import githubIconSrc from "../../../assets/icons/icons8-github-64.png"
-import mailIconSrc from "../../../assets/icons/icons8-mail-50.png"
+import linkedinIconSrc from "../../../assets/icons/icons8-linkedin-36.png"
+import githubIconSrc from "../../../assets/icons/icons8-github-36.png"
+import mailIconSrc from "../../../assets/icons/icons8-mail-36.png"
 
 export type SocialMediaLinkProps = {
 	name: "linkedin" | "github" | "mail"
