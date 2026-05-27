@@ -1,6 +1,12 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
-import { List, ResponsiveWrapper, SectionTitle, Modal, Lightbox } from "../../ui"
+import {
+	List,
+	ResponsiveWrapper,
+	SectionTitle,
+	Modal,
+	Lightbox
+} from "../../ui"
 import splitTabsIconSrc from "../../../assets/split-tabs-icon.svg"
 import studyswipeIllustrationSrc from "../../../assets/studyswipe-screenshot.png"
 import studyswipeIconSrc from "../../../assets/studyswipe-icon.png"

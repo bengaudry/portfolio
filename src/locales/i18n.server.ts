@@ -12,10 +12,12 @@ export async function initI18n(language: string) {
 
 	await instance
 		.use(initReactI18next)
-		.use(resourcesToBackend((lang: string) => {
-			const loader = localeLoaders[lang] ?? localeLoaders.fr
-			return loader()
-		}))
+		.use(
+			resourcesToBackend((lang: string) => {
+				const loader = localeLoaders[lang] ?? localeLoaders.fr
+				return loader()
+			})
+		)
 		.init({
 			lng: language,
 			fallbackLng: "fr",

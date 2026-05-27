@@ -1,15 +1,19 @@
 @font-face {
-  font-family: "Heming";
-  src: local("Heming-Variable.woff2"), url("../assets/fonts/Heming-Variable.woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Heming";
+	src:
+		local("Heming-Variable.woff2"),
+		url("../assets/fonts/Heming-Variable.woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "DMMono";
-  src: local("DMMono-Regular.woff2"), url("../assets/fonts/DMMono-Regular.woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+	font-family: "DMMono";
+	src:
+		local("DMMono-Regular.woff2"),
+		url("../assets/fonts/DMMono-Regular.woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }

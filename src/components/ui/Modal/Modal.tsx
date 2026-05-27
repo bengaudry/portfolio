@@ -16,7 +16,6 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
 
 	if (!isOpen) return null
 
-
 	return (
 		<div className={styles.ModalBackdrop} onClick={handleBackdropClick}>
 			<div className={styles.Modal}>
@@ -36,4 +35,3 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
 		</div>
 	)
 }
-
