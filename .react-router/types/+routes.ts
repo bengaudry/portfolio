@@ -3,36 +3,36 @@
 import "react-router"
 
 declare module "react-router" {
-  interface Register {
-    pages: Pages
-    routeFiles: RouteFiles
-    routeModules: RouteModules
-  }
+	interface Register {
+		pages: Pages
+		routeFiles: RouteFiles
+		routeModules: RouteModules
+	}
 }
 
 type Pages = {
-  "/": {
-    params: {};
-  };
-  "/:locale?": {
-    params: {
-      "locale"?: string;
-    };
-  };
-};
+	"/": {
+		params: {}
+	}
+	"/:locale?": {
+		params: {
+			locale?: string
+		}
+	}
+}
 
 type RouteFiles = {
-  "root.tsx": {
-    id: "root";
-    page: "/" | "/:locale?";
-  };
-  "catchall.tsx": {
-    id: "catchall";
-    page: "/:locale?";
-  };
-};
+	"root.tsx": {
+		id: "root"
+		page: "/" | "/:locale?"
+	}
+	"catchall.tsx": {
+		id: "catchall"
+		page: "/:locale?"
+	}
+}
 
 type RouteModules = {
-  "root": typeof import("./src/root.tsx");
-  "catchall": typeof import("./src/catchall.tsx");
-};
+	root: typeof import("./src/root.tsx")
+	catchall: typeof import("./src/catchall.tsx")
+}

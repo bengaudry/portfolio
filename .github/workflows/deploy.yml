@@ -1,37 +1,37 @@
 name: Deploy to FTP Server
 on:
-  push:
-    branches: [master]
+    push:
+        branches: [master]
 
 permissions:
-  contents: write
+    contents: write
 
 jobs:
-  deploy-ftp:
-    runs-on: ubuntu-latest
-    environment: ftp-deploy-env
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    deploy-ftp:
+        runs-on: ubuntu-latest
+        environment: ftp-deploy-env
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
 
-      - name: 'Setup Node.js'
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'yarn'
+            - name: "Setup Node.js"
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22"
+                  cache: "yarn"
 
-      - name: Install dependencies
-        run: yarn
+            - name: Install dependencies
+              run: yarn
 
-      - name: Build the project
-        run: yarn build
+            - name: Build the project
+              run: yarn build
 
-      - name: Deploy to VPS via Rsync
-        uses: Burnett01/rsync-deployments@8.0.5
-        with:
-          switches: -avzr --delete
-          path: build/client/
-          remote_path: /var/www/portfolio/public_html
-          remote_host: ${{ secrets.FTP_HOST }}
-          remote_user: ${{ secrets.FTP_USERNAME }}
-          remote_key: ${{ secrets.FTP_PASSWORD }}
+            - name: Deploy to VPS via Rsync
+              uses: Burnett01/rsync-deployments@8.0.5
+              with:
+                  switches: -avzr --delete
+                  path: build/client/
+                  remote_path: /var/www/portfolio/public_html
+                  remote_host: ${{ secrets.FTP_HOST }}
+                  remote_user: ${{ secrets.FTP_USERNAME }}
+                  remote_key: ${{ secrets.FTP_PASSWORD }}

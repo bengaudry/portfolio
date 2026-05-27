@@ -28,4 +28,3 @@ export function useOverlayControls(isOpen: boolean, onClose: () => void) {
 
 	return { handleBackdropClick }
 }
-

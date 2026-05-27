@@ -7,7 +7,7 @@ import { LangSelector } from "../../misc/LangSelector/LangSelector"
 import { DownloadResumeButton } from "../../misc/DownloadResumeButton/DownloadResumeButton"
 import meLowResImgSrc from "../../../assets/me-low-res.webp"
 import meImgSrc from "../../../assets/me.webp"
-import locationIconSrc from "../../../assets/icons/icons8-location-94.png"
+import locationIconSrc from "../../../assets/icons/icons8-location-24.webp"
 import styles from "./Hero.module.scss"
 
 export function Hero() {

@@ -18,7 +18,6 @@ export function Lightbox({
 
 	if (!isOpen) return null
 
-
 	return (
 		<div className={styles.LightboxBackdrop} onClick={handleBackdropClick}>
 			<div className={styles.LightboxContainer}>
@@ -39,4 +38,3 @@ export function Lightbox({
 		</div>
 	)
 }
-

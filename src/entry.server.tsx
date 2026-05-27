@@ -50,7 +50,10 @@ export default async function handleRequest(
 						}
 
 						// Set content type with charset
-						responseHeaders.set("Content-Type", "text/html; charset=utf-8")
+						responseHeaders.set(
+							"Content-Type",
+							"text/html; charset=utf-8"
+						)
 
 						// Security headers
 						responseHeaders.set(
@@ -59,7 +62,10 @@ export default async function handleRequest(
 						)
 						responseHeaders.set("X-Content-Type-Options", "nosniff")
 						responseHeaders.set("X-Frame-Options", "DENY")
-						responseHeaders.set("Referrer-Policy", "strict-no-referrer")
+						responseHeaders.set(
+							"Referrer-Policy",
+							"strict-no-referrer"
+						)
 						responseHeaders.set(
 							"Permissions-Policy",
 							"geolocation=(), camera=(), microphone=(), payment=()"
@@ -89,7 +95,10 @@ export default async function handleRequest(
 
 		// Return error response
 		responseHeaders.set("Content-Type", "text/html; charset=utf-8")
-		responseHeaders.set("Cache-Control", "no-cache, no-store, must-revalidate")
+		responseHeaders.set(
+			"Cache-Control",
+			"no-cache, no-store, must-revalidate"
+		)
 
 		const errorHtml = `
 <!DOCTYPE html>

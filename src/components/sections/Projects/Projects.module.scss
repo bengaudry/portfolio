@@ -131,7 +131,9 @@
 	border-radius: 8px;
 	object-fit: cover;
 	cursor: pointer;
-	transition: transform 0.2s ease, filter 0.2s ease;
+	transition:
+		transform 0.2s ease,
+		filter 0.2s ease;
 	position: relative;
 
 	&:hover {
@@ -188,4 +190,3 @@
 		object-fit: contain;
 	}
 }
-

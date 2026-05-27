@@ -16,13 +16,15 @@ p {
 	max-width: 580px;
 }
 
-p, span {
+p,
+span {
 	font-size: 0.9rem;
 	line-height: 1.1rem;
 }
 
 @media screen and (min-width: 780px) {
-	p, span {
+	p,
+	span {
 		font-size: 1.1rem;
 		line-height: 1.3rem;
 	}
@@ -38,7 +40,12 @@ a {
 	color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: var(--primary-text-color);
 	font-family: "Heming", monospace;
 	letter-spacing: 0.1rem;
