@@ -34,6 +34,9 @@
 			"description": "Website for the trade fair of the engineering school Polytech Lyon, where students can see the different companies that will be present at the trade fair, and apply for internships and job offers.",
 			"link-label": "Go to website"
 		},
+		"pronto": {
+			"description": "A CLI tool written in Rust to compile and execute C programs with just one command, without any configuration."
+		},
 		"compiler": {
 			"title": "Compiler",
 			"description": "A compiler for a simplified version of C, written in Java. It compiles to a custom assembly language resembling arm64."

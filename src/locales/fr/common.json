@@ -34,6 +34,9 @@
 			"description": "Site web du forum des entreprises de l'école d'ingénieurs Polytech Lyon, où les étudiants peuvent voir les différentes entreprises qui seront présentes au forum, et postuler à des offres de stage et d'emploi.",
 			"link-label": "Accéder au site web"
 		},
+		"pronto": {
+			"description": "Un outil CLI écrit en Rust permettant de compiler et exécuter des programmes C avec une seule commande, sans aucune configuration."
+		},
 		"compiler": {
 			"title": "Compilateur",
 			"description": "Un compilateur pour une version simplifiée de C, écrit en Java. Il compile vers un langage d'assemblage personnalisé ressemblant à arm64."

@@ -12,6 +12,7 @@ import studyswipeIllustrationSrc from "../../../assets/studyswipe-screenshot.png
 import studyswipeIconSrc from "../../../assets/studyswipe-icon.png"
 import compilerIllustrationSrc from "../../../assets/compiler-illustration.png"
 import compilerIconSrc from "../../../assets/binary-icon.png"
+import prontoIllustrationSrc from "../../../assets/pronto-screenshot.png"
 import irrigationProjectIllustrationSrc from "../../../assets/irrigation-proj-illustration.png"
 import irrigationProjectIconSrc from "../../../assets/flowerpot-icon.png"
 import externalLinkIconSrc from "../../../assets/icons/icons8-link-48.png"
@@ -153,6 +154,13 @@ export default function Projects() {
 			link: "https://forum-polytech-lyon.org",
 			linkLabel: t("projects.trade-fair.link-label"),
 			repoUrl: "https://github.com/bengaudry/forum-polytech-lyon"
+		},
+		{
+			title: "Pronto",
+			state: "active",
+			description: t("projects.pronto.description"),
+			imgSrc: prontoIllustrationSrc,
+			repoUrl: "https://github.com/bengaudry/pronto"
 		},
 		{
 			title: t("projects.compiler.title"),
