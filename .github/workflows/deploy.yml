@@ -34,9 +34,9 @@ jobs:
       - name: Clean portfolio contents only
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          key: ${{ secrets.FTP_PASSWORD }}
           script: |
             # Supprime tout le contenu (fichiers cachés inclus) sans toucher au dossier /var/www/portfolio
             rm -rf /var/www/portfolio/{*,.*} 2>/dev/null || true
