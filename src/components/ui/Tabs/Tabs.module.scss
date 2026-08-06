@@ -1,0 +1,32 @@
+.Tabs {
+}
+
+.Nav {
+}
+
+.Trigger {
+	padding: 6px 12px;
+	background-color: transparent;
+	transition: background-color 200ms ease-in-out;
+	border-radius: 8px;
+
+	&:hover {
+		background-color: #2c2c2c;
+	}
+
+	&:not(:last-child) {
+		margin-right: 4px;
+	}
+}
+
+.ActiveTrigger {
+	background-color: #4c4c4c;
+
+	&:hover {
+		background-color: #4c4c4c;
+	}
+}
+
+.Content {
+	margin-top: 12px;
+}

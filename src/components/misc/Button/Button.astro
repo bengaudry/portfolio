@@ -1,0 +1,49 @@
+---
+import styles from "./Button.module.scss"
+import {getLocaleFromUrl} from "@/i18n/utils.ts";
+import type {HTMLAttributes} from "astro/types";
+import type {ButtonLinkPropsBase} from "@/components/misc/Button/Button.tsx";
+
+type Props = ButtonLinkPropsBase & HTMLAttributes<"a">
+
+const {
+    class: className,
+    href,
+    label,
+    leftIcon,
+    rightIcon,
+    StartContent,
+    EndContent,
+    ...otherProps
+} = Astro.props
+
+const classNames = [styles.Button, className].filter(Boolean)
+const computedClassname = classNames.join(" ")
+
+const locale = getLocaleFromUrl(Astro.url)
+const realHref = `/${locale}${href}`
+---
+
+<a class={computedClassname} {...otherProps} href={realHref}>
+    {StartContent && StartContent}
+    {leftIcon && (
+            <img
+                    src={leftIcon.src}
+                    alt={leftIcon.alt}
+                    height={leftIcon.height ?? 16}
+                    width={leftIcon.width ?? 16}
+                    loading="lazy"
+            />
+    )}
+    <span>{label}</span>
+    {rightIcon && (
+            <img
+                    src={rightIcon.src}
+                    alt={rightIcon.alt}
+                    height={rightIcon.height ?? 16}
+                    width={rightIcon.width ?? 16}
+                    loading="lazy"
+            />
+    )}
+    {EndContent && EndContent}
+</a>

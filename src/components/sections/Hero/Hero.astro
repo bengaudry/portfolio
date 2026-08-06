@@ -1,0 +1,63 @@
+---
+import {HeroTitle} from "@/components/misc"
+import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro"
+import SocialMediaLink from "@/components/ui/SocialMediaLink/SocialMediaLink.astro"
+import LangSelector from "@/components/misc/LangSelector/LangSelector.astro"
+import meLowResImg from "@/assets/me-low-res.webp"
+import meImg from "@/assets/me.webp"
+import locationIcon from "@/assets/icons/icons8-location-24.webp"
+import {useTranslation} from "@/i18n/utils.ts";
+import {RESUMES} from "@/lib/constants.ts";
+import {Download} from "lucide-react";
+import ButtonLink from "@/components/misc/Button/Button.astro"
+import styles from "./Hero.module.scss"
+
+const {t, locale} = useTranslation(Astro.url)
+---
+
+<section class={styles.Hero}>
+    <ResponsiveWrapper withMargin className={styles.InnerWrapper}>
+        <LangSelector/>
+        <img
+                src={meImg.src}
+                class={styles.Picture}
+                style={{
+                    // Loading the low res image as a background image while the high res one is loading to avoid layout shift
+
+                    backgroundImage: `url(${meLowResImg.src})`
+                }}
+                alt="Picture of Ben Gaudry"
+                width={480}
+                height={480}
+                fetchpriority="high"
+        />
+        <HeroTitle client:only="react" />
+        <a
+                class={styles.Location}
+                target="_blank"
+                href="https://maps.app.goo.gl/6h5ANdi6Dqbmisc26"
+        >
+            <img
+                    src={locationIcon.src}
+                    height={24}
+                    width={24}
+                    alt="Location icon"
+            />
+            <u>Lyon, France</u>
+        </a>
+        <p>{t("hero.presentation")}</p>
+        <div class={styles.SocialMediaLinksWrapper}>
+            <SocialMediaLink name="linkedin"/>
+            <SocialMediaLink name="github"/>
+            <SocialMediaLink name="mail"/>
+            <ButtonLink
+                    target="_blank"
+                    href={RESUMES[locale]?.url}
+                    class={styles.button}
+                    download={RESUMES[locale]?.name}
+                    label={t("common.download-resume")}
+                    EndContent={<Download size={16} />}
+            />
+        </div>
+    </ResponsiveWrapper>
+</section>

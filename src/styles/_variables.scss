@@ -1,0 +1,20 @@
+:root {
+	/* Raw rgb values */
+	// backgrounds
+	--main-background-color-raw: 12, 12, 12;
+	--card-hover-background-color-raw: 18, 18, 18;
+
+	// foregrounds
+	--primary-text-color-raw: 240, 240, 240;
+	--secondary-text-color-raw: 160, 160, 160;
+
+	// borders
+	--card-border-color-raw: 60, 60, 60;
+
+	/* Usable rgb values */
+	--main-background-color: rgb(var(--main-background-color-raw));
+	--primary-text-color: rgb(var(--primary-text-color-raw));
+	--secondary-text-color: rgb(var(--secondary-text-color-raw));
+	--card-border-color: rgb(var(--card-border-color-raw));
+	--card-hover-background-color: rgb(var(--card-hover-background-color-raw));
+}

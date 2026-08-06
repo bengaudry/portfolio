@@ -1,0 +1,22 @@
+---
+import {useTranslation} from "@/i18n/utils"
+import SectionTitle from "@/components/ui/SectionTitle/SectionTitle.astro"
+import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro"
+import styles from "./About.module.scss"
+
+const {t} = useTranslation(Astro.url)
+---
+
+<section class={styles.About}>
+    <ResponsiveWrapper withBorder isFirst style={{paddingBottom: 0}}>
+        <SectionTitle title={t("about.title")}/>
+        {t("about.content")
+            .split("\n")
+            .map((content, idx) => (
+                    <div>
+                        <span>$</span>
+                        <span>{content}</span>
+                    </div>
+            ))}
+    </ResponsiveWrapper>
+</section>

@@ -1,0 +1,15 @@
+.BackButton {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+	margin-bottom: 1rem;
+
+	&:hover {
+		color: white;
+	}
+}
+
+.CustomTabs {
+	margin-top: 1rem;
+}

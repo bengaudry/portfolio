@@ -1,0 +1,120 @@
+.ProjectItem {
+	&:not(:last-child) {
+		margin-bottom: 4rem;
+	}
+
+	&:hover {
+		.ProjectPicture {
+			filter: none;
+		}
+	}
+}
+
+.ProjectItem {
+	& > article {
+		display: flex;
+		gap: 1rem;
+		flex-direction: column;
+	}
+
+	p {
+		display: block;
+		max-width: 350px;
+	}
+}
+
+.ProjectIcon {
+	width: 32px;
+	height: 32px;
+	margin-bottom: 0.5rem;
+}
+
+.ProjectLinks {
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+
+	a {
+		height: 24px;
+		width: 24px;
+		display: block;
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+@media screen and (min-width: 780px) {
+	.ProjectItem > article {
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+.ProjectPicture {
+	width: 100%;
+	max-width: 350px;
+	filter: grayscale(1);
+}
+
+.ProjectStatePill {
+	--background-raw: 140, 140, 140;
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	padding: 6px 12px;
+	width: fit-content;
+	border-radius: 4px;
+	background: rgba(var(--background-raw), 0.2);
+	color: rgba(var(--background-raw), 0.6);
+	font-size: 0.8rem;
+
+	span:first-child {
+		display: block;
+		width: 6px;
+		height: 6px;
+		border-radius: 9999px;
+		background: rgb(var(--background-raw), 0.7);
+	}
+
+	&[aria-label='active'] {
+		--background-raw: 0, 255, 153;
+	}
+	&[aria-label='development'] {
+		--background-raw: 255, 166, 1;
+	}
+}
+
+.ButtonLink {
+	margin-top: 1rem;
+}
+
+.DetailsButton {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 16px;
+	width: fit-content;
+	background-color: var(--primary-text-color);
+	color: var(--main-background-color);
+	border-radius: 12px;
+	border: none;
+	font-weight: 600;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+
+	&:hover {
+		background-color: rgba(var(--primary-text-color-raw), 0.8);
+	}
+
+	&:active {
+		background-color: rgba(var(--primary-text-color-raw), 0.7);
+	}
+}

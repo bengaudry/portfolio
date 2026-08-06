@@ -1,0 +1,18 @@
+---
+import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro"
+import styles from "./Footer.module.scss"
+---
+
+<footer class={styles.Footer}>
+    <ResponsiveWrapper withMargin>
+        <div class="content-center">
+            <p>© Ben Gaudry - {new Date().getFullYear()}</p>
+            <p>
+                Icons by{" "}
+                <a target="_blank" href="https://icons8.com">
+                    Icons8
+                </a>
+            </p>
+        </div>
+    </ResponsiveWrapper>
+</footer>

@@ -1,0 +1,17 @@
+---
+import Rhombus from "../Rhombus/Rhombus.astro"
+import styles from "./SectionTitle.module.scss"
+
+type Props = {
+    title: string
+}
+
+const {title} = Astro.props;
+---
+
+<div class={styles.SectionTitle}>
+    <Rhombus className={styles.Rhombus}/>
+    <h2>
+        {title}
+    </h2>
+</div>

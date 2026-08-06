@@ -1,0 +1,20 @@
+---
+import {ProjectsView} from "@/components/projects/ProjectsView/ProjectsView";
+import Layout from "@/layouts/Layout.astro";
+import styles from "./projects.module.scss"
+
+export function getStaticPaths() {
+    return [
+        {params: {locale: 'en'}},
+        {params: {locale: 'fr'}},
+    ];
+}
+
+export const prerender = true;
+---
+
+<Layout>
+    <div class={styles.Projects}>
+        <ProjectsView defaultProjectId={Astro.url.searchParams.get("modal-content-id")} client:only="react"/>
+    </div>
+</Layout>

@@ -1,0 +1,23 @@
+---
+type Props = {
+    location: string
+    startYear: number
+    endYear?: number
+    description?: string
+}
+
+const {
+    location,
+    startYear,
+    endYear,
+    description
+} = Astro.props
+---
+
+<div>
+			<span>
+				{location}&nbsp;&middot;&nbsp;{startYear}
+                {endYear && "-" + endYear}
+			</span>
+    <p>{description}</p>
+</div>

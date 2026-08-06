@@ -1,0 +1,38 @@
+.SubProjectsList {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.ProjectCard {
+	border: 1px solid var(--card-border-color);
+	border-radius: 12px;
+	padding: 2rem 1rem;
+	transition: background-color 200ms ease;
+
+	img {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	h3 {
+		margin-bottom: 0.5rem;
+	}
+
+	&:hover {
+		background-color: var(--card-hover-background-color);
+		cursor: pointer;
+	}
+}
+
+.ProjectCardHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+
+	img {
+		width: 32px;
+		height: 32px;
+	}
+}

@@ -1,0 +1,32 @@
+---
+import {useTranslation} from "@/i18n/utils"
+import SectionTitle from "@/components/ui/SectionTitle/SectionTitle.astro"
+import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro"
+import {ChevronRight} from "lucide-react"
+
+import styles from "./Projects.module.scss"
+import {
+    getHighlightedProjectsList,
+} from "@/lib/projects.ts"
+import ButtonLink from "@/components/misc/Button/Button.astro"
+import ProjectItem from "./ProjectItem.astro"
+
+const {t} = useTranslation(Astro.url)
+const projectsList = getHighlightedProjectsList(t)
+---
+
+<section class={styles.Projects}>
+    <ResponsiveWrapper withMargin={true} withBorder={true}>
+        <SectionTitle title={t("projects.title")}/>
+        {projectsList.map((project) => (
+                <ProjectItem
+                        {...project}
+                />
+        ))}
+        <ButtonLink
+                href="/projects"
+                label={t("projects.view-all")}
+                EndContent={<ChevronRight size = {16}/>}
+        />
+    </ResponsiveWrapper>
+</section>

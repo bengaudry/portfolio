@@ -1,0 +1,26 @@
+---
+import { useTranslation } from "@/i18n/utils"
+import SectionTitle from "@/components/ui/SectionTitle/SectionTitle.astro"
+import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro"
+import { PERSONAL_EMAIL } from "@/lib/constants"
+import styles from "./Contact.module.scss"
+
+const { t } = useTranslation(Astro.url)
+---
+
+		<section class={styles.Contact}>
+			<ResponsiveWrapper withMargin withBorder isLast>
+				<SectionTitle title={t("contact.title")} />
+				<p>{t("contact.contactMe")}</p>
+				<a href={`mailto:${PERSONAL_EMAIL}`}>{PERSONAL_EMAIL}</a>
+				<p>{t("contact.workWithMeHeader")}</p>
+				<a href="https://www.malt.fr/profile/bengaudry" target="_blank">
+					<img
+						src="https://dam.malt.com/navbar/logos/malt-logo-red.svg?vh=9690b2?w=100&h=28"
+						width={100}
+						height={28}
+						alt="MALT"
+					/>
+				</a>
+			</ResponsiveWrapper>
+		</section>

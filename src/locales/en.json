@@ -1,0 +1,63 @@
+{
+	"hero": {
+		"presentation": "I am a computer science student at the engineering school Polytech Lyon, and I am specialized in web development, especially front-end. I also have a strong interest in low-level programming."
+	},
+	"about": {
+		"title": "About",
+		"content": "I started coding in the beggining of middle school with Mathieu Nebra's web development course on OpenClassrooms.\nDuring lockdown, I extended my coding skills with game development on UE4.\nSince that, I developed many projects by myself, and I deepened my knowledge with my studies.\nI would like to work in software development, for example web development or low-level programming (operating systems, drivers, compilers, etc.)."
+	},
+	"education": {
+		"title": "Education"
+	},
+	"skills": {
+		"title": "Skills",
+		"front-end": "Front-end",
+		"back-end": "Back-end",
+		"tools": "Tools",
+		"others": "Others"
+	},
+	"projects": {
+		"title": "Projects",
+		"view-details": "View Details",
+		"view-all": "View all projects",
+		"github": "GitHub",
+		"visit-project": "Visit project",
+		"side-by-side": {
+			"description": "A firefox addon that allows its users to open two websites in a single tab with a system of split view.",
+			"link-label": "Mozilla Addons"
+		},
+		"studyswipe": {
+			"description": "A web app for students to study their courses with flashcards.",
+			"link-label": "Go to web app"
+		},
+		"trade-fair": {
+			"title": "Trade Fair Website",
+			"description": "Website for the trade fair of the engineering school Polytech Lyon, where students can see the different companies that will be present at the trade fair, and apply for internships and job offers.",
+			"link-label": "Go to website"
+		},
+		"pronto": {
+			"description": "A CLI tool written in Rust to compile and execute C programs with just one command, without any configuration."
+		},
+		"compiler": {
+			"title": "Compiler",
+			"description": "A compiler for a simplified version of C, written in Java. It compiles to a custom assembly language resembling arm64."
+		},
+		"irrigation-system": {
+			"title": "Irrigation System",
+			"description": "An automated irrigation system based on an arduino nano, sensors such as soil moisture sensor, temperature sensor, brightness sensor... and a water pump."
+		}
+	},
+	"contact": {
+		"title": "Contact",
+		"contactMe": "You can contact me via email :",
+		"workWithMeHeader": "To work with me:"
+	},
+	"common": {
+		"active": "active",
+		"inactive": "inactive",
+		"development": "development",
+		"download-resume": "Resume",
+		"close": "Close",
+		"back": "Back"
+	}
+}

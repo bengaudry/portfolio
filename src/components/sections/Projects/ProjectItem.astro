@@ -1,0 +1,32 @@
+---
+import type {ProjectProps} from "@/lib/projects.ts";
+import styles from "@/components/sections/Projects/Projects.module.scss";
+import {List} from "@/components/ui";
+
+type Props = ProjectProps;
+
+const {
+    id,
+    title,
+    description,
+    imgSrc,
+    iconSrc,
+} = Astro.props;
+---
+
+<a href={`/projects?modal-content-id=${encodeURIComponent(id)}`}>
+    <List className={styles.ProjectItem} title={title} iconUrl={iconSrc}>
+        <article>
+            <img
+                    src={imgSrc}
+                    class={styles.ProjectPicture}
+                    loading="lazy"
+                    width={350}
+                    height={(350 * 9) / 16}
+                    alt={`${title} screenshot`}
+            />
+
+            <p>{description}</p>
+        </article>
+    </List>
+</a>

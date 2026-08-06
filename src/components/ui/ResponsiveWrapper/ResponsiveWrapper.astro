@@ -1,0 +1,27 @@
+---
+import type {CSSProperties, PropsWithChildren} from "react"
+import type {ResponsiveWrapperProps} from "./ResponsiveWrapper.tsx";
+import styles from "./ResponsiveWrapper.module.scss"
+
+type Props = Omit<ResponsiveWrapperProps, "children">
+
+const {
+    isFirst,
+    isLast,
+    className,
+    withBorder,
+    withMargin,
+    style
+} = Astro.props;
+
+const classNames = [styles.ResponsiveWrapper]
+if (withMargin) classNames.push(styles.WithMargin)
+if (withBorder) classNames.push(styles.WithBorder)
+if (isFirst) classNames.push(styles.First)
+if (isLast) classNames.push(styles.Last)
+if (className) classNames.push(className)
+---
+
+<div class:list={classNames} style={style}>
+    <slot />
+</div>
