@@ -39,6 +39,7 @@ jobs:
           key: ${{ secrets.FTP_PASSWORD }}
           source: "dist/,ecosystem.config.cjs,package.json"
           target: "/var/www/portfolio"
+          strip_components: 1
 
       - name: Restart PM2 on VPS
         uses: appleboy/ssh-action@v1.0.3
