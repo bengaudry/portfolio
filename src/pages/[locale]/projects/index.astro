@@ -17,7 +17,7 @@ export const prerender = true;
 const {locale, t} = useTranslation(Astro.url)
 ---
 
-<GlobalLayout>
+<GlobalLayout title={"Ben Gaudry - " + t("projects.title")}>
     <div class={styles.Projects}>
         <ResponsiveWrapper withMargin isFirst>
             <a href={`/${locale}/`} class={styles.BackButton}>
