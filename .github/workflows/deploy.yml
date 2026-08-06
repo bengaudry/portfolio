@@ -34,8 +34,8 @@ jobs:
       - name: Deploy dist/ to VPS via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
           key: ${{ secrets.FTP_PASSWORD }}
           source: "dist/,ecosystem.config.cjs,package.json"
           target: "/var/www/portfolio"
@@ -43,8 +43,8 @@ jobs:
       - name: Restart PM2 on VPS
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
           key: ${{ secrets.FTP_PASSWORD }}
           script: |
             cd /var/www/portfolio
