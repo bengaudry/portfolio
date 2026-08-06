@@ -31,6 +31,16 @@ jobs:
       - name: Build the project
         run: pnpm build
 
+      - name: Clean portfolio contents only
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Supprime tout le contenu (fichiers cachés inclus) sans toucher au dossier /var/www/portfolio
+            rm -rf /var/www/portfolio/{*,.*} 2>/dev/null || true
+
       - name: Deploy dist/ to VPS via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -40,7 +50,6 @@ jobs:
           source: "dist/,ecosystem.config.cjs,package.json"
           target: "/var/www/portfolio"
           strip_components: 1
-          rm: true
 
       - name: Restart PM2 on VPS
         uses: appleboy/ssh-action@v1.0.3
