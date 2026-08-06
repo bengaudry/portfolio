@@ -4,3 +4,5 @@ allowBuilds:
   sharp: true
 minimumReleaseAgeExclude:
   - '@astrojs/node@11.1.0'
+packages:
+  - '.'
