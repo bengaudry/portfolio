@@ -2,7 +2,7 @@ module.exports = {
     apps: [
         {
             name: 'astro-portfolio-backend',
-            script: './server/entry.js',
+            script: './server/entry.mjs',
             instances: 'max',
             exec_mode: 'cluster',
             env: {
