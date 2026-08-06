@@ -3,3 +3,14 @@
 		margin-bottom: 1rem;
 	}
 }
+
+.AboutBulletPoint {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 1rem;
+
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+}

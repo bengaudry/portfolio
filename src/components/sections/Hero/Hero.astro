@@ -1,5 +1,5 @@
 ---
-import {HeroTitle} from "@/components/misc"
+import HeroTitle from "@/components/misc/HeroTitle/HeroTitle.astro"
 import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro"
 import SocialMediaLink from "@/components/ui/SocialMediaLink/SocialMediaLink.astro"
 import LangSelector from "@/components/misc/LangSelector/LangSelector.astro"
@@ -31,7 +31,7 @@ const {t, locale} = useTranslation(Astro.url)
                 height={480}
                 fetchpriority="high"
         />
-        <HeroTitle client:only="react" />
+        <HeroTitle />
         <a
                 class={styles.Location}
                 target="_blank"

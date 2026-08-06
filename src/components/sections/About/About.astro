@@ -13,7 +13,7 @@ const {t} = useTranslation(Astro.url)
         {t("about.content")
             .split("\n")
             .map((content, idx) => (
-                    <div>
+                    <div class={styles.AboutBulletPoint}>
                         <span>$</span>
                         <span>{content}</span>
                     </div>

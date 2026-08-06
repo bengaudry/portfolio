@@ -1,5 +1,11 @@
 ---
 import "@/styles/App.scss"
+
+type Props = {
+	title?: string
+}
+
+const { title = "Ben Gaudry - Portfolio" } = Astro.props
 ---
 
 <!doctype html>
@@ -9,7 +15,7 @@ import "@/styles/App.scss"
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />

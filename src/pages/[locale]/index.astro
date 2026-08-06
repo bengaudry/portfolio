@@ -1,5 +1,5 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+import GlobalLayout from "@/layouts/GlobalLayout.astro";
 import Hero from "@/components/sections/Hero/Hero.astro"
 import About from "@/components/sections/About/About.astro"
 import Education from "@/components/sections/Education/Education.astro"
@@ -19,7 +19,7 @@ export function getStaticPaths() {
 export const prerender = true;
 ---
 
-<Layout>
+<GlobalLayout>
     <div class={styles.Home} role="main" aria-label="Main content">
         <Hero/>
         <About/>
@@ -29,4 +29,4 @@ export const prerender = true;
         <Contact/>
         <Footer/>
     </div>
-</Layout>
+</GlobalLayout>

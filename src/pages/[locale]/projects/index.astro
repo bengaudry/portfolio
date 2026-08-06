@@ -1,7 +1,10 @@
 ---
 import {ProjectsView} from "@/components/projects/ProjectsView/ProjectsView";
-import Layout from "@/layouts/Layout.astro";
+import GlobalLayout from "@/layouts/GlobalLayout.astro";
 import styles from "./projects.module.scss"
+import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro";
+import { ChevronLeft } from "lucide-react";
+import {useTranslation} from "@/i18n/utils.ts";
 
 export function getStaticPaths() {
     return [
@@ -11,10 +14,18 @@ export function getStaticPaths() {
 }
 
 export const prerender = true;
+const {locale, t} = useTranslation(Astro.url)
 ---
 
-<Layout>
+<GlobalLayout>
     <div class={styles.Projects}>
-        <ProjectsView defaultProjectId={Astro.url.searchParams.get("modal-content-id")} client:only="react"/>
+        <ResponsiveWrapper withMargin isFirst>
+            <a href={`/${locale}/`} class={styles.BackButton}>
+                <ChevronLeft size={24}/>
+                {t('common.back')}
+            </a>
+            <h1>{t('projects.title')}</h1>
+            <ProjectsView defaultProjectId={Astro.url.searchParams.get("modal-content-id")} client:only="react"/>
+        </ResponsiveWrapper>
     </div>
-</Layout>
+</GlobalLayout>

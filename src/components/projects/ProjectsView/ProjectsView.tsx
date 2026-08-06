@@ -21,12 +21,7 @@ export function ProjectsView({
 			projects={projects}
 			defaultProjectId={defaultProjectId}
 		>
-			<ResponsiveWrapper withMargin isFirst>
-				<a href={`/${locale}/`} className={styles.BackButton}>
-					<ChevronLeft size={24} />
-					{t('common.back')}
-				</a>
-				<h1>{t('projects.title')}</h1>
+			<ResponsiveWrapper>
 				<Tabs
 					tabs={[
 						{
@@ -40,7 +35,7 @@ export function ProjectsView({
 							content: <SubProjectsList category="low-level" />
 						}
 					]}
-				></Tabs>
+				/>
 			</ResponsiveWrapper>
 			<ProjectsModal />
 		</ProjectsProvider>
