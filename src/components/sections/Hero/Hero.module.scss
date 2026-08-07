@@ -138,3 +138,13 @@
 		text-underline-offset: 3px;
 	}
 }
+
+.LangSelector {
+	position: absolute;
+	z-index: 20;
+	top: 5vh;
+}
+
+.DownloadResumeButton {
+	margin-left: 0.8rem;
+}

@@ -32,7 +32,7 @@
 		},
 		"trade-fair": {
 			"title": "Site web du forum des entreprises",
-			"description": "Site web du forum des entreprises de l'école d'ingénieurs Polytech Lyon, où les étudiants peuvent voir les différentes entreprises qui seront présentes au forum, et postuler à des offres de stage et d'emploi.",
+			"description": "Site web réalisé en Vue.js pour le forum des entreprises 2026 de Polytech Lyon.",
 			"link-label": "Accéder au site web"
 		},
 		"pronto": {

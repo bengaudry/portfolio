@@ -19,11 +19,10 @@ const projectsList = getHighlightedProjectsList(t)
     <ResponsiveWrapper withMargin={true} withBorder={true}>
         <SectionTitle title={t("projects.title")}/>
         {projectsList.map((project) => (
-                <ProjectItem
-                        {...project}
-                />
+                <ProjectItem project={project} />
         ))}
         <ButtonLink
+                class={styles.SeeAllProjectsButton}
                 href="/projects"
                 label={t("projects.view-all")}
                 EndContent={<ChevronRight size = {16}/>}

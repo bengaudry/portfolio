@@ -32,7 +32,7 @@
 		},
 		"trade-fair": {
 			"title": "Trade Fair Website",
-			"description": "Website for the trade fair of the engineering school Polytech Lyon, where students can see the different companies that will be present at the trade fair, and apply for internships and job offers.",
+			"description": "Website developed with Vue.js for the 2026 trade fair of Polytech Lyon.",
 			"link-label": "Go to website"
 		},
 		"pronto": {

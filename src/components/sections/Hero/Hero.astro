@@ -17,7 +17,9 @@ const {t, locale} = useTranslation(Astro.url)
 
 <section class={styles.Hero}>
     <ResponsiveWrapper withMargin className={styles.InnerWrapper}>
-        <LangSelector/>
+        <div class={styles.LangSelector}>
+            <LangSelector/>
+        </div>
         <img
                 src={meImg.src}
                 class={styles.Picture}
@@ -31,7 +33,7 @@ const {t, locale} = useTranslation(Astro.url)
                 height={480}
                 fetchpriority="high"
         />
-        <HeroTitle />
+        <HeroTitle/>
         <a
                 class={styles.Location}
                 target="_blank"
@@ -53,10 +55,10 @@ const {t, locale} = useTranslation(Astro.url)
             <ButtonLink
                     target="_blank"
                     href={RESUMES[locale]?.url}
-                    class={styles.button}
+                    class={styles.DownloadResumeButton}
                     download={RESUMES[locale]?.name}
                     label={t("common.download-resume")}
-                    EndContent={<Download size={16} />}
+                    EndContent={<Download size = {16} />}
             />
         </div>
     </ResponsiveWrapper>

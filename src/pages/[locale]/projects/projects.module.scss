@@ -1,7 +1,24 @@
 .Projects {
 	overflow-y: hidden;
 	overflow-x: hidden;
-	margin: 2rem auto;
+	padding: 2rem 1rem;
+	margin: 0 auto;
+	max-width: 480px;
+
+	--vertical-display-breakpoint: 1000px;
+}
+
+@media screen and (min-width: 1000px) {
+	.Projects {
+		max-width: 1280px;
+	}
+}
+
+.Header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .BackButton {

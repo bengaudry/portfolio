@@ -3,7 +3,7 @@ import type {ProjectProps} from "@/lib/projects.ts";
 import styles from "@/components/sections/Projects/Projects.module.scss";
 import {List} from "@/components/ui";
 
-type Props = ProjectProps;
+type Props = { project: ProjectProps };
 
 const {
     id,
@@ -11,7 +11,7 @@ const {
     description,
     imgSrc,
     iconSrc,
-} = Astro.props;
+} = Astro.props.project;
 ---
 
 <a href={`/projects?modal-content-id=${encodeURIComponent(id)}`}>

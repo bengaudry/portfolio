@@ -9,20 +9,6 @@
 	max-width: 500px;
 	border-radius: 8px;
 	object-fit: cover;
-	cursor: pointer;
-	transition:
-		transform 0.2s ease,
-		filter 0.2s ease;
-	position: relative;
-
-	&:hover {
-		transform: scale(1.02);
-		filter: brightness(1.05);
-	}
-
-	&:active {
-		transform: scale(0.98);
-	}
 }
 
 .ModalProjectInfo {

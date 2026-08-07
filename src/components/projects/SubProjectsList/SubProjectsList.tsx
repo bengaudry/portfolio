@@ -1,7 +1,6 @@
 import {
 	getProjectsList,
 	type ProjectCategory,
-	type ProjectProps
 } from '@/lib/projects.ts'
 import { useTranslation } from '@/i18n/utils.ts'
 import styles from './SubProjectsList.module.scss'
