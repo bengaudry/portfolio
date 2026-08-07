@@ -41,7 +41,7 @@ export function ProjectsModal() {
                         <div className={styles.ModalProjectSkills}>
                             {selectedProject.associatedSkills.map((skillId) => {
                                 return <ListItem title={SKILLS[skillId].title} size="sm" variant="secondary"
-                                                 icon={SKILLS[skillId].icon}/>
+                                                 icon={SKILLS[skillId].icon} />
                             })}
                         </div>
                         <p className={styles.ModalProjectDescription}>

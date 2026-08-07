@@ -7,7 +7,7 @@ export type ListItemT = {
     variant?: "primary" | "secondary"
 } & (
     | {
-    icon?: ImageMetadata
+    icon?: ImageMetadata | undefined
 }
     | { iconUrl?: string }
     )
@@ -20,7 +20,7 @@ export type ListProps = PropsWithChildren<{
 }> &
     (
         | {
-        icon?: ImageMetadata
+        icon?: ImageMetadata | undefined
     }
         | { iconUrl?: string }
         )

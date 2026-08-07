@@ -4,8 +4,7 @@ import {List} from "@/components/ui"
 import SectionTitle from "@/components/ui/SectionTitle/SectionTitle.astro"
 import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro"
 import styles from "./Skills.module.scss"
-import {SKILLS} from "./list.ts"
-import {DISPLAYABLE_SKILLS} from "@/components/sections/Skills/list.ts";
+import {DISPLAYABLE_SKILLS} from "./list.ts"
 
 const {t} = useTranslation(Astro.url)
 ---
@@ -13,13 +12,12 @@ const {t} = useTranslation(Astro.url)
 <section class={styles.Skills}>
     <ResponsiveWrapper withMargin withBorder>
         <SectionTitle title={t("skills.title")}/>
-        {Object.keys(SKILLS).map((skillName) => (
+        {Object.entries(DISPLAYABLE_SKILLS).map(([category, display]) => (
                 <List
-                        title={t("skills." + skillName)}
-                        icon={DISPLAYABLE_SKILLS[skillName].icon}
-                        items={DISPLAYABLE_SKILLS[skillName].items}
+                        title={t("skills." + category)}
+                        icon={display.icon}
+                        items={display.items}
                 />
         ))}
     </ResponsiveWrapper>
 </section>
-
