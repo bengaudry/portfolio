@@ -21,7 +21,7 @@ const classNames = [styles.Button, className].filter(Boolean)
 const computedClassname = classNames.join(" ")
 
 const locale = getLocaleFromUrl(Astro.url)
-const realHref = `/${locale}${href}`
+const realHref = href?.startsWith("/") ? `/${locale}${href}` : href
 ---
 
 <a class={computedClassname} {...otherProps} href={realHref}>

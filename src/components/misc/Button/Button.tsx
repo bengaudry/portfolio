@@ -32,7 +32,7 @@ export function ButtonLink({
 	const computedClassname = classNames.join(' ')
 
 	const { locale } = useTranslation()
-	const realHref = `/${locale}${href}`
+	const realHref = href?.startsWith("/") ? `/${locale}${href}` : href
 
 	return (
 		<a className={computedClassname} {...otherProps} href={realHref}>
