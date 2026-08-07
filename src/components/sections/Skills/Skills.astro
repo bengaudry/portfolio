@@ -5,6 +5,7 @@ import SectionTitle from "@/components/ui/SectionTitle/SectionTitle.astro"
 import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro"
 import styles from "./Skills.module.scss"
 import {SKILLS} from "./list.ts"
+import {DISPLAYABLE_SKILLS} from "@/components/sections/Skills/list.ts";
 
 const {t} = useTranslation(Astro.url)
 ---
@@ -15,8 +16,8 @@ const {t} = useTranslation(Astro.url)
         {Object.keys(SKILLS).map((skillName) => (
                 <List
                         title={t("skills." + skillName)}
-                        icon={SKILLS[skillName].icon}
-                        items={SKILLS[skillName].items}
+                        icon={DISPLAYABLE_SKILLS[skillName].icon}
+                        items={DISPLAYABLE_SKILLS[skillName].items}
                 />
         ))}
     </ResponsiveWrapper>

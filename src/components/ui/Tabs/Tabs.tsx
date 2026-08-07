@@ -24,15 +24,18 @@ const useTabs = () => {
 
 export function TabTrigger({
 	tabId,
-	tabName
+	tabName,
+	index
 }: {
 	tabId: string
-	tabName: string
+	tabName: string,
+	index: number
 }) {
 	const { setCurrentTabId, currentTabId } = useTabs()
 
 	return (
 		<button
+			tabIndex={0}
 			className={[
 				styles.Trigger,
 				currentTabId === tabId && styles.ActiveTrigger
@@ -59,9 +62,10 @@ export function Tabs({
 		<TabsContext.Provider value={{ currentTabId, setCurrentTabId }}>
 			<div className={[styles.Tabs, className].join(' ')} style={style}>
 				<nav className={styles.Nav}>
-					{tabs.map((tab) => (
+					{tabs.map((tab, idx) => (
 						<TabTrigger
 							key={tab.id}
+							index={idx}
 							tabId={tab.id}
 							tabName={tab.name}
 						/>

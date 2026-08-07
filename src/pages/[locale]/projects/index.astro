@@ -2,10 +2,10 @@
 import {ProjectsView} from "@/components/projects/ProjectsView/ProjectsView";
 import GlobalLayout from "@/layouts/GlobalLayout.astro";
 import styles from "./projects.module.scss"
-import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro";
 import {ChevronLeft} from "lucide-react";
 import {useTranslation} from "@/i18n/utils.ts";
 import LangSelector from "@/components/misc/LangSelector/LangSelector.astro";
+import Footer from "@/components/sections/Footer/Footer.astro";
 
 export function getStaticPaths() {
     return [
@@ -31,4 +31,5 @@ const {locale, t} = useTranslation(Astro.url)
 
         <ProjectsView defaultProjectId={Astro.url.searchParams.get("modal-content-id")} client:only="react"/>
     </div>
+    <Footer />
 </GlobalLayout>

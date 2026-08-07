@@ -36,136 +36,178 @@ import othersCppIcon from '../../../assets/icons/skills/others/icons8-c++-50.png
 import othersAssemblyIcon from '../../../assets/icons/skills/others/icons8-processor-50.png'
 import othersPhpIcon from '../../../assets/icons/skills/others/icons8-php-50.png'
 import othersLinuxIcon from '../../../assets/icons/skills/others/icons8-linux-50.png'
+import othersRustIcon from "../../../assets/icons/skills/others/icons8-rust-24.png"
 
-export const SKILLS: Record<
-	string,
-	{
-		icon: ImageMetadata
-		items: Array<{ title: string; icon?: ImageMetadata }>
-	}
+export type Skill = {
+    title: string
+    icon?: ImageMetadata
+    category: "front-end" | "back-end" | "tools" | "others"
+}
+
+export const SKILLS: Record<string, Skill> = {
+    html: {
+        title: 'HTML',
+        icon: frontHtmlIcon,
+        category: "front-end"
+    },
+    css: {
+        title: 'CSS',
+        icon: frontCssIcon,
+        category: "front-end"
+    },
+    react: {
+        title: 'React',
+        icon: frontReactIcon,
+        category: "front-end"
+    },
+    typescript: {
+        title: 'TypeScript',
+        icon: frontTypescriptIcon,
+        category: "front-end"
+    },
+    tailwindcss: {
+        title: 'TailwindCSS',
+        icon: frontTailwindIcon,
+        category: "front-end"
+    },
+    alpinejs: {
+        title: 'Alpine.js',
+        category: "front-end"
+    },
+    vuejs: {
+        title: 'Vue.js',
+        icon: frontVueIcon,
+        category: "front-end"
+    },
+    nextjs: {
+        title: 'Next.JS',
+        icon: backNextjsIcon,
+        category: "back-end"
+    },
+    prisma: {
+        title: 'Prisma',
+        icon: backPrismaIcon,
+        category: "back-end"
+    },
+    firebase: {
+        title: 'Firebase',
+        icon: backFirebaseIcon,
+        category: "back-end"
+    },
+    supabase: {
+        title: 'Supabase',
+        icon: backSupabaseIcon,
+        category: "back-end"
+    },
+    nodejs: {
+        title: 'NodeJS',
+        icon: backNodejsIcon,
+        category: "back-end"
+    },
+    oraclesql: {
+        title: 'Oracle SQL',
+        icon: backDatabaseIcon,
+        category: "back-end"
+    },
+    git: {
+        title: 'Git',
+        icon: toolsGitIcon,
+        category: "tools"
+    },
+    figma: {
+        title: 'Figma',
+        icon: toolsFigmaIcon,
+        category: "tools"
+    },
+    canva: {
+        title: 'Canva',
+        icon: toolsCanvaIcon,
+        category: "tools"
+    },
+    github: {
+        title: 'Github',
+        icon: toolsGithubIcon,
+        category: "tools"
+    },
+    notion: {
+        title: 'Notion',
+        icon: toolsNotionIcon,
+        category: "tools"
+    },
+    vercel: {
+        title: 'Vercel',
+        icon: toolsVercelIcon,
+        category: "tools"
+    },
+    netlify: {
+        title: 'Netlify',
+        icon: toolsNetlifyIcon,
+        category: "tools"
+    },
+    java: {
+        title: 'Java',
+        icon: othersJavaIcon,
+        category: "others"
+    },
+    python: {
+        title: 'Python',
+        icon: othersPythonIcon,
+        category: "others"
+    },
+    c: {
+        title: 'C',
+        category: "others"
+    },
+    cpp: {
+        title: 'C++',
+        icon: othersCppIcon,
+        category: "others"
+    },
+    rust: {
+        title: "Rust",
+        icon: othersRustIcon,
+        category: "others"
+    },
+    asm: {
+        title: 'Assembly',
+        icon: othersAssemblyIcon,
+        category: "others"
+    },
+    php: {
+        title: 'Php',
+        icon: othersPhpIcon,
+        category: "others"
+    },
+    linux: {
+        title: 'Linux',
+        icon: othersLinuxIcon,
+        category: "others"
+    }
+} as const
+
+export type SkillId = keyof typeof SKILLS
+
+export const DISPLAYABLE_SKILLS: Record<
+    string,
+    {
+        icon: ImageMetadata
+        items: Array<Skill>
+    }
 > = {
-	'front-end': {
-		icon: frontendIcon,
-		items: [
-			{
-				title: 'HTML',
-				icon: frontHtmlIcon
-			},
-			{
-				title: 'CSS',
-				icon: frontCssIcon
-			},
-			{
-				title: 'React',
-				icon: frontReactIcon
-			},
-			{
-				title: 'TypeScript',
-				icon: frontTypescriptIcon
-			},
-			{
-				title: 'TailwindCSS',
-				icon: frontTailwindIcon
-			},
-			{
-				title: 'Alpine.js'
-			},
-			{
-				title: 'Vue.js',
-				icon: frontVueIcon
-			}
-		]
-	},
-	'back-end': {
-		icon: backendIcon,
-		items: [
-			{
-				title: 'Next.JS',
-				icon: backNextjsIcon
-			},
-			{
-				title: 'Prisma',
-				icon: backPrismaIcon
-			},
-			{
-				title: 'Firebase',
-				icon: backFirebaseIcon
-			},
-			{
-				title: 'Supabase',
-				icon: backSupabaseIcon
-			},
-			{
-				title: 'NodeJS',
-				icon: backNodejsIcon
-			},
-			{
-				title: 'Oracle SQL',
-				icon: backDatabaseIcon
-			}
-		]
-	},
-	tools: {
-		icon: toolsIcon,
-		items: [
-			{
-				title: 'Git',
-				icon: toolsGitIcon
-			},
-			{
-				title: 'Figma',
-				icon: toolsFigmaIcon
-			},
-			{
-				title: 'Canva',
-				icon: toolsCanvaIcon
-			},
-			{
-				title: 'Github',
-				icon: toolsGithubIcon
-			},
-			{
-				title: 'Notion',
-				icon: toolsNotionIcon
-			},
-			{
-				title: 'Vercel',
-				icon: toolsVercelIcon
-			},
-			{
-				title: 'Netlify',
-				icon: toolsNetlifyIcon
-			}
-		]
-	},
-	others: {
-		icon: othersIcon,
-		items: [
-			{
-				title: 'Java',
-				icon: othersJavaIcon
-			},
-			{
-				title: 'Python',
-				icon: othersPythonIcon
-			},
-			{ title: 'C' },
-			{
-				title: 'C++',
-				icon: othersCppIcon
-			},
-			{
-				title: 'Assembly',
-				icon: othersAssemblyIcon
-			},
-			{
-				title: 'Php',
-				icon: othersPhpIcon
-			},
-			{
-				title: 'Linux',
-				icon: othersLinuxIcon
-			}
-		]
-	}
+    'front-end': {
+        icon: frontendIcon,
+        items: Object.values(SKILLS).filter((skill) => skill.category === 'front-end')
+    },
+    'back-end': {
+        icon: backendIcon,
+        items: Object.values(SKILLS).filter((skill) => skill.category === 'back-end')
+    },
+    'tools': {
+        icon: toolsIcon,
+        items: Object.values(SKILLS).filter((skill) => skill.category === 'tools')
+    },
+    'others': {
+        icon: othersIcon,
+        items: Object.values(SKILLS).filter((skill) => skill.category === 'others')
+    }
 }
