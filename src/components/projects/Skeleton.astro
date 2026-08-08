@@ -1,0 +1,30 @@
+---
+import tabsStyles from "@/components/ui/Tabs/Tabs.module.scss";
+import projectsStyles from '@/components/projects/ProjectsView/ProjectsView.module.scss'
+import subProjectsListStyles from "@/components/projects/SubProjectsList/SubProjectsList.module.scss"
+---
+<div>
+    <nav class:list={[tabsStyles.TabsNav, projectsStyles.MobileView, projectsStyles.CustomTabs]}>
+        <button class={tabsStyles.Trigger}>Web</button>
+        <button class={tabsStyles.Trigger}>Low level</button>
+    </nav>
+
+    <div class={[projectsStyles.LaptopView].join(" ")}>
+        <section>
+            <h2>Web</h2>
+            <div class={subProjectsListStyles.SubProjectsList}>
+                <div class={subProjectsListStyles.ProjectCard} style="height: 400px"/>
+                <div class={subProjectsListStyles.ProjectCard} style="height: 400px"/>
+                <div class={subProjectsListStyles.ProjectCard} style="height: 400px"/>
+            </div>
+        </section>
+        <section>
+            <h2>Low-level</h2>
+            <div class={subProjectsListStyles.SubProjectsList}>
+                <div class={subProjectsListStyles.ProjectCard} style="height: 400px"/>
+                <div class={subProjectsListStyles.ProjectCard} style="height: 400px"/>
+                <div class={subProjectsListStyles.ProjectCard} style="height: 400px"/>
+            </div>
+        </section>
+    </div>
+</div>

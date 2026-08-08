@@ -6,6 +6,7 @@ import {ChevronLeft} from "lucide-react";
 import {useTranslation} from "@/i18n/utils.ts";
 import LangSelector from "@/components/misc/LangSelector/LangSelector.astro";
 import Footer from "@/components/sections/Footer/Footer.astro";
+import Skeleton from "@/components/projects/Skeleton.astro";
 
 export function getStaticPaths() {
     return [
@@ -29,7 +30,9 @@ const {locale, t} = useTranslation(Astro.url)
         </div>
         <h1>{t('projects.title')}</h1>
 
-        <ProjectsView defaultProjectId={Astro.url.searchParams.get("modal-content-id")} client:only="react"/>
+        <ProjectsView client:only="react">
+            <Skeleton slot="fallback" />
+        </ProjectsView>
     </div>
     <Footer />
 </GlobalLayout>

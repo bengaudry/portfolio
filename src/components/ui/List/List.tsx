@@ -1,10 +1,12 @@
 import {type PropsWithChildren} from 'react'
 import styles from './List.module.scss'
 
+type Variant = "primary" | "secondary"
+
 export type ListItemT = {
     title: string
     size?: "sm" | "md",
-    variant?: "primary" | "secondary"
+    variant?: Variant
 } & (
     | {
     icon?: ImageMetadata | undefined
@@ -17,12 +19,14 @@ export type ListProps = PropsWithChildren<{
     items?: Array<ListItemT>
     className?: string
     linksTo?: string
+    variant?: Variant
 }> &
     (
         | {
         icon?: ImageMetadata | undefined
     }
         | { iconUrl?: string }
+        | { forceIcon?: boolean }
         )
 
 export function ListItem({title, size = "md", variant = "primary", ...props}: ListItemT) {
@@ -63,17 +67,20 @@ export function List({
                          items,
                          linksTo,
                          className,
+                         variant = "primary",
                          ...props
                      }: ListProps) {
     const classNames = [styles.List]
     if (className) classNames.push(className)
+
+    const forceIcon = "forceIcon" in props && props.forceIcon === true
 
     const Children = () => {
         if (!items) return children
         return (
             <ListItemsContainer>
                 {items.map((item, index) => (
-                    <ListItem key={index} {...item} />
+                    <ListItem key={index} variant={variant} {...item} />
                 ))}
             </ListItemsContainer>
         )
@@ -98,6 +105,9 @@ export function List({
                         alt={title + ' icon'}
                         className={styles.Icon}
                     />
+                )}
+                {forceIcon && (
+                    <span className={styles.ForceIcon}>{title[0]}</span>
                 )}
                 {linksTo ? (
                     <a

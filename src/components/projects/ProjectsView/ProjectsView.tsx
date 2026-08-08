@@ -6,13 +6,12 @@ import {Tabs} from '@/components/ui/Tabs/Tabs.tsx'
 import {useTranslation} from '@/i18n/utils.ts'
 import {ProjectsModal} from '@/components/projects/ProjectsModal/ProjectsModal.tsx'
 
-export function ProjectsView({
-                                 defaultProjectId
-                             }: {
-    defaultProjectId: string | null
-}) {
+export function ProjectsView() {
     const {t} = useTranslation()
     const projects = getProjectsList(t)
+
+    const currentUrl = new URL(window.location.href)
+    const defaultProjectId = currentUrl.searchParams.get("modal-content-id")
 
     return (
         <ProjectsProvider

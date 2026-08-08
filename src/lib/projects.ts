@@ -1,4 +1,4 @@
-import splitTabsIcon from '../assets/split-tabs-icon.svg'
+import sideBySideIcon from '../assets/side-by-side-icon-white.svg'
 import studyswipeIllustration from '../assets/studyswipe-screenshot.png'
 import studyswipeIcon from '../assets/studyswipe-icon.png'
 import compilerIllustration from '../assets/compiler-illustration.png'
@@ -37,7 +37,7 @@ export const getProjectsList = (t: TranslationFunction) => {
             state: 'active',
             description: t('projects.side-by-side.description'),
             imgSrc: 'https://addons.mozilla.org/user-media/previews/full/322/322418.png?modified=1748884796',
-            iconSrc: splitTabsIcon.src,
+            iconSrc: sideBySideIcon.src,
             link: 'https://addons.mozilla.org/firefox/addon/side-by-side',
             linkLabel: t('projects.side-by-side.link-label'),
             repoUrl: 'https://github.com/bengaudry/side-by-side',

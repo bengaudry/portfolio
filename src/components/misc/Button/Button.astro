@@ -29,6 +29,7 @@ if (typeof href === "string" && href.startsWith("/")) {
 
 <a class={computedClassname} {...otherProps} href={realHref}>
     {StartContent && StartContent}
+    <slot name="start" />
     {leftIcon && (
             <img
                     src={leftIcon.src}
@@ -49,4 +50,5 @@ if (typeof href === "string" && href.startsWith("/")) {
             />
     )}
     {EndContent && EndContent}
+    <slot name="end" />
 </a>

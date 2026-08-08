@@ -80,3 +80,13 @@
 .Icon {
   flex-shrink: 0;
 }
+
+.ForceIcon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  background-color: rgba(var(--primary-text-color-raw), 0.2);
+}

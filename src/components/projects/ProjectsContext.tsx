@@ -26,15 +26,8 @@ export function ProjectsProvider({
 	projects: ReturnType<typeof getProjectsList>
 }>) {
 	const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(
-		null
+		defaultProjectId ? projects.find((p) => p.id === defaultProjectId) || null : null
 	)
-
-	useEffect(() => {
-		if (defaultProjectId) {
-			const proj = projects.find((p) => p.id === defaultProjectId)
-			if (proj) setSelectedProject(proj)
-		}
-	}, [defaultProjectId, projects])
 
 	return (
 		<ProjectsContext.Provider

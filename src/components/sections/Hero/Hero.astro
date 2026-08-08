@@ -58,8 +58,9 @@ const {t, locale} = useTranslation(Astro.url)
                     class={styles.DownloadResumeButton}
                     download={RESUMES[locale]?.name}
                     label={t("common.download-resume")}
-                    EndContent={<Download size = {16} />}
-            />
+            >
+                <Download size={16} slot="end"/>
+            </ButtonLink>
         </div>
     </ResponsiveWrapper>
 </section>
