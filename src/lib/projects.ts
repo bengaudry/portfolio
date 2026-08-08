@@ -43,7 +43,7 @@ export const getProjectsList = (t: TranslationFunction) => {
             repoUrl: 'https://github.com/bengaudry/side-by-side',
             category: 'web',
             isPersonal: true,
-            associatedSkills: ["typescript", "git", "github", "figma"]
+            associatedSkills: ["openSource", "typescript", "git", "github", "figma"]
         },
         {
             id: 'studyswipe',

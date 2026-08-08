@@ -182,6 +182,10 @@ export const SKILLS: Record<string, Skill> = {
         title: 'Linux',
         icon: othersLinuxIcon,
         category: "others"
+    },
+    openSource: {
+        title: "Open-source",
+        category: "others"
     }
 } as const
 
