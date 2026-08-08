@@ -26,7 +26,8 @@
 .ModalProjectSkills {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
+	overflow-x: auto;
 	align-items: center;
 	gap: 0.4rem;
 }
