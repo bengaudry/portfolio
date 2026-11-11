@@ -1,0 +1,42 @@
+---
+import {PERSONAL_EMAIL} from "@/lib/constants"
+import styles from "./SocialMediaLink.module.scss"
+import linkedinIcon from "@/assets/icons/icons8-linkedin-36.png"
+import githubIcon from "@/assets/icons/icons8-github-36.png"
+import mailIcon from "@/assets/icons/icons8-mail-36.png"
+
+type Props = {
+    name: "linkedin" | "github" | "mail"
+}
+
+const {name} = Astro.props;
+
+let iconSrc: string = ""
+let link: string = ""
+
+if ("linkedin" === name) {
+    link = "https://www.linkedin.com/in/ben-gaudry"
+    iconSrc = linkedinIcon.src
+}
+
+if ("github" === name) {
+    link = "https://github.com/bengaudry"
+    iconSrc = githubIcon.src
+}
+
+if ("mail" === name) {
+    link = `mailto:${PERSONAL_EMAIL}`
+    iconSrc = mailIcon.src
+}
+---
+
+
+<a
+        class={styles.SocialMediaLink}
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={"Open " + name + " in a new tab"}
+>
+    <img height={36} width={36} src={iconSrc} alt={name + " icon"}/>
+</a>

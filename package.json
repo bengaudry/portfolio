@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@12.6.0",
+  "scripts": {
+    "dev:web": "pnpm --filter portfolio-astro dev",
+    "dev:cms": "pnpm --filter portfolio dev",
+    "build:web": "pnpm --filter portfolio-astro build",
+    "build:cms": "pnpm --filter portfolio build"
+  }
+}

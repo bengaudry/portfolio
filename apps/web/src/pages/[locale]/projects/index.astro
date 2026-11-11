@@ -1,0 +1,42 @@
+---
+import {ProjectsView} from "@/components/projects/ProjectsView/ProjectsView";
+import GlobalLayout from "@/layouts/GlobalLayout.astro";
+import styles from "./projects.module.scss"
+import {ChevronLeft} from "lucide-react";
+import {useTranslation} from "@/i18n/utils.ts";
+import LangSelector from "@/components/misc/LangSelector/LangSelector.astro";
+import Footer from "@/components/sections/Footer/Footer.astro";
+import Skeleton from "@/components/projects/Skeleton.astro";
+import {getProjectsList} from "@/lib/projects.ts";
+import {getLocaleFromUrl} from "@/i18n/utils.ts";
+
+export function getStaticPaths() {
+    return [
+        {params: {locale: 'en'}},
+        {params: {locale: 'fr'}},
+    ];
+}
+
+export const prerender = true;
+const locale = getLocaleFromUrl(Astro.url)
+const {t} = useTranslation(Astro.url)
+const projects = await getProjectsList(locale)
+---
+
+<GlobalLayout title={"Ben Gaudry - " + t("projects.title")}>
+    <div class={styles.Projects}>
+        <div class={styles.Header}>
+            <a href={`/${locale}/`} class={styles.BackButton}>
+                <ChevronLeft size={24}/>
+                {t('common.back')}
+            </a>
+            <LangSelector />
+        </div>
+        <h1>{t('projects.title')}</h1>
+
+        <ProjectsView client:only="react" projects={projects}>
+            <Skeleton slot="fallback" />
+        </ProjectsView>
+    </div>
+    <Footer />
+</GlobalLayout>

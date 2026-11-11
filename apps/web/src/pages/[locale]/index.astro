@@ -1,0 +1,34 @@
+---
+import GlobalLayout from "@/layouts/GlobalLayout.astro";
+import Hero from "@/components/sections/Hero/Hero.astro"
+import About from "@/components/sections/About/About.astro"
+import Education from "@/components/sections/Education/Education.astro"
+import Projects from "@/components/sections/Projects/Projects.astro"
+import Footer from "@/components/sections/Footer/Footer.astro"
+import Contact from "@/components/sections/Contact/Contact.astro"
+import Skills from "@/components/sections/Skills/Skills.astro"
+import styles from "./home.module.scss"
+import Work from "@/components/sections/Work/Work.astro";
+
+export function getStaticPaths() {
+    return [
+        {params: {locale: 'en'}},
+        {params: {locale: 'fr'}},
+    ];
+}
+
+export const prerender = true;
+---
+
+<GlobalLayout>
+    <div class={styles.Home} role="main" aria-label="Main content">
+        <Hero/>
+        <About/>
+        <Education/>
+        <Work />
+        <Skills/>
+        <Projects/>
+        <Contact/>
+        <Footer/>
+    </div>
+</GlobalLayout>

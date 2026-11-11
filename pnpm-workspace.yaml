@@ -1,0 +1,19 @@
+packages:
+  - 'apps/*'
+
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true
+
+minimumReleaseAgeExclude:
+  - '@astrojs/node@11.1.0'
+  - '@sanity/access-ui@6.23.0'
+  - '@sanity/diff@6.23.0'
+  - '@sanity/mutator@6.23.0'
+  - '@sanity/schema@6.23.0'
+  - '@sanity/types@6.23.0'
+  - '@sanity/util@6.23.0'
+  - '@sanity/validation@6.23.0'
+  - '@sanity/vision@6.23.0'
+  - sanity@6.23.0

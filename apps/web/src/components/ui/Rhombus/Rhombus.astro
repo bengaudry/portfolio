@@ -1,0 +1,14 @@
+---
+import styles from "./Rhombus.module.scss"
+
+type Props = { isInView?: boolean; className?: string }
+const {className, isInView, ...otherProps} = Astro.props
+
+const classNames: string[] = [styles.Rhombus]
+if (className) classNames.push(className)
+---
+
+<div
+        class:list={classNames}
+        {...otherProps}
+/>

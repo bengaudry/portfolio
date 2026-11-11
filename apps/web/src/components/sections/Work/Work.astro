@@ -1,0 +1,30 @@
+---
+import styles from "./Work.module.scss";
+import SectionTitle from "@/components/ui/SectionTitle/SectionTitle.astro";
+import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro";
+import {useTranslation} from "@/i18n/utils";
+import {List} from "@/components/ui";
+import {fetchCompanies} from "@/lib/cms";
+import {getLocaleFromUrl} from "@/i18n/utils.ts";
+
+const locale = getLocaleFromUrl(Astro.url)
+const {t} = useTranslation(Astro.url)
+const companies = await fetchCompanies(locale)
+---
+
+<section class={styles.Work}>
+    <ResponsiveWrapper withMargin withBorder>
+        <SectionTitle title={t("work.title")}/>
+		{companies.map(({ roles, logoUrl, name }) => (
+			<List title={name} iconUrl={logoUrl}>
+				{roles.map(({ position, location, duration, description }) => (
+					<div class={styles.WorkItem}>
+						<h3>{position}</h3>
+						<p>{name} &middot; {location} &middot; {duration}</p>
+						<p>{description}</p>
+					</div>))
+				}
+			</List>
+		))}
+    </ResponsiveWrapper>
+</section>

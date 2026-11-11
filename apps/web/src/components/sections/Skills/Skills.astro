@@ -1,0 +1,31 @@
+---
+import {useTranslation} from "@/i18n/utils"
+import {List} from "@/components/ui"
+import SectionTitle from "@/components/ui/SectionTitle/SectionTitle.astro"
+import ResponsiveWrapper from "@/components/ui/ResponsiveWrapper/ResponsiveWrapper.astro"
+import styles from "./Skills.module.scss"
+import {getDisplayableSkills} from "@/lib/skills"
+import {getLocaleFromUrl} from "@/i18n/utils.ts";
+
+const locale = getLocaleFromUrl(Astro.url)
+const {t} = useTranslation(Astro.url)
+const displayableSkills = await getDisplayableSkills(locale)
+---
+
+<section class={styles.Skills}>
+    <ResponsiveWrapper withMargin withBorder>
+        <SectionTitle title={t("skills.title")}/>
+        {Object.entries(displayableSkills).map(([category, display]) => (
+                <List
+                        title={t("skills." + category)}
+                        iconUrl={display.iconUrl}
+                        items={display.items.map((skill) => ({
+							title: skill.title,
+							iconUrl: skill.iconUrl,
+							variant: "secondary" as const,
+						}))}
+                        variant="secondary"
+                />
+        ))}
+    </ResponsiveWrapper>
+</section>

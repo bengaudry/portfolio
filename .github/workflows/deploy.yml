@@ -1,0 +1,77 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ftp-deploy-env
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12.6.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build web app
+        run: pnpm --filter portfolio-astro build
+
+      - name: Clean portfolio contents only
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          key: ${{ secrets.FTP_PASSWORD }}
+          script: |
+            rm -rf /var/www/portfolio/{*,.*} 2>/dev/null || true
+
+      - name: Deploy dist/ to VPS via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          key: ${{ secrets.FTP_PASSWORD }}
+          source: "apps/web/dist/"
+          target: "/var/www/portfolio"
+          strip_components: 3
+
+      - name: Deploy ecosystem.config.cjs and package.json to VPS via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          key: ${{ secrets.FTP_PASSWORD }}
+          source: "apps/web/ecosystem.config.cjs,apps/web/package.json"
+          target: "/var/www/portfolio"
+          strip_components: 2
+
+      - name: Restart PM2 on VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          key: ${{ secrets.FTP_PASSWORD }}
+          script: |
+            cd /var/www/portfolio
+            pm2 reload ecosystem.config.cjs --update-env || pm2 start ecosystem.config.cjs
+
+      - name: Deploy CMS
+        run: pnpm --filter portfolio run deploy -- --yes
+        env:
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}

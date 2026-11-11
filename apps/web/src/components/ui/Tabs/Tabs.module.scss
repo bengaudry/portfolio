@@ -1,0 +1,39 @@
+.Tabs {
+}
+
+.Nav {
+	margin-top: 1rem;
+}
+
+.Trigger {
+	padding: 6px 12px;
+	background-color: transparent;
+	transition: background-color 200ms ease-in-out;
+	border-radius: 8px;
+	font-size: 1rem;
+
+	&:hover {
+		background-color: #2c2c2c;
+	}
+
+	&:not(:last-child) {
+		margin-right: 4px;
+	}
+	&:focus-within {
+		outline: 2px solid var(--primary-text-color);
+	}
+}
+
+.ActiveTrigger {
+	background-color: #4c4c4c;
+	color: var(--primary-text-color);
+	font-weight: 600;
+
+	&:hover {
+		background-color: #4c4c4c;
+	}
+}
+
+.Content {
+	margin-top: 12px;
+}

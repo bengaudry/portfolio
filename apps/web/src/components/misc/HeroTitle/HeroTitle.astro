@@ -1,0 +1,9 @@
+---
+import styles from './HeroTitle.module.scss'
+import {HeroTitleTick} from "@/components/misc/HeroTitle/HeroTitleTick.tsx";
+---
+
+<h1 class={styles.HeroTitle}>
+    <span>Ben Gaudry</span>
+    <HeroTitleTick client:only="react"/>
+</h1>

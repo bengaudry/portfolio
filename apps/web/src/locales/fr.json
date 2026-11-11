@@ -1,0 +1,82 @@
+{
+	"hero": {
+		"presentation": "Étudiant en informatique dans l'école d'ingénieurs Polytech Lyon, je suis spécialisé dans le développement web, et notamment le front-end. J'ai aussi une forte appétence pour le développement bas-niveau."
+	},
+	"about": {
+		"title": "À propos",
+		"content": "J'ai commencé à coder au début du collège avec les cours de développement web de Mathieu Nebra sur OpenClassrooms.\nPendant le confinement j'ai étendu mes connaissances en code avec le développement de jeu vidéo sur UE4.\nJ'ai depuis développé plusieurs projets par moi-même, et formalisé mes connaissances avec mes études.\nJ'aimerais travailler dans le développement logiciel comme le développement web ou développement bas-niveau (systèmes d'exploitation, pilotes, compilateurs, etc.)."
+	},
+	"work": {
+		"title": "Expérience professionnelle"
+	},
+	"education": {
+		"title": "Formation"
+	},
+	"skills": {
+		"title": "Compétences",
+		"front-end": "Front-end",
+		"back-end": "Back-end",
+		"tools": "Outils",
+		"others": "Autres"
+	},
+	"projects": {
+		"title": "Projets",
+		"view-details": "Voir les détails",
+		"view-all": "Voir tous les projets",
+		"github": "GitHub",
+		"visit-project": "Visiter le projet",
+		"side-by-side": {
+			"description": "Un module Firefox qui permet à ses utilisateurs d'ouvrir deux sites webs en un seul onglet avec un système de vue séparée.",
+			"link-label": "Mozilla Addons"
+		},
+		"studyswipe": {
+			"description": "Une application web à destination des étudiants pour réviser ses cours sous forme de flashcards.",
+			"link-label": "Accéder à l'application"
+		},
+		"trade-fair": {
+			"title": "Site web du forum des entreprises",
+			"description": "Site web réalisé en Vue.js pour le forum des entreprises 2026 de Polytech Lyon.",
+			"link-label": "Accéder au site web"
+		},
+		"pronto": {
+			"description": "Un outil CLI écrit en Rust permettant de compiler et exécuter des programmes C avec une seule commande, sans aucune configuration."
+		},
+		"compiler": {
+			"title": "Compilateur",
+			"description": "Un compilateur pour une version simplifiée de C, écrit en Java. Il compile vers un langage d'assemblage personnalisé ressemblant à arm64."
+		},
+		"irrigation-system": {
+			"title": "Système d'irrigation",
+			"description": "Un système d'irrigation automatisé basé sur un arduino nano, des capteurs tels que capteur d'humidité du sol, capteur de température, capteur de luminosité... et une pompe à eau."
+		}
+	},
+	"contact": {
+		"title": "Contact",
+		"contactMe": "Vous pouvez me contacter par email :",
+		"workWithMeHeader": "Pour travailler avec moi :"
+	},
+	"workExperience": {
+		"common": {
+			"internship": "Stage"
+		},
+		"edf": {
+			"company": "EDF",
+			"roles": {
+				"internship": {
+					"location": "Lyon, France",
+					"duration": "Août 2026 - Janvier 2027 (6 mois)",
+					"position": "Assistant chef de projet informatique",
+					"description": "J'ai travaillé sur le recueil des besoins métiers, la rédaction de spécifications fonctionnelles, et la stratégie de migration dans le cadre de la mise en place d'une GED (Gestion éléctronique des documents)."
+				}
+			}
+		}
+	},
+	"common": {
+		"active": "actif",
+		"inactive": "inactif",
+		"development": "développement",
+		"download-resume": "Mon CV",
+		"close": "Fermer",
+		"back": "Retour"
+	}
+}

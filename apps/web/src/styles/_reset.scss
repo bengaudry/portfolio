@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	user-select: text;
+}
+
+body {
+	background-color: var(--main-background-color);
+	font-family: 'DMMono', monospace;
+	letter-spacing: -0.01rem;
+	font-weight: 400;
+	color: var(--secondary-text-color);
+}
+
+p {
+	max-width: 580px;
+}
+
+p,
+span {
+	font-size: 0.9rem;
+	line-height: 1.1rem;
+	font-family: inherit;
+}
+
+@media screen and (min-width: 780px) {
+	p,
+	span {
+		font-size: 1.1rem;
+		line-height: 1.3rem;
+	}
+}
+
+button {
+	border: 0;
+	outline: 0;
+	color: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--primary-text-color);
+	font-family: 'Heming', monospace;
+	letter-spacing: 0.1rem;
+
+	& > * {
+		font-family: inherit;
+		letter-spacing: inherit;
+		color: inherit;
+	}
+}
+
+img {
+	user-select: none;
+}
+
+ul,
+ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}

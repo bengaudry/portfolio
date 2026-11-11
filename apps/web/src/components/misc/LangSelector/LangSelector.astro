@@ -1,0 +1,27 @@
+---
+import styles from "./LangSelector.module.scss";
+import {getLocaleFromUrl} from "@/i18n/utils";
+
+const currentLang = getLocaleFromUrl(Astro.url);
+const delocalizedPathname = Astro.url.pathname.replace(`/${currentLang}`, "");
+---
+
+<div
+        class={styles.LangSelector}
+        role="navigation"
+        aria-label="Language selector"
+>
+    <a
+            href={`/en${delocalizedPathname}`}
+            class:list={[styles.button, {[styles.active]: currentLang === "en"}]}
+    >
+        EN
+    </a>
+    <span class={styles.separator}>/</span>
+    <a
+            href={`/fr${delocalizedPathname}`}
+            class:list={[styles.button, {[styles.active]: currentLang === "fr"}]}
+    >
+        FR
+    </a>
+</div>

@@ -1,0 +1,56 @@
+.SubProjectsList {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+	.SubProjectsList {
+		flex-direction: row;
+		align-items: flex-start;
+		width: 100%;
+		gap: 1rem;
+	}
+
+	.ProjectCard {
+		min-width: 350px;
+	}
+
+	.ProjectCard {
+		img {
+			aspect-ratio: 16 / 9;
+			object-fit: cover;
+		}
+	}
+}
+
+.ProjectCard {
+	border: 1px solid var(--card-border-color);
+	border-radius: 12px;
+	padding: 1.5rem;
+	transition: background-color 200ms ease;
+	flex: 1;
+
+	img {
+		width: 100%;
+	}
+
+	&:hover {
+		background-color: var(--card-hover-background-color);
+		cursor: pointer;
+	}
+}
+
+.ProjectCardHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 0.7rem;
+	margin-bottom: 1rem;
+
+	img {
+		width: 32px;
+		height: 32px;
+	}
+}
