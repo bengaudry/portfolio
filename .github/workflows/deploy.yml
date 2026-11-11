@@ -72,6 +72,6 @@ jobs:
             pm2 reload ecosystem.config.cjs --update-env || pm2 start ecosystem.config.cjs
 
       - name: Deploy CMS
-        run: pnpm --filter portfolio run deploy -- --yes
+        run: pnpm --filter ./apps/cms run deploy -- --yes
         env:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
