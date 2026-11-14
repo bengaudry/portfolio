@@ -55,6 +55,11 @@
 		"contactMe": "You can contact me via email :",
 		"workWithMeHeader": "To work with me:"
 	},
+	"blog": {
+		"title": "Blog",
+		"empty": "No articles published yet.",
+		"read-more": "Read more"
+	},
 	"common": {
 		"active": "active",
 		"inactive": "inactive",

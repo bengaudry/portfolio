@@ -58,6 +58,17 @@ export type CmsCompany = {
 	roles: CmsRole[]
 }
 
+export type CmsArticle = {
+	_id: string
+	slug: string
+	title: string
+	summary: string
+	content: string
+	publishedAt: string
+	coverImageUrl?: string
+	isPublished: boolean
+}
+
 type RawSkill = {
 	_id: string
 	name: string
@@ -225,4 +236,64 @@ export async function fetchCompanies(locale: Locale): Promise<CmsCompany[]> {
 			)
 		}))
 	}))
+}
+
+type RawArticle = {
+	_id: string
+	slug: { current: string }
+	title: LocaleString
+	summary: LocaleText
+	content: LocaleText
+	publishedAt: string
+	coverImage?: CmsImage
+	isPublished: boolean
+}
+
+function toCmsArticle(raw: RawArticle, locale: Locale): CmsArticle {
+	return {
+		_id: raw._id,
+		slug: raw.slug.current,
+		title: getLocalized(raw.title, locale),
+		summary: getLocalized(raw.summary, locale),
+		content: getLocalized(raw.content, locale),
+		publishedAt: raw.publishedAt,
+		coverImageUrl: urlFor(raw.coverImage),
+		isPublished: raw.isPublished
+	}
+}
+
+export async function fetchArticles(locale: Locale): Promise<CmsArticle[]> {
+	const raw = await sanityClient.fetch<RawArticle[]>(
+		`*[_type == "article" && isPublished == true] | order(publishedAt desc) {
+			_id,
+			"slug": slug,
+			title,
+			summary,
+			content,
+			publishedAt,
+			coverImage { asset->{_id, url} },
+			isPublished
+		}`
+	)
+	return raw.map((article) => toCmsArticle(article, locale))
+}
+
+export async function fetchArticleBySlug(
+	slug: string,
+	locale: Locale
+): Promise<CmsArticle | undefined> {
+	const raw = await sanityClient.fetch<RawArticle | undefined>(
+		`*[_type == "article" && slug.current == $slug && isPublished == true][0] {
+			_id,
+			"slug": slug,
+			title,
+			summary,
+			content,
+			publishedAt,
+			coverImage { asset->{_id, url} },
+			isPublished
+		}`,
+		{ slug }
+	)
+	return raw ? toCmsArticle(raw, locale) : undefined
 }

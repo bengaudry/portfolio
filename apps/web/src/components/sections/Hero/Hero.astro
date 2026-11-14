@@ -61,6 +61,11 @@ const {t, locale} = useTranslation(Astro.url)
             >
                 <Download size={16} slot="end"/>
             </ButtonLink>
+            <ButtonLink
+                    href="/blog"
+                    class={styles.BlogButton}
+                    label={t("blog.title")}
+            />
         </div>
     </ResponsiveWrapper>
 </section>

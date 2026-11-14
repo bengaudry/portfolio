@@ -55,6 +55,11 @@
 		"contactMe": "Vous pouvez me contacter par email :",
 		"workWithMeHeader": "Pour travailler avec moi :"
 	},
+	"blog": {
+		"title": "Blog",
+		"empty": "Aucun article publié pour le moment.",
+		"read-more": "Lire la suite"
+	},
 	"workExperience": {
 		"common": {
 			"internship": "Stage"

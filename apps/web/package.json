@@ -22,10 +22,14 @@
 		"astro": "^7.1.6",
 		"framer-motion": "^12.43.0",
 		"lucide-react": "^1.28.0",
+		"marked": "^18.2.0",
 		"react": "^19.2.8",
-		"react-dom": "^19.2.8"
+		"react-dom": "^19.2.8",
+		"sanitize-html": "^2.18.2"
 	},
 	"devDependencies": {
+		"@types/marked": "^6.0.0",
+		"@types/sanitize-html": "^2.16.2",
 		"prettier": "^3.9.6",
 		"sass": "^1.102.0",
 		"sass-embedded": "^1.100.0"
