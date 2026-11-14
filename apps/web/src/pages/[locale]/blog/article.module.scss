@@ -1,0 +1,108 @@
+.Article {
+	overflow-x: hidden;
+	padding: 2rem 1rem;
+	margin: 0 auto;
+	max-width: 480px;
+}
+
+@media screen and (min-width: 1000px) {
+	.Article {
+		max-width: 800px;
+	}
+}
+
+.Header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.BackButton {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+	margin-bottom: 1rem;
+
+	&:hover {
+		color: white;
+	}
+}
+
+.CoverImage {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+	border-radius: 12px;
+	margin-bottom: 1.5rem;
+}
+
+.ArticleMeta {
+	margin-bottom: 2rem;
+
+	h1 {
+		margin: 0 0 0.5rem;
+		font-size: 2rem;
+	}
+
+	time {
+		color: var(--secondary-text-color);
+	}
+}
+
+.Content {
+	line-height: 1.7;
+	color: var(--primary-text-color);
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 2rem 0 1rem;
+	}
+
+	p {
+		margin: 0 0 1rem;
+	}
+
+	a {
+		color: var(--accent-color);
+		text-decoration: underline;
+	}
+
+	ul,
+	ol {
+		margin: 0 0 1rem 1.5rem;
+	}
+
+	li {
+		margin-bottom: 0.25rem;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 8px;
+	}
+
+	pre {
+		background-color: var(--card-hover-background-color);
+		padding: 1rem;
+		border-radius: 8px;
+		overflow-x: auto;
+	}
+
+	code {
+		font-family:
+			ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+		font-size: 0.9em;
+	}
+
+	pre code {
+		background: none;
+		padding: 0;
+	}
+}

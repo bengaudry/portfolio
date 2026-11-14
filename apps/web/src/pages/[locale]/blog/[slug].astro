@@ -1,0 +1,63 @@
+---
+import GlobalLayout from "@/layouts/GlobalLayout.astro";
+import styles from "./article.module.scss"
+import {ChevronLeft} from "lucide-react";
+import {useTranslation} from "@/i18n/utils.ts";
+import LangSelector from "@/components/misc/LangSelector/LangSelector.astro";
+import Footer from "@/components/sections/Footer/Footer.astro";
+import {getArticleBySlug} from "@/lib/articles.ts";
+import {fetchArticles} from "@/lib/cms.ts";
+import {getLocaleFromUrl} from "@/i18n/utils.ts";
+
+export async function getStaticPaths() {
+    const locales = ['en', 'fr'] as const
+    const paths: Array<{ params: { locale: string; slug: string } }> = []
+
+    for (const locale of locales) {
+        const articles = await fetchArticles(locale)
+        for (const article of articles) {
+            paths.push({params: {locale, slug: article.slug}})
+        }
+    }
+
+    return paths
+}
+
+export const prerender = true;
+const {slug} = Astro.params
+const locale = getLocaleFromUrl(Astro.url)
+const {t} = useTranslation(Astro.url)
+const article = await getArticleBySlug(slug, locale)
+
+if (!article) {
+    return Astro.redirect(`/${locale}/blog`)
+}
+---
+
+<GlobalLayout title={"Ben Gaudry - " + article.title}>
+    <article class={styles.Article}>
+        <div class={styles.Header}>
+            <a href={`/${locale}/blog`} class={styles.BackButton}>
+                <ChevronLeft size={24}/>
+                {t('common.back')}
+            </a>
+            <LangSelector />
+        </div>
+
+        {article.coverImageUrl && (
+            <img
+                src={article.coverImageUrl}
+                alt={article.title}
+                class={styles.CoverImage}
+            />
+        )}
+
+        <div class={styles.ArticleMeta}>
+            <h1>{article.title}</h1>
+            <time datetime={article.publishedAtIso}>{article.publishedAt}</time>
+        </div>
+
+        <div class={styles.Content} set:html={article.contentHtml} />
+    </article>
+    <Footer />
+</GlobalLayout>

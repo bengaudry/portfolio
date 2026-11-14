@@ -1,0 +1,62 @@
+---
+import GlobalLayout from "@/layouts/GlobalLayout.astro";
+import styles from "./blog.module.scss"
+import {ChevronLeft} from "lucide-react";
+import {useTranslation} from "@/i18n/utils.ts";
+import LangSelector from "@/components/misc/LangSelector/LangSelector.astro";
+import Footer from "@/components/sections/Footer/Footer.astro";
+import {getArticlesList} from "@/lib/articles.ts";
+import {getLocaleFromUrl} from "@/i18n/utils.ts";
+
+export function getStaticPaths() {
+    return [
+        {params: {locale: 'en'}},
+        {params: {locale: 'fr'}},
+    ];
+}
+
+export const prerender = true;
+const locale = getLocaleFromUrl(Astro.url)
+const {t} = useTranslation(Astro.url)
+const articles = await getArticlesList(locale)
+---
+
+<GlobalLayout title={"Ben Gaudry - " + t("blog.title")}>
+    <div class={styles.Blog}>
+        <div class={styles.Header}>
+            <a href={`/${locale}/`} class={styles.BackButton}>
+                <ChevronLeft size={24}/>
+                {t('common.back')}
+            </a>
+            <LangSelector />
+        </div>
+        <h1>{t('blog.title')}</h1>
+
+        {articles.length === 0 ? (
+            <p class={styles.Empty}>{t('blog.empty')}</p>
+        ) : (
+            <ul class={styles.ArticleList}>
+                {articles.map((article) => (
+                    <li class={styles.ArticleCard}>
+                        <a href={`/${locale}/blog/${article.slug}`} class={styles.ArticleLink}>
+                            {article.coverImageUrl && (
+                                <img
+                                    src={article.coverImageUrl}
+                                    alt={article.title}
+                                    class={styles.CoverImage}
+                                    loading="lazy"
+                                />
+                            )}
+                            <div class={styles.ArticleInfo}>
+                                <time datetime={article.publishedAtIso}>{article.publishedAt}</time>
+                                <h2>{article.title}</h2>
+                                <p>{article.summary}</p>
+                            </div>
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        )}
+    </div>
+    <Footer />
+</GlobalLayout>
